@@ -3,7 +3,10 @@ Rails.application.routes.draw do
   get '/', to:'welcome#index'
 
   get '/restaurant', to: 'restaurant#index'
+  get '/restaurant/new', to: 'restaurant#new'
+  post '/restaurant', to: 'restaurant#create'
 
   get '/brewery', to: 'brewery#index'
+
 
 end
