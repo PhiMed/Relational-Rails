@@ -2531,3 +2531,811 @@ Processing by RestaurantController#show as HTML
 Completed 200 OK in 26ms (Views: 23.4ms | ActiveRecord: 0.5ms)
 
 
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (7842.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "relational_rails_development"[0m
+  ↳ bin/rails:4
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (8255.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "relational_rails_development"[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6619517006900186970)[0m
+  ↳ bin/rails:4
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6619517006900186970)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6619517006900186970)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateBrewery (20211012231602)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (8.9ms)[0m  [1m[35mDROP TABLE "breweries"[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20211012231602"]]
+  ↳ bin/rails:4
+  [1m[35m (8.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6619517006900186970)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6619517006900186970)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateBrewery (20211012231602)
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "breweries" ("id" bigserial primary key, "name" character varying, "created_at" timestamp, "updated_at" timestamp, "number_of_employees" integer, "employee_owned" boolean)[0m
+  ↳ db/migrate/20211012231602_create_brewery.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211012231602"]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(6619517006900186970)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6619517006900186970)[0m
+  ↳ bin/rails:4
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateRestaurant (20211013014800)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (8.9ms)[0m  [1m[35mCREATE TABLE "restaurants" ("id" bigserial primary key, "name" character varying, "seats" integer, "serve_liquor" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20211013014800_create_restaurant.rb:3
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6619517006900186970)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6619517006900186970)[0m
+  ↳ bin/rails:4
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateRestaurant (20211013014800)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE "restaurants" ("id" bigserial primary key, "name" character varying, "seats" integer, "serve_liquor" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20211013014800_create_restaurant.rb:3
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6619517006900186970)[0m
+  ↳ bin/rails:4
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (8113.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "relational_rails_development"[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6619517006900186970)[0m
+  ↳ bin/rails:4
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateRestaurant (20211013014800)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE "restaurants" ("id" bigserial primary key, "name" character varying, "seats" integer, "serve_liquor" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20211013014800_create_restaurant.rb:3
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6619517006900186970)[0m
+  ↳ bin/rails:4
+Started GET "/" for ::1 at 2021-10-12 19:52:05 -0600
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/dididodson/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 72ms (Views: 71.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-12 19:52:08 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (1.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:3
+  Rendered restaurant/index.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 38ms (Views: 18.7ms | ActiveRecord: 13.4ms)
+
+
+Started GET "/restaurant/1" for ::1 at 2021-10-12 19:52:09 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_controller.rb:25
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 23ms (Views: 19.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-12 19:52:26 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:3
+  Rendered restaurant/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/restaurant/1" for ::1 at 2021-10-12 19:52:28 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.7ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_controller.rb:25
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 20ms (Views: 17.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/restaurant/new" for ::1 at 2021-10-12 19:52:50 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 18ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurant/new" for ::1 at 2021-10-12 19:53:47 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/brewery" for ::1 at 2021-10-12 19:53:53 -0600
+Processing by BreweryController#index as HTML
+  Rendering brewery/index.html.erb within layouts/application
+  [1m[36mBrewery Load (2.7ms)[0m  [1m[34mSELECT "breweries".* FROM "breweries"[0m
+  ↳ app/views/brewery/index.html.erb:3
+  Rendered brewery/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 23ms (Views: 12.8ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-12 19:53:57 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:3
+  Rendered restaurant/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 20ms (Views: 17.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/restaurant/1" for ::1 at 2021-10-12 19:54:00 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (1.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_controller.rb:25
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 28ms (Views: 24.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/restaurant/new" for ::1 at 2021-10-12 19:54:15 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/restaurant" for ::1 at 2021-10-12 19:54:29 -0600
+Processing by RestaurantController#create as HTML
+  Parameters: {"authenticity_token"=>"9q/75cixLRbdKcJ1AcM89vAMfVLJ3aRmO+q/hX+g2ssU1r8hsg7z4PhpnkpHS7IgDHx3G8iIxY3AUyCkcrrxDg==", "restaurant"=>{"name"=>"Arvada Tavern", "seats"=>"50", "serve_liquor"=>"true"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/restaurant_controller.rb:19
+  [1m[36mRestaurant Create (2.0ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Arvada Tavern"], ["created_at", "2021-10-13 01:54:29.041967"], ["updated_at", "2021-10-13 01:54:29.041967"], ["seats", 50], ["serve_liquor", true]]
+  ↳ app/controllers/restaurant_controller.rb:19
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/restaurant_controller.rb:19
+Redirected to http://localhost:3000/restaurant
+Completed 302 Found in 8ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-12 19:54:29 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.8ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:3
+  Rendered restaurant/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/restaurant/2" for ::1 at 2021-10-12 19:54:30 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_controller.rb:25
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/restaurant/1" for ::1 at 2021-10-12 19:54:45 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_controller.rb:25
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/restaurant/1" for ::1 at 2021-10-12 19:54:53 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_controller.rb:25
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 20ms (Views: 17.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-12 19:54:57 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:3
+  Rendered restaurant/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 21ms (Views: 18.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/restaurant/2" for ::1 at 2021-10-12 19:54:58 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRestaurant Load (1.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_controller.rb:25
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 19ms (Views: 16.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-12 19:55:04 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:3
+  Rendered restaurant/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-12 19:56:03 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:3
+  Rendered restaurant/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 20ms (Views: 17.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/brewery" for ::1 at 2021-10-12 19:56:13 -0600
+Processing by BreweryController#index as HTML
+  Rendering brewery/index.html.erb within layouts/application
+  [1m[36mBrewery Load (0.4ms)[0m  [1m[34mSELECT "breweries".* FROM "breweries"[0m
+  ↳ app/views/brewery/index.html.erb:3
+  Rendered brewery/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/brewery/new" for ::1 at 2021-10-12 19:56:14 -0600
+Processing by BreweryController#new as HTML
+  Rendering brewery/new.html.erb within layouts/application
+  Rendered brewery/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/brewery" for ::1 at 2021-10-12 19:56:22 -0600
+Processing by BreweryController#create as HTML
+  Parameters: {"authenticity_token"=>"bLfmfmsWDVk8FnHF24fYqqGksaduWoLEkbjQlj7auN6OzqK6EanTrxlWLfqdD1Z8XdS77m8P4y9qAU+3M8CTGw==", "brewery"=>{"name"=>"Breckenridge Brewery", "number_of_employees"=>"83", "employee_owned"=>"true"}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/brewery_controller.rb:19
+  [1m[36mBrewery Create (3.6ms)[0m  [1m[32mINSERT INTO "breweries" ("name", "created_at", "updated_at", "number_of_employees", "employee_owned") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Breckenridge Brewery"], ["created_at", "2021-10-13 01:56:22.415940"], ["updated_at", "2021-10-13 01:56:22.415940"], ["number_of_employees", 83], ["employee_owned", true]]
+  ↳ app/controllers/brewery_controller.rb:19
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/brewery_controller.rb:19
+Redirected to http://localhost:3000/brewery
+Completed 302 Found in 22ms (ActiveRecord: 12.1ms)
+
+
+Started GET "/brewery" for ::1 at 2021-10-12 19:56:22 -0600
+Processing by BreweryController#index as HTML
+  Rendering brewery/index.html.erb within layouts/application
+  [1m[36mBrewery Load (0.5ms)[0m  [1m[34mSELECT "breweries".* FROM "breweries"[0m
+  ↳ app/views/brewery/index.html.erb:3
+  Rendered brewery/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/brewery/1" for ::1 at 2021-10-12 19:56:23 -0600
+Processing by BreweryController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrewery Load (0.5ms)[0m  [1m[34mSELECT  "breweries".* FROM "breweries" WHERE "breweries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brewery_controller.rb:25
+  Rendering brewery/show.html.erb within layouts/application
+  Rendered brewery/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 20ms (Views: 16.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/brewery" for ::1 at 2021-10-12 19:56:41 -0600
+Processing by BreweryController#index as HTML
+  Rendering brewery/index.html.erb within layouts/application
+  [1m[36mBrewery Load (0.5ms)[0m  [1m[34mSELECT "breweries".* FROM "breweries"[0m
+  ↳ app/views/brewery/index.html.erb:3
+  Rendered brewery/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2021-10-12 19:57:07 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/employee" for ::1 at 2021-10-12 20:04:51 -0600
+Processing by EmployeeController#index as HTML
+Completed 406 Not Acceptable in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (EmployeeController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.6) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.6) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.6) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.6) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.6) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.6) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.6) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.6) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.6) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.6) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.6) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.6) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.6) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.6) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/brewery" for ::1 at 2021-10-12 20:08:09 -0600
+Processing by BreweryController#index as HTML
+  Rendering brewery/index.html.erb within layouts/application
+  [1m[36mBrewery Load (1.6ms)[0m  [1m[34mSELECT "breweries".* FROM "breweries"[0m
+  ↳ app/views/brewery/index.html.erb:3
+  Rendered brewery/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 19ms (Views: 14.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/brewery/1" for ::1 at 2021-10-12 20:08:10 -0600
+Processing by BreweryController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrewery Load (0.7ms)[0m  [1m[34mSELECT  "breweries".* FROM "breweries" WHERE "breweries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brewery_controller.rb:25
+  Rendering brewery/show.html.erb within layouts/application
+  Rendered brewery/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 17ms (Views: 13.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/brewery" for ::1 at 2021-10-12 20:09:08 -0600
+Processing by BreweryController#index as HTML
+  Rendering brewery/index.html.erb within layouts/application
+  [1m[36mBrewery Load (0.5ms)[0m  [1m[34mSELECT "breweries".* FROM "breweries"[0m
+  ↳ app/views/brewery/index.html.erb:3
+  Rendered brewery/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 24ms (Views: 21.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/brewery/1" for ::1 at 2021-10-12 20:09:11 -0600
+Processing by BreweryController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrewery Load (0.8ms)[0m  [1m[34mSELECT  "breweries".* FROM "breweries" WHERE "breweries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brewery_controller.rb:25
+  Rendering brewery/show.html.erb within layouts/application
+  Rendered brewery/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 27ms (Views: 23.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/brewery" for ::1 at 2021-10-12 20:10:39 -0600
+Processing by BreweryController#index as HTML
+  Rendering brewery/index.html.erb within layouts/application
+  [1m[36mBrewery Load (0.4ms)[0m  [1m[34mSELECT "breweries".* FROM "breweries"[0m
+  ↳ app/views/brewery/index.html.erb:3
+  Rendered brewery/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/brewery/1" for ::1 at 2021-10-12 20:10:40 -0600
+Processing by BreweryController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrewery Load (1.1ms)[0m  [1m[34mSELECT  "breweries".* FROM "breweries" WHERE "breweries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brewery_controller.rb:25
+  Rendering brewery/show.html.erb within layouts/application
+  Rendered brewery/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 19ms (Views: 15.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/brewery" for ::1 at 2021-10-12 20:10:53 -0600
+Processing by BreweryController#index as HTML
+  Rendering brewery/index.html.erb within layouts/application
+  [1m[36mBrewery Load (0.6ms)[0m  [1m[34mSELECT "breweries".* FROM "breweries"[0m
+  ↳ app/views/brewery/index.html.erb:3
+  Rendered brewery/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/brewery/new" for ::1 at 2021-10-12 20:11:08 -0600
+Processing by BreweryController#new as HTML
+  Rendering brewery/new.html.erb within layouts/application
+  Rendered brewery/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/brewery/new" for ::1 at 2021-10-12 20:11:18 -0600
+Processing by BreweryController#new as HTML
+  Rendering brewery/new.html.erb within layouts/application
+  Rendered brewery/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/brewery" for ::1 at 2021-10-12 20:18:05 -0600
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/dididodson/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by BreweryController#index as HTML
+  Rendering brewery/index.html.erb within layouts/application
+  [1m[36mBrewery Load (1.3ms)[0m  [1m[34mSELECT "breweries".* FROM "breweries"[0m
+  ↳ app/views/brewery/index.html.erb:3
+  Rendered brewery/index.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 98ms (Views: 84.6ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/" for ::1 at 2021-10-12 20:18:08 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 37ms (Views: 35.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/employee" for ::1 at 2021-10-12 20:18:10 -0600
+Processing by EmployeeController#index as HTML
+Completed 406 Not Acceptable in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (EmployeeController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.6) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.6) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.6) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.6) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.6) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.6) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.6) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.6) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.6) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.6) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.6) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.6) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.6) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.6) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/employee" for ::1 at 2021-10-12 20:18:32 -0600
+Processing by EmployeeController#index as HTML
+Completed 406 Not Acceptable in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (EmployeeController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.6) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.6) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.6) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.6) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.6) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.6) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.6) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.6) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.6) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.6) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.6) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.6) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.6) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.6) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/employee" for ::1 at 2021-10-12 20:18:33 -0600
+Processing by EmployeeController#index as HTML
+Completed 406 Not Acceptable in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (EmployeeController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.6) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.6) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.6) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.6) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.6) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.6) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.6) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.6) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.6) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.6) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.6) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.6) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.6) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.6) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
