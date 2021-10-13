@@ -5,8 +5,13 @@ Rails.application.routes.draw do
   get '/restaurant', to: 'restaurant#index'
   get '/restaurant/new', to: 'restaurant#new'
   post '/restaurant', to: 'restaurant#create'
+  get '/restaurant/:id', to: 'restaurant#show'
 
   get '/brewery', to: 'brewery#index'
+  get '/brewery/new', to: 'brewery#new'
+  post '/brewery', to: 'brewery#create'
+  get '/brewery/:id', to: 'brewery#show'
 
+  get '/employee', to: 'employee#index'
 
 end
