@@ -1,5 +1,15 @@
 <h1>Employees</h1>
 
 <% @employee.each do |employee| %>
-  <h3><%=employee.name%><h3>
-<%end%>
+  <h3><%= employee.name %></h3>
+  <p>Employee ID: <%=employee.id%></p>
+  <p>Weekly Hours: <%=employee.weekly_hours%><p>
+  <p>Over 21: <%=employee.over_21%><p>
+  <p>Created At: <%=employee.created_at%><p>
+  <p>Updated At: <%=employee.updated_at%><p>
+  <p>Restaurant ID: <%=employee.restaurant_id%><p>
+<% end %>
+
+<h2>Add New Employee</h2>
+
+  <a href="/employee/new">Add New Employee</a>
