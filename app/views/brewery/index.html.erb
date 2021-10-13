@@ -1,5 +1,9 @@
 <h1>Breweries</h1>
 
-<% @brewery.each do |brewery|%>
-  <h3><%=brewery%></h3>
-<%end%>
+<% @brewery.each do |brewery| %>
+  <a href="/brewery/<%=brewery.id%>"><h3><%= brewery.name %></h3></a>
+<% end %>
+
+<h2>Add New Brewery</h2>
+
+  <a href="/brewery/new">Add New Brewery</a></li>
