@@ -1,0 +1,10 @@
+<h1>Employees</h1>
+
+<% @employee.each do |employee| %>
+  <h3><%=employee.id%></h3>
+  <h3><%=employee.name%></h3>
+  <h3><%=employee.created_at%></h3>
+  <h3><%=employee.updated_at%></h3>
+  <h3><%=employee.weekly_hours%></h3>
+  <h3><%=employee.over_21%></h3>
+<%end%>
