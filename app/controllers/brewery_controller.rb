@@ -10,10 +10,10 @@ class BreweryController < ApplicationController
   def create
     brewery = Brewery.new({
       name: params[:brewery][:name],
-      created_at: params[:brewery][:created_at],
-      updated_at: params[:brewery][:updated_at],
       number_of_employees: params[:brewery][:number_of_employees],
-      employee_owned: params[:brewery][:employee_owned]
+      employee_owned: params[:brewery][:employee_owned],
+      created_at: params[:brewery][:created_at],
+      updated_at: params[:brewery][:updated_at]
       })
 
     brewery.save

@@ -1,6 +1,6 @@
 class EmployeeController < ApplicationController
 
   def index
-    @employee = ['bob', 'joe']
+    @employee = Employee.all
   end
 end
