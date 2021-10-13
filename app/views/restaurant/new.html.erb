@@ -1,10 +1,15 @@
 <form action="/restaurant" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <p>Enter a new restaurant:</p>
+  <p><h3>Enter a new restaurant:</h3></p>
+  <p>Name:</p>
   <input type='text' name='restaurant[name]'/><br/>
+  <p>Created At:</p>
   <input type='datetime' name='restaurant[created_at]'/><br/>
+  <p>Updated At:</p>
   <input type='datetime' name='restaurant[updated_at]'/><br/>
+    <p>Number of Seats:</p>
   <input type='integer' name='restaurant[seats]'/><br/>
+    <p>Serves Alcohol:</p>
   <input type='boolean' name='restaurant[serve_liquor]'/><br/>
   <input type='submit'/>
 </form>
