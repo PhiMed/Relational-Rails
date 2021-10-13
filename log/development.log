@@ -1,0 +1,2533 @@
+Started GET "/" for ::1 at 2021-10-12 15:30:09 -0600
+  
+ActiveRecord::NoDatabaseError (connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "relational_rails_development" does not exist
+):
+  
+activerecord (5.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:696:in `rescue in connect'
+activerecord (5.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:691:in `connect'
+activerecord (5.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:830:in `new_connection'
+activerecord (5.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:874:in `checkout_new_connection'
+activerecord (5.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:853:in `try_to_checkout_new_connection'
+activerecord (5.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:814:in `acquire_connection'
+activerecord (5.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:538:in `checkout'
+activerecord (5.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:1033:in `retrieve_connection'
+activerecord (5.2.6) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.6) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.6) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (273.9ms)[0m  [1m[35mCREATE DATABASE "relational_rails_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (47.3ms)[0m  [1m[35mCREATE DATABASE "relational_rails_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+Started GET "/" for ::1 at 2021-10-12 15:31:22 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 98ms (Views: 97.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-12 15:31:30 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  Rendered restaurant/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/brewery" for ::1 at 2021-10-12 15:31:32 -0600
+Processing by BreweryController#index as HTML
+  Rendering brewery/index.html.erb within layouts/application
+  Rendered brewery/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-12 15:31:38 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  Rendered restaurant/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-12 15:31:58 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  Rendered restaurant/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurant/new" for ::1 at 2021-10-12 15:32:02 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/restaurant" for ::1 at 2021-10-12 15:34:05 -0600
+  
+ActionController::RoutingError (No route matches [POST] "/restaurant"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/restaurant" for ::1 at 2021-10-12 15:35:16 -0600
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for RestaurantController):
+  
+actionpack (5.2.6) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.6) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.6) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.6) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/restaurant" for ::1 at 2021-10-12 15:35:26 -0600
+Processing by RestaurantController#create as HTML
+  Parameters: {"authenticity_token"=>"WwtKarGmL/JWj68woU27RGjDM1y0UXQEqwlnpQz0jlO5cg6uyxnxBHPP8w/nxTWSlLM5FbUEFe9QsPiEAe6llg==", "restaurant"=>{"id"=>"4", "name"=>"Taste of Bombay", "created_at"=>"2021-10-11", "updated_at"=>"2021-10-12", "seats"=>"35", "serve_liquor"=>"true"}}
+No template found for RestaurantController#create, rendering head :no_content
+Completed 204 No Content in 22ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/restaurant" for ::1 at 2021-10-12 15:42:28 -0600
+Processing by RestaurantController#create as HTML
+  Parameters: {"authenticity_token"=>"WwtKarGmL/JWj68woU27RGjDM1y0UXQEqwlnpQz0jlO5cg6uyxnxBHPP8w/nxTWSlLM5FbUEFe9QsPiEAe6llg==", "restaurant"=>{"id"=>"4", "name"=>"Taste of Bombay", "created_at"=>"2021-10-11", "updated_at"=>"2021-10-12", "seats"=>"35", "serve_liquor"=>"true"}}
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 10.2ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedTable: ERROR:  relation "restaurants" does not exist
+LINE 8:                WHERE a.attrelid = '"restaurants"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod,
+                     c.collname, col_description(a.attrelid, a.attnum) AS comment
+                FROM pg_attribute a
+                LEFT JOIN pg_attrdef d ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+                LEFT JOIN pg_type t ON a.atttypid = t.oid
+                LEFT JOIN pg_collation c ON a.attcollation = c.oid AND a.attcollation <> t.typcollation
+               WHERE a.attrelid = '"restaurants"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+):
+  
+app/controllers/restaurant_controller.rb:11:in `create'
+  [1m[35m (51.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:4
+  [1m[35m (7.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:4
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6619517006900186970)[0m
+  ↳ bin/rails:4
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateRestaurant (20211012214717)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6619517006900186970)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6619517006900186970)[0m
+  ↳ bin/rails:4
+  [1m[35m (4.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateRestaurant (20211012214945)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (33.8ms)[0m  [1m[35mCREATE TABLE "restaurants" ("id" bigserial primary key, "name" character varying, "created_at" timestamp, "updated_at" timestamp, "seats" integer, "serve_liquor" boolean)[0m
+  ↳ db/migrate/20211012214945_create_restaurant.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211012214945"]]
+  ↳ bin/rails:4
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-10-12 21:50:10.930486"], ["updated_at", "2021-10-12 21:50:10.930486"]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6619517006900186970)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Started GET "/" for ::1 at 2021-10-12 15:54:05 -0600
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/dididodson/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 78ms (Views: 76.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-12 15:54:10 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  Rendered restaurant/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/brewery" for ::1 at 2021-10-12 15:54:12 -0600
+Processing by BreweryController#index as HTML
+  Rendering brewery/index.html.erb within layouts/application
+  Rendered brewery/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-12 15:54:42 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  Rendered restaurant/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurant/new" for ::1 at 2021-10-12 15:54:46 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 20ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurant/new" for ::1 at 2021-10-12 15:55:10 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/restaurant" for ::1 at 2021-10-12 15:55:16 -0600
+Processing by RestaurantController#create as HTML
+  Parameters: {"authenticity_token"=>"KqLClkpqHyMppxhAfzX3nRCWUo7hDnvnDi2uGqreH3XI24ZSMNXB1QznRH85vXlL7OZYx+BbGgz1lDE7p8Q0sA==", "restaurant"=>{"name"=>"Taste of Bombay", "created_at"=>"2021-10-11", "updated_at"=>"2021-10-12", "seats"=>"35", "serve_liquor"=>"true"}}
+  [1m[35m (2.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/restaurant_controller.rb:19
+  [1m[36mRestaurant Create (1.6ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taste of Bombay"], ["created_at", "2021-10-11 00:00:00"], ["updated_at", "2021-10-12 00:00:00"], ["seats", 35], ["serve_liquor", true]]
+  ↳ app/controllers/restaurant_controller.rb:19
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/restaurant_controller.rb:19
+Redirected to http://localhost:3000/restaurant
+Completed 302 Found in 28ms (ActiveRecord: 16.5ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-12 15:55:16 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  Rendered restaurant/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-12 15:55:20 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  Rendered restaurant/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-12 15:57:21 -0600
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/dididodson/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (5.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:3
+  Rendered restaurant/index.html.erb within layouts/application (27.4ms)
+Completed 200 OK in 118ms (Views: 98.3ms | ActiveRecord: 16.7ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-12 16:01:50 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:3
+  Rendered restaurant/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 23ms (Views: 21.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-12 16:02:30 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:3
+  Rendered restaurant/index.html.erb within layouts/application (83.5ms)
+Completed 500 Internal Server Error in 86ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `id' for #<#<Class:0x000000014ec19ab8>:0x000000013a8f83e8>):
+    1: <h1>All Restaurants</h1>
+    2: 
+    3: <% @restaurant.each do |restaurant|%>
+    4:   <h3><%id%><%=restaurant.id%></h3>
+    5:   <h3><%=restaurant.name%></h3>
+    6:   <h3><%=restaurant.created_at%></h3>
+    7:   <h3><%=restaurant.updated_at%></h3>
+  
+app/views/restaurant/index.html.erb:4:in `block in _app_views_restaurant_index_html_erb___489975922812523305_13060'
+app/views/restaurant/index.html.erb:3:in `_app_views_restaurant_index_html_erb___489975922812523305_13060'
+Started GET "/restaurant" for ::1 at 2021-10-12 16:02:39 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:3
+  Rendered restaurant/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-12 16:13:18 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  Rendered restaurant/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/dididodson/turing/mod2/Relational-Rails/app/views/restaurant/index.html.erb:4: syntax error, unexpected instance variable, expecting '|'
+@output_buffer.safe_append='  <h3>'.freeze;...
+^~~~~~~~~~~~~~
+/Users/dididodson/turing/mod2/Relational-Rails/app/views/restaurant/index.html.erb:7: syntax error, unexpected `ensure', expecting end-of-input
+          ensure
+          ^~~~~~
+):
+  
+app/views/restaurant/index.html.erb:4: syntax error, unexpected instance variable, expecting '|'
+app/views/restaurant/index.html.erb:7: syntax error, unexpected `ensure', expecting end-of-input
+Started GET "/" for ::1 at 2021-10-12 16:13:26 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-12 16:13:30 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  Rendered restaurant/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/dididodson/turing/mod2/Relational-Rails/app/views/restaurant/index.html.erb:4: syntax error, unexpected instance variable, expecting '|'
+@output_buffer.safe_append='  <h3>'.freeze;...
+^~~~~~~~~~~~~~
+/Users/dididodson/turing/mod2/Relational-Rails/app/views/restaurant/index.html.erb:7: syntax error, unexpected `ensure', expecting end-of-input
+          ensure
+          ^~~~~~
+):
+  
+app/views/restaurant/index.html.erb:4: syntax error, unexpected instance variable, expecting '|'
+app/views/restaurant/index.html.erb:7: syntax error, unexpected `ensure', expecting end-of-input
+Started GET "/restaurant" for ::1 at 2021-10-12 16:13:42 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (1.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:3
+  Rendered restaurant/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-12 16:14:07 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.8ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:3
+  Rendered restaurant/index.html.erb within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    1: <h1>Restaurants</h1>
+    2: 
+    3: <% @restaurant.each do |restaurant| %>
+    4:   <h3><%= params[:restaurant][:name] %></h3>
+    5: <% end %>
+  
+app/views/restaurant/index.html.erb:4:in `block in _app_views_restaurant_index_html_erb___489975922812523305_15080'
+app/views/restaurant/index.html.erb:3:in `_app_views_restaurant_index_html_erb___489975922812523305_15080'
+Started GET "/restaurant" for ::1 at 2021-10-12 16:14:27 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:3
+  Rendered restaurant/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 23ms (Views: 21.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurant/1" for ::1 at 2021-10-12 16:14:48 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/restaurant/1"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/restaurant" for ::1 at 2021-10-12 16:16:12 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:3
+  Rendered restaurant/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 24ms (Views: 22.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-12 16:16:37 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:3
+  Rendered restaurant/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-12 16:17:11 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:3
+  Rendered restaurant/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurant/:id" for ::1 at 2021-10-12 16:17:12 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/restaurant/:id"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/restaurant" for ::1 at 2021-10-12 16:19:06 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:3
+  Rendered restaurant/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurant/:id" for ::1 at 2021-10-12 16:19:07 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/restaurant/:id"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/restaurant/:id" for ::1 at 2021-10-12 16:19:11 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/restaurant/:id"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/restaurant" for ::1 at 2021-10-12 16:19:26 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:3
+  Rendered restaurant/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurant/1" for ::1 at 2021-10-12 16:19:27 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/restaurant/1"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/restaurant/new" for ::1 at 2021-10-12 16:21:24 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 20ms (Views: 19.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurant/new" for ::1 at 2021-10-12 16:22:03 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurant/new" for ::1 at 2021-10-12 16:22:24 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurant/new" for ::1 at 2021-10-12 16:23:20 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurant/new" for ::1 at 2021-10-12 16:23:51 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurant/" for ::1 at 2021-10-12 16:24:09 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:3
+  Rendered restaurant/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/restaurant/" for ::1 at 2021-10-12 16:25:40 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:3
+  Rendered restaurant/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurant/new" for ::1 at 2021-10-12 16:25:42 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 17ms (Views: 16.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurant/" for ::1 at 2021-10-12 16:26:17 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:3
+  Rendered restaurant/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurant/:id" for ::1 at 2021-10-12 16:42:23 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/restaurant/:id"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/restaurant/:id" for ::1 at 2021-10-12 16:43:00 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/restaurant/:id"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/restaurant/" for ::1 at 2021-10-12 16:43:05 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (1.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:3
+  Rendered restaurant/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 28ms (Views: 25.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/restaurant/1" for ::1 at 2021-10-12 16:43:07 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/restaurant/1"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/restaurant/" for ::1 at 2021-10-12 16:46:34 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:3
+  Rendered restaurant/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/restaurant/" for ::1 at 2021-10-12 16:46:35 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:3
+  Rendered restaurant/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/restaurant/1" for ::1 at 2021-10-12 16:46:36 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/restaurant/1"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/restaurant/" for ::1 at 2021-10-12 16:46:49 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:3
+  Rendered restaurant/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurant/1" for ::1 at 2021-10-12 16:46:50 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/restaurant/1"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/restaurant/" for ::1 at 2021-10-12 16:47:13 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:3
+  Rendered restaurant/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/restaurant/" for ::1 at 2021-10-12 16:47:14 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:3
+  Rendered restaurant/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurant/1" for ::1 at 2021-10-12 16:47:18 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/restaurant/1"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/restaurant/1" for ::1 at 2021-10-12 16:47:18 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/restaurant/1"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/restaurant/" for ::1 at 2021-10-12 16:51:05 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (1.8ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:3
+  Rendered restaurant/index.html.erb within layouts/application (34.1ms)
+Completed 200 OK in 43ms (Views: 9.6ms | ActiveRecord: 30.8ms)
+
+
+Started GET "/restaurant/1" for ::1 at 2021-10-12 16:51:06 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <a href="/restaurant">Restaurant Index</a>
+    2: 
+    3: <h1><%= @restaurant.name %></h1>
+    4: 
+    5: <p><%= @restaurant.seats %></p>
+  
+app/views/restaurant/show.html.erb:3:in `_app_views_restaurant_show_html_erb___3601467117308259715_25120'
+Started GET "/restaurant/" for ::1 at 2021-10-12 16:54:23 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  Rendered restaurant/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/dididodson/turing/mod2/Relational-Rails/app/views/restaurant/index.html.erb:12: syntax error, unexpected `ensure', expecting end-of-input
+          ensure
+          ^~~~~~
+):
+  
+app/views/restaurant/index.html.erb:12: syntax error, unexpected `ensure', expecting end-of-input
+Started GET "/restaurant/" for ::1 at 2021-10-12 16:54:33 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:3
+  Rendered restaurant/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/restaurant/1" for ::1 at 2021-10-12 16:54:36 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <a href="/restaurant">Restaurant Index</a>
+    2: 
+    3: <h1><%= @restaurant.name %></h1>
+    4: 
+    5: <p><%= @restaurant.seats %></p>
+  
+app/views/restaurant/show.html.erb:3:in `_app_views_restaurant_show_html_erb___3601467117308259715_26240'
+Started GET "/restaurant/" for ::1 at 2021-10-12 16:54:47 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:3
+  Rendered restaurant/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/restaurant/new" for ::1 at 2021-10-12 16:54:49 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurant/" for ::1 at 2021-10-12 16:57:12 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:3
+  Rendered restaurant/index.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 27ms (Views: 14.4ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/restaurant/1" for ::1 at 2021-10-12 16:57:13 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_controller.rb:25
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 25ms (Views: 17.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/restaurant/1" for ::1 at 2021-10-12 16:57:21 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_controller.rb:25
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurant/1" for ::1 at 2021-10-12 16:57:38 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_controller.rb:25
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurant/1" for ::1 at 2021-10-12 16:58:26 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_controller.rb:25
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 20ms (Views: 17.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/restaurant/1" for ::1 at 2021-10-12 16:58:51 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_controller.rb:25
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (38.3ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `Serve' for #<#<Class:0x00000001385c8710>:0x00000001387a8a80>):
+    5: <p><%= @restaurant.created_at %></p>
+    6: <p><%= @restaurant.updated_at %></p>
+    7: <p><%= @restaurant.seats %></p>
+    8: <p><%= Serve Liquor: @restaurant.serve_liquor %></p>
+  
+app/views/restaurant/show.html.erb:8:in `_app_views_restaurant_show_html_erb___3601467117308259715_29200'
+Started GET "/restaurant/1" for ::1 at 2021-10-12 16:59:03 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.7ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_controller.rb:25
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 22ms (Views: 18.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/restaurant/1" for ::1 at 2021-10-12 16:59:45 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_controller.rb:25
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurant/1" for ::1 at 2021-10-12 16:59:45 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_controller.rb:25
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 22ms (Views: 18.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurant/1" for ::1 at 2021-10-12 16:59:49 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_controller.rb:25
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurant/1" for ::1 at 2021-10-12 17:02:20 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_controller.rb:25
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-12 17:02:34 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:3
+  Rendered restaurant/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/restaurant/new" for ::1 at 2021-10-12 17:02:36 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurant/new" for ::1 at 2021-10-12 17:03:05 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurant/new" for ::1 at 2021-10-12 17:03:05 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-10-12 17:12:40 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/brewery" for ::1 at 2021-10-12 17:12:42 -0600
+Processing by BreweryController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant BreweryController::Brewery):
+  
+app/controllers/brewery_controller.rb:4:in `index'
+Started GET "/restaurant" for ::1 at 2021-10-12 17:12:45 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (1.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:3
+  Rendered restaurant/index.html.erb within layouts/application (28.1ms)
+Completed 200 OK in 44ms (Views: 20.6ms | ActiveRecord: 19.4ms)
+
+
+Started GET "/brewery" for ::1 at 2021-10-12 17:12:53 -0600
+Processing by BreweryController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant BreweryController::Brewery):
+  
+app/controllers/brewery_controller.rb:4:in `index'
+Started GET "/brewery" for ::1 at 2021-10-12 17:13:25 -0600
+Processing by BreweryController#index as HTML
+  Rendering brewery/index.html.erb within layouts/application
+  [1m[36mBrewery Load (44.8ms)[0m  [1m[34mSELECT "breweries".* FROM "breweries"[0m
+  ↳ app/views/brewery/index.html.erb:3
+  Rendered brewery/index.html.erb within layouts/application (45.7ms)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 44.8ms)
+
+
+  
+ActionView::Template::Error (PG::UndefinedTable: ERROR:  relation "breweries" does not exist
+LINE 1: SELECT "breweries".* FROM "breweries"
+                                  ^
+: SELECT "breweries".* FROM "breweries"):
+    1: <h1>Breweries</h1>
+    2: 
+    3: <% @brewery.each do |brewery| %>
+    4:   <a href="/brewery/<%=brewery.id%>"><h3><%= brewery.name %></h3></a>
+    5: <% end %>
+    6: 
+  
+app/views/brewery/index.html.erb:3:in `_app_views_brewery_index_html_erb__1310290913117972009_35800'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6619517006900186970)[0m
+  ↳ bin/rails:4
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateBrewery (20211012231602)
+  [1m[35m (5.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (18.5ms)[0m  [1m[35mCREATE TABLE "breweries" ("id" bigserial primary key, "name" character varying, "created_at" timestamp, "updated_at" timestamp, "number_of_employees" integer, "employee_owned" boolean)[0m
+  ↳ db/migrate/20211012231602_create_brewery.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211012231602"]]
+  ↳ bin/rails:4
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6619517006900186970)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Started GET "/brewery" for ::1 at 2021-10-12 17:17:21 -0600
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/dididodson/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by BreweryController#index as HTML
+  Rendering brewery/index.html.erb within layouts/application
+  [1m[36mBrewery Load (0.9ms)[0m  [1m[34mSELECT "breweries".* FROM "breweries"[0m
+  ↳ app/views/brewery/index.html.erb:3
+  Rendered brewery/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 74ms (Views: 68.1ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/brewery/new" for ::1 at 2021-10-12 17:17:23 -0600
+Processing by BreweryController#new as HTML
+  Rendering brewery/new.html.erb within layouts/application
+  Rendered brewery/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/brewery" for ::1 at 2021-10-12 17:18:05 -0600
+Processing by BreweryController#create as HTML
+  Parameters: {"authenticity_token"=>"D44suFc1cIkEek8ZKbWQAFJyEt1R9AQbK+aAQEVcxDHt92h8LYqufyE6EyZvPR7WrgIYlFChZfDQXx9hSEbv9A==", "brewery"=>{"name"=>"Odell", "created_at"=>"2021-10-09", "updated_at"=>"2021-10-13", "number_of_employees"=>"40", "employee_owned"=>"false"}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant BreweryController::Brewert):
+  
+app/controllers/brewery_controller.rb:11:in `create'
+Started POST "/brewery" for ::1 at 2021-10-12 17:18:20 -0600
+Processing by BreweryController#create as HTML
+  Parameters: {"authenticity_token"=>"D44suFc1cIkEek8ZKbWQAFJyEt1R9AQbK+aAQEVcxDHt92h8LYqufyE6EyZvPR7WrgIYlFChZfDQXx9hSEbv9A==", "brewery"=>{"name"=>"Odell", "created_at"=>"2021-10-09", "updated_at"=>"2021-10-13", "number_of_employees"=>"40", "employee_owned"=>"false"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/brewery_controller.rb:19
+  [1m[36mBrewery Create (1.9ms)[0m  [1m[32mINSERT INTO "breweries" ("name", "created_at", "updated_at", "number_of_employees", "employee_owned") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Odell"], ["created_at", "2021-10-09 00:00:00"], ["updated_at", "2021-10-13 00:00:00"], ["number_of_employees", 40], ["employee_owned", false]]
+  ↳ app/controllers/brewery_controller.rb:19
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/brewery_controller.rb:19
+Redirected to http://localhost:3000/brewery
+Completed 302 Found in 22ms (ActiveRecord: 13.8ms)
+
+
+Started GET "/brewery" for ::1 at 2021-10-12 17:18:20 -0600
+Processing by BreweryController#index as HTML
+  Rendering brewery/index.html.erb within layouts/application
+  [1m[36mBrewery Load (0.4ms)[0m  [1m[34mSELECT "breweries".* FROM "breweries"[0m
+  ↳ app/views/brewery/index.html.erb:3
+  Rendered brewery/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/brewery/1" for ::1 at 2021-10-12 17:18:21 -0600
+Processing by BreweryController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrewery Load (0.4ms)[0m  [1m[34mSELECT  "breweries".* FROM "breweries" WHERE "breweries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brewery_controller.rb:25
+  Rendering brewery/show.html.erb within layouts/application
+  Rendered brewery/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 21ms (Views: 15.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/brewery/1" for ::1 at 2021-10-12 17:18:30 -0600
+Processing by BreweryController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrewery Load (0.4ms)[0m  [1m[34mSELECT  "breweries".* FROM "breweries" WHERE "breweries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brewery_controller.rb:25
+  Rendering brewery/show.html.erb within layouts/application
+  Rendered brewery/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 19ms (Views: 16.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/brewery/new" for ::1 at 2021-10-12 17:18:34 -0600
+Processing by BreweryController#new as HTML
+  Rendering brewery/new.html.erb within layouts/application
+  Rendered brewery/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/brewery" for ::1 at 2021-10-12 17:19:08 -0600
+Processing by BreweryController#create as HTML
+  Parameters: {"authenticity_token"=>"BMTfWEygFZ69Sme93bNzxG4/ZuGFjPcoIrDHDTD13KfmvZucNh/LaJgKO4KbO/0Skk9sqITZlsPZCVgsPe/3Yg==", "brewery"=>{"name"=>"Breckenridge Brewery", "created_at"=>"2021-09-18", "updated_at"=>"2021-10-13", "number_of_employees"=>"83", "employee_owned"=>"true"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/brewery_controller.rb:19
+  [1m[36mBrewery Create (0.6ms)[0m  [1m[32mINSERT INTO "breweries" ("name", "created_at", "updated_at", "number_of_employees", "employee_owned") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Breckenridge Brewery"], ["created_at", "2021-09-18 00:00:00"], ["updated_at", "2021-10-13 00:00:00"], ["number_of_employees", 83], ["employee_owned", true]]
+  ↳ app/controllers/brewery_controller.rb:19
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/brewery_controller.rb:19
+Redirected to http://localhost:3000/brewery
+Completed 302 Found in 4ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/brewery" for ::1 at 2021-10-12 17:19:08 -0600
+Processing by BreweryController#index as HTML
+  Rendering brewery/index.html.erb within layouts/application
+  [1m[36mBrewery Load (0.9ms)[0m  [1m[34mSELECT "breweries".* FROM "breweries"[0m
+  ↳ app/views/brewery/index.html.erb:3
+  Rendered brewery/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/brewery/2" for ::1 at 2021-10-12 17:19:09 -0600
+Processing by BreweryController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBrewery Load (0.5ms)[0m  [1m[34mSELECT  "breweries".* FROM "breweries" WHERE "breweries"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/brewery_controller.rb:25
+  Rendering brewery/show.html.erb within layouts/application
+  Rendered brewery/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/brewery/1" for ::1 at 2021-10-12 17:19:48 -0600
+Processing by BreweryController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrewery Load (0.6ms)[0m  [1m[34mSELECT  "breweries".* FROM "breweries" WHERE "breweries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brewery_controller.rb:25
+  Rendering brewery/show.html.erb within layouts/application
+  Rendered brewery/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/brewery" for ::1 at 2021-10-12 17:19:50 -0600
+Processing by BreweryController#index as HTML
+  Rendering brewery/index.html.erb within layouts/application
+  [1m[36mBrewery Load (0.4ms)[0m  [1m[34mSELECT "breweries".* FROM "breweries"[0m
+  ↳ app/views/brewery/index.html.erb:3
+  Rendered brewery/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/brewery/2" for ::1 at 2021-10-12 17:19:52 -0600
+Processing by BreweryController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBrewery Load (0.4ms)[0m  [1m[34mSELECT  "breweries".* FROM "breweries" WHERE "breweries"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/brewery_controller.rb:25
+  Rendering brewery/show.html.erb within layouts/application
+  Rendered brewery/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 18ms (Views: 15.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/brewery" for ::1 at 2021-10-12 17:19:53 -0600
+Processing by BreweryController#index as HTML
+  Rendering brewery/index.html.erb within layouts/application
+  [1m[36mBrewery Load (0.4ms)[0m  [1m[34mSELECT "breweries".* FROM "breweries"[0m
+  ↳ app/views/brewery/index.html.erb:3
+  Rendered brewery/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/brewery" for ::1 at 2021-10-12 17:44:07 -0600
+Processing by BreweryController#index as HTML
+  Rendering brewery/index.html.erb within layouts/application
+  [1m[36mBrewery Load (1.1ms)[0m  [1m[34mSELECT "breweries".* FROM "breweries"[0m
+  ↳ app/views/brewery/index.html.erb:3
+  Rendered brewery/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 24ms (Views: 21.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2021-10-12 17:44:12 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/employees" for ::1 at 2021-10-12 17:44:14 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/employees"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/employees" for ::1 at 2021-10-12 17:44:23 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/employees"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/employees" for ::1 at 2021-10-12 17:50:06 -0600
+  
+ActionController::RoutingError (uninitialized constant EmployeesController):
+  
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/employees" for ::1 at 2021-10-12 17:52:07 -0600
+  
+ActionController::RoutingError (uninitialized constant EmployeesController):
+  
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/employees" for ::1 at 2021-10-12 17:56:07 -0600
+  
+ActionController::RoutingError (uninitialized constant EmployeesController):
+  
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/employees" for ::1 at 2021-10-12 17:57:44 -0600
+  
+ActionController::RoutingError (uninitialized constant EmployeesController):
+  
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/employees" for ::1 at 2021-10-12 17:58:16 -0600
+  
+ActionController::RoutingError (uninitialized constant EmployeesController):
+  
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/employees" for ::1 at 2021-10-12 17:58:18 -0600
+  
+ActionController::RoutingError (uninitialized constant EmployeesController):
+  
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/employees" for ::1 at 2021-10-12 17:58:38 -0600
+  
+ActionController::RoutingError (uninitialized constant EmployeesController):
+  
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/employees" for ::1 at 2021-10-12 17:58:40 -0600
+  
+ActionController::RoutingError (uninitialized constant EmployeesController):
+  
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/employees" for ::1 at 2021-10-12 17:58:55 -0600
+  
+ActionController::RoutingError (uninitialized constant EmployeesController):
+  
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/employees" for ::1 at 2021-10-12 17:58:56 -0600
+  
+ActionController::RoutingError (uninitialized constant EmployeesController):
+  
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/employees" for ::1 at 2021-10-12 17:59:09 -0600
+  
+ActionController::RoutingError (uninitialized constant EmployeesController):
+  
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/employees" for ::1 at 2021-10-12 17:59:40 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/employees"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/employees" for ::1 at 2021-10-12 18:00:06 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/employees"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/employees" for ::1 at 2021-10-12 18:00:06 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/employees"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/employees" for ::1 at 2021-10-12 18:00:25 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/employees"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/employees" for ::1 at 2021-10-12 18:00:45 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/employees"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/employees" for ::1 at 2021-10-12 18:01:35 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/employees"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/employees" for ::1 at 2021-10-12 18:01:36 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/employees"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/employees" for ::1 at 2021-10-12 18:01:40 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/employees"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/restaurant" for ::1 at 2021-10-12 18:26:42 -0600
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/dididodson/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (6.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:3
+  Rendered restaurant/index.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 94ms (Views: 74.6ms | ActiveRecord: 17.9ms)
+
+
+Started GET "/restaurant/new" for ::1 at 2021-10-12 18:26:45 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 49ms (Views: 46.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurant/1" for ::1 at 2021-10-12 18:26:49 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_controller.rb:25
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 23ms (Views: 17.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/brewery" for ::1 at 2021-10-12 18:26:57 -0600
+Processing by BreweryController#index as HTML
+  Rendering brewery/index.html.erb within layouts/application
+  [1m[36mBrewery Load (3.2ms)[0m  [1m[34mSELECT "breweries".* FROM "breweries"[0m
+  ↳ app/views/brewery/index.html.erb:3
+  Rendered brewery/index.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 37ms (Views: 17.2ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/brewery/2" for ::1 at 2021-10-12 18:26:59 -0600
+Processing by BreweryController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBrewery Load (0.3ms)[0m  [1m[34mSELECT  "breweries".* FROM "breweries" WHERE "breweries"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/brewery_controller.rb:25
+  Rendering brewery/show.html.erb within layouts/application
+  Rendered brewery/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 21ms (Views: 17.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/brewery/new" for ::1 at 2021-10-12 18:27:02 -0600
+Processing by BreweryController#new as HTML
+  Rendering brewery/new.html.erb within layouts/application
+  Rendered brewery/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 18ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/brewery" for ::1 at 2021-10-12 18:27:06 -0600
+Processing by BreweryController#index as HTML
+  Rendering brewery/index.html.erb within layouts/application
+  [1m[36mBrewery Load (0.4ms)[0m  [1m[34mSELECT "breweries".* FROM "breweries"[0m
+  ↳ app/views/brewery/index.html.erb:3
+  Rendered brewery/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 25ms (Views: 23.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees" for ::1 at 2021-10-12 18:27:08 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/employees"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/restaurant" for ::1 at 2021-10-12 18:32:26 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:3
+  Rendered restaurant/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 27ms (Views: 25.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurant/1" for ::1 at 2021-10-12 18:32:27 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_controller.rb:25
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 23ms (Views: 20.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-12 18:33:43 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:3
+  Rendered restaurant/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 23ms (Views: 19.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/restaurant/1" for ::1 at 2021-10-12 18:37:07 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_controller.rb:25
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 26ms (Views: 23.4ms | ActiveRecord: 0.5ms)
+
+
