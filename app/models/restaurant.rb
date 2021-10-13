@@ -1,2 +1,3 @@
 class Restaurant < ApplicationRecord
-end  
+  has_many :employees
+end
