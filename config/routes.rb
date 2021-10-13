@@ -12,6 +12,6 @@ Rails.application.routes.draw do
   post '/brewery', to: 'brewery#create'
   get '/brewery/:id', to: 'brewery#show'
 
-  
+  get '/employee', to: 'employee#index'
 
 end
