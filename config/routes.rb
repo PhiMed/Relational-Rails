@@ -13,5 +13,7 @@ Rails.application.routes.draw do
   get '/brewery/:id', to: 'brewery#show'
 
   get '/employee', to: 'employee#index'
-
+  get '/employee/new', to: 'employee#new'
+  post '/employee', to: 'employee#create'
+  get '/employee/:id', to: 'employee#show'
 end
