@@ -38,4 +38,15 @@ RSpec.describe "restaurant", type: :feature do
     expect(page).to have_content(restaurant.employees.count)
     expect(restaurant.employees.count).to eq(2)
   end
+
+  it 'provides links for employee and restaurant indexes' do
+    restaurant = Restaurant.create!(name: "Taco Bell",
+                                    seats: 12,
+                                    serve_liquor: false)
+
+    visit "/restaurant/#{restaurant.id}"
+
+    expect(page).to have_link("Employee Index")
+    expect(page).to have_link("Restaurant Index")
+  end
 end
