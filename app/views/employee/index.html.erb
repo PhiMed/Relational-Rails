@@ -1,4 +1,7 @@
-<h1>Employees</h1>
+<h2>Add New Employee</h2>
+<a href="/employee/new">Add New Employee</a>
+
+<h1>Current Employees</h1>
 
 <% @employee.each do |employee| %>
   <h3><%= employee.name %></h3>
@@ -9,7 +12,3 @@
   <p>Updated At: <%=employee.updated_at%><p>
   <p>Restaurant ID: <%=employee.restaurant_id%><p>
 <% end %>
-
-<h2>Add New Employee</h2>
-
-<a href="/employee/new">Add New Employee</a>

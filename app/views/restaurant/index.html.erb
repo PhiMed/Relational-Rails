@@ -1,9 +1,10 @@
 <a href="/">Welcome Index</a>
 
+<h2><a href="/restaurant/new">Add New Restaurant</a></h2>
+
 <h1>Restaurants</h1>
 
 <% @restaurant.each do |restaurant| %>
   <a href="/restaurant/<%=restaurant.id%>"><h3><%= restaurant.name %></h3></a>
+  <p> <%=restaurant.created_at %></p>
 <% end %>
-
-<h2><a href="/restaurant/new">Add New Restaurant</a></h2>
