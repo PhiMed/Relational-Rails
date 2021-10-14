@@ -1,9 +1,11 @@
 <a href="/">Welcome Index</a>
+<a href="/beer">Beer Index</a>
+<a href="/brewery">Brewery Index</a>
 
 <h1>Breweries</h1>
 
 <% @brewery.each do |brewery| %>
-  <a href="/brewery/<%=brewery.id%>"><h3><%= brewery.name %></h3></a>
+  <p><a href="/brewery/<%=brewery.id%>"><h3><%= brewery.name %></a>  <%= brewery.created_at %>
 <% end %>
 
 <h2>Add New Brewery</h2>
