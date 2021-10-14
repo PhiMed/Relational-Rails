@@ -7234,3 +7234,1323 @@ Processing by BeerController#index as HTML
 Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/" for ::1 at 2021-10-14 08:32:22 -0600
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/dididodson/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 81ms (Views: 80.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 08:32:25 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (3.8ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:5
+  Rendered restaurant/index.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 44ms (Views: 19.0ms | ActiveRecord: 15.5ms)
+
+
+Started GET "/restaurant/1" for ::1 at 2021-10-14 08:32:27 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_controller.rb:25
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (9.1ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for #<Restaurant:0x00000001098aa7c8>):
+     7: <p><%='Created At:'%> <%= @restaurant.created_at %></p>
+     8: <p><%='Updated At:'%> <%= @restaurant.updated_at %></p>
+     9: 
+    10: <% @restaurant.each do |restaurant| %>
+    11:   <%= link_to restaurant.employee, "/restaurant/#{restaurant.id}/employee" %>
+    12: <% end %>  
+  
+app/views/restaurant/show.html.erb:10:in `_app_views_restaurant_show_html_erb___1992078020501767575_15120'
+Started GET "/restaurant/1" for ::1 at 2021-10-14 08:33:09 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (1.0ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_controller.rb:25
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for #<Restaurant:0x000000010906d358>):
+     7: <p><%='Created At:'%> <%= @restaurant.created_at %></p>
+     8: <p><%='Updated At:'%> <%= @restaurant.updated_at %></p>
+     9: 
+    10: <% @restaurant.each do |restaurant| %>
+    11:   <%= restaurant.name %>
+    12: <% end %>
+  
+app/views/restaurant/show.html.erb:10:in `_app_views_restaurant_show_html_erb___1992078020501767575_15680'
+Started GET "/restaurant/1" for ::1 at 2021-10-14 08:33:09 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_controller.rb:25
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (11.9ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for #<Restaurant:0x0000000128b2d2d8>):
+     7: <p><%='Created At:'%> <%= @restaurant.created_at %></p>
+     8: <p><%='Updated At:'%> <%= @restaurant.updated_at %></p>
+     9: 
+    10: <% @restaurant.each do |restaurant| %>
+    11:   <%= restaurant.name %>
+    12: <% end %>
+  
+app/views/restaurant/show.html.erb:10:in `_app_views_restaurant_show_html_erb___1992078020501767575_16240'
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mEmployee Load (3.7ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/" for ::1 at 2021-10-14 08:37:22 -0600
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/dididodson/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 61ms (Views: 60.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 08:37:25 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (1.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:5
+  Rendered restaurant/index.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 58ms (Views: 36.6ms | ActiveRecord: 12.4ms)
+
+
+Started GET "/restaurant/1" for ::1 at 2021-10-14 08:37:27 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_controller.rb:25
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     7: <p><%='Created At:'%> <%= @restaurant.created_at %></p>
+     8: <p><%='Updated At:'%> <%= @restaurant.updated_at %></p>
+     9: 
+    10: <% @employee.each do |emp| %>
+    11:   <% link_to "Employees", "/restaurant/#{employee.restaurant_id}/employee" %>
+    12: <% end %>  
+  
+app/views/restaurant/show.html.erb:10:in `_app_views_restaurant_show_html_erb__3967771246473012155_15120'
+Started GET "/restaurant/1" for ::1 at 2021-10-14 08:37:44 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_controller.rb:25
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     7: <p><%='Created At:'%> <%= @restaurant.created_at %></p>
+     8: <p><%='Updated At:'%> <%= @restaurant.updated_at %></p>
+     9: 
+    10: <% employee.each do |emp| %>
+    11:   <% link_to "Employees", "/restaurant/#{employee.restaurant_id}/employee" %>
+    12: <% end %>
+  
+app/views/restaurant/show.html.erb:10:in `_app_views_restaurant_show_html_erb__3967771246473012155_15680'
+Started GET "/restaurant/1" for ::1 at 2021-10-14 08:37:45 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_controller.rb:25
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (88.5ms)
+Completed 500 Internal Server Error in 93ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `employee' for #<#<Class:0x000000012a7293d8>:0x000000012d135c08>
+Did you mean?  employee_url):
+     7: <p><%='Created At:'%> <%= @restaurant.created_at %></p>
+     8: <p><%='Updated At:'%> <%= @restaurant.updated_at %></p>
+     9: 
+    10: <% employee.each do |emp| %>
+    11:   <% link_to "Employees", "/restaurant/#{employee.restaurant_id}/employee" %>
+    12: <% end %>
+  
+app/views/restaurant/show.html.erb:10:in `_app_views_restaurant_show_html_erb__3967771246473012155_16240'
+Started GET "/restaurant/1" for ::1 at 2021-10-14 08:38:42 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.7ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_controller.rb:25
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (67.1ms)
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `employee' for #<#<Class:0x000000012a7293d8>:0x0000000119af72a0>
+Did you mean?  employee_url):
+     7: <p><%='Created At:'%> <%= @restaurant.created_at %></p>
+     8: <p><%='Updated At:'%> <%= @restaurant.updated_at %></p>
+     9: 
+    10: <% @employee.each do |emp| %>
+    11:   <% link_to "Employees", "/restaurant/#{emp.restaurant_id}/employee" %>
+    12: <% end %>
+  
+app/views/restaurant/show.html.erb:10:in `_app_views_restaurant_show_html_erb__3967771246473012155_16880'
+Started GET "/restaurant/1" for ::1 at 2021-10-14 08:38:43 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_controller.rb:25
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     7: <p><%='Created At:'%> <%= @restaurant.created_at %></p>
+     8: <p><%='Updated At:'%> <%= @restaurant.updated_at %></p>
+     9: 
+    10: <% @employee.each do |emp| %>
+    11:   <% link_to "Employees", "/restaurant/#{emp.restaurant_id}/employee" %>
+    12: <% end %>
+  
+app/views/restaurant/show.html.erb:10:in `_app_views_restaurant_show_html_erb__3967771246473012155_17440'
+Started GET "/" for ::1 at 2021-10-14 11:55:15 -0600
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/dididodson/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 67ms (Views: 65.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 11:55:18 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (1.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:5
+  Rendered restaurant/index.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 49ms (Views: 30.1ms | ActiveRecord: 11.9ms)
+
+
+Started GET "/restaurant/new" for ::1 at 2021-10-14 11:55:19 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/employee" for ::1 at 2021-10-14 11:55:30 -0600
+Processing by EmployeeController#index as HTML
+  Rendering employee/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employee/index.html.erb:3
+  Rendered employee/index.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 35ms (Views: 18.5ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/employee/new" for ::1 at 2021-10-14 11:55:33 -0600
+Processing by EmployeeController#new as HTML
+  Rendering employee/new.html.erb within layouts/application
+  Rendered employee/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/employee/1" for ::1 at 2021-10-14 11:57:31 -0600
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/dididodson/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by EmployeeController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (0.9ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employee_controller.rb:26
+Completed 404 Not Found in 15ms (ActiveRecord: 11.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Employee with 'id'=1):
+  
+app/controllers/employee_controller.rb:26:in `show'
+Started GET "/employee/2" for ::1 at 2021-10-14 11:57:36 -0600
+Processing by EmployeeController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employee_controller.rb:26
+  Rendering employee/show.html.erb within layouts/application
+  Rendered employee/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 119ms (Views: 109.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/employee" for ::1 at 2021-10-14 11:58:21 -0600
+Processing by EmployeeController#index as HTML
+  Rendering employee/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employee/index.html.erb:3
+  Rendered employee/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/employee" for ::1 at 2021-10-14 11:58:36 -0600
+Processing by EmployeeController#index as HTML
+  Rendering employee/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employee/index.html.erb:3
+  Rendered employee/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 25ms (Views: 23.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/employee" for ::1 at 2021-10-14 11:58:43 -0600
+Processing by EmployeeController#index as HTML
+  Rendering employee/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employee/index.html.erb:3
+  Rendered employee/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 20ms (Views: 18.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employee" for ::1 at 2021-10-14 11:59:30 -0600
+Processing by EmployeeController#index as HTML
+  Rendering employee/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employee/index.html.erb:6
+  Rendered employee/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/employee" for ::1 at 2021-10-14 12:08:46 -0600
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/dididodson/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by EmployeeController#index as HTML
+  Rendering employee/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employee/index.html.erb:6
+  Rendered employee/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 100ms (Views: 89.5ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/" for ::1 at 2021-10-14 12:08:50 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 12:08:51 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (1.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:5
+  Rendered restaurant/index.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 28ms (Views: 13.2ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/restaurant/new" for ::1 at 2021-10-14 12:08:53 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurant/new" for ::1 at 2021-10-14 12:13:37 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 12:18:09 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:5
+  Rendered restaurant/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 20ms (Views: 17.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 12:29:35 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (4.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:5
+  Rendered restaurant/index.html.erb within layouts/application (29.2ms)
+Completed 200 OK in 47ms (Views: 20.9ms | ActiveRecord: 21.4ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 12:29:36 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:5
+  Rendered restaurant/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 18ms (Views: 15.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurant/1" for ::1 at 2021-10-14 12:29:37 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_controller.rb:25
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 21ms (Views: 16.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/restaurant/new" for ::1 at 2021-10-14 12:29:41 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurant/1" for ::1 at 2021-10-14 12:30:05 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_controller.rb:25
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 19ms (Views: 16.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurant/2" for ::1 at 2021-10-14 12:30:08 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_controller.rb:25
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 17ms (Views: 14.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-10-14 12:30:25 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 17ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 12:32:04 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:7
+  Rendered restaurant/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 17ms (Views: 15.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 12:32:55 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.8ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:7
+  Rendered restaurant/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 12:33:10 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:7
+  Rendered restaurant/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/restaurant/new" for ::1 at 2021-10-14 12:33:41 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/restaurant" for ::1 at 2021-10-14 12:33:56 -0600
+Processing by RestaurantController#create as HTML
+  Parameters: {"authenticity_token"=>"/oYkQcl56bN0mLnZPhDdsNxVSi0zHlv+Nk3p5qU/wfEc/2CFs8Y3RVHY5eZ4mFNmICVAZDJLOhXN9HbHqCXqNA==", "restaurant"=>{"name"=>"El Tapatio", "seats"=>"400", "serve_liquor"=>"true"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/restaurant_controller.rb:19
+  [1m[36mRestaurant Create (1.6ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "El Tapatio"], ["created_at", "2021-10-14 18:33:56.485664"], ["updated_at", "2021-10-14 18:33:56.485664"], ["seats", 400], ["serve_liquor", true]]
+  ↳ app/controllers/restaurant_controller.rb:19
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/restaurant_controller.rb:19
+Redirected to http://localhost:3000/restaurant
+Completed 302 Found in 9ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 12:33:56 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:7
+  Rendered restaurant/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 12:34:18 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:7
+  Rendered restaurant/index.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 36ms (Views: 19.9ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 12:34:19 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:7
+  Rendered restaurant/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 12:34:54 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:7
+  Rendered restaurant/index.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 33ms (Views: 19.4ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 12:35:27 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:7
+  Rendered restaurant/index.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 38ms (Views: 19.6ms | ActiveRecord: 13.2ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 12:35:27 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:7
+  Rendered restaurant/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurant/new" for ::1 at 2021-10-14 12:35:29 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 18ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurant/" for ::1 at 2021-10-14 12:35:32 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:7
+  Rendered restaurant/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurant/" for ::1 at 2021-10-14 12:35:58 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:7
+  Rendered restaurant/index.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 31ms (Views: 14.8ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/restaurant/" for ::1 at 2021-10-14 12:35:58 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:7
+  Rendered restaurant/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2021-10-14 12:36:01 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 12:36:03 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:7
+  Rendered restaurant/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 12:36:23 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:7
+  Rendered restaurant/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 32ms (Views: 17.0ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 12:36:24 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:7
+  Rendered restaurant/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 12:37:07 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.9ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:7
+  Rendered restaurant/index.html.erb within layouts/application (14.5ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (The method .order() must contain arguments.):
+     5: <h1>Restaurants</h1>
+     6: 
+     7: <% @restaurant.each do |restaurant| %>
+     8:   <% restaurant.sort %>
+     9:   <a href="/restaurant/<%=restaurant.id%>"><h3><%= restaurant.name %></h3></a>
+    10:   <p> <%=restaurant.created_at %></p>
+    11: <% end %>
+  
+app/models/restaurant.rb:5:in `sort'
+app/views/restaurant/index.html.erb:8:in `block in _app_views_restaurant_index_html_erb__2503987109670340934_36760'
+app/views/restaurant/index.html.erb:7:in `_app_views_restaurant_index_html_erb__2503987109670340934_36760'
+Started GET "/restaurant" for ::1 at 2021-10-14 12:37:07 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:7
+  Rendered restaurant/index.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (The method .order() must contain arguments.):
+     5: <h1>Restaurants</h1>
+     6: 
+     7: <% @restaurant.each do |restaurant| %>
+     8:   <% restaurant.sort %>
+     9:   <a href="/restaurant/<%=restaurant.id%>"><h3><%= restaurant.name %></h3></a>
+    10:   <p> <%=restaurant.created_at %></p>
+    11: <% end %>
+  
+app/models/restaurant.rb:5:in `sort'
+app/views/restaurant/index.html.erb:8:in `block in _app_views_restaurant_index_html_erb__2503987109670340934_37280'
+app/views/restaurant/index.html.erb:7:in `_app_views_restaurant_index_html_erb__2503987109670340934_37280'
+Started GET "/restaurant" for ::1 at 2021-10-14 12:37:17 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:7
+  Rendered restaurant/index.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (The method .order() must contain arguments.):
+     5: <h1>Restaurants</h1>
+     6: 
+     7: <% @restaurant.each do |restaurant| %>
+     8:   <% restaurant.sort %>
+     9:   <a href="/restaurant/<%=restaurant.id%>"><h3><%= restaurant.name %></h3></a>
+    10:   <p> <%=restaurant.created_at %></p>
+    11: <% end %>
+  
+app/models/restaurant.rb:5:in `sort'
+app/views/restaurant/index.html.erb:8:in `block in _app_views_restaurant_index_html_erb__2503987109670340934_37800'
+app/views/restaurant/index.html.erb:7:in `_app_views_restaurant_index_html_erb__2503987109670340934_37800'
+Started GET "/restaurant" for ::1 at 2021-10-14 12:37:18 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:7
+  Rendered restaurant/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 33ms (Views: 17.9ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 12:37:21 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:7
+  Rendered restaurant/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 19ms (Views: 17.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 12:38:14 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:7
+  Rendered restaurant/index.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 31ms (Views: 16.9ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 12:38:14 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:7
+  Rendered restaurant/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2021-10-14 12:38:16 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 12:38:17 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:7
+  Rendered restaurant/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 12:38:40 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:7
+  [1m[36mRestaurant Load (9.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" ORDER BY "restaurants"."created_at" ASC[0m
+  ↳ app/models/restaurant.rb:5
+  [1m[36mCACHE Restaurant Load (0.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" ORDER BY "restaurants"."created_at" ASC[0m
+  ↳ app/models/restaurant.rb:5
+  [1m[36mCACHE Restaurant Load (0.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" ORDER BY "restaurants"."created_at" ASC[0m
+  ↳ app/models/restaurant.rb:5
+  Rendered restaurant/index.html.erb within layouts/application (27.8ms)
+Completed 200 OK in 47ms (Views: 21.5ms | ActiveRecord: 19.8ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 12:38:42 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:7
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" ORDER BY "restaurants"."created_at" ASC[0m
+  ↳ app/models/restaurant.rb:5
+  [1m[36mCACHE Restaurant Load (0.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" ORDER BY "restaurants"."created_at" ASC[0m
+  ↳ app/models/restaurant.rb:5
+  [1m[36mCACHE Restaurant Load (0.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" ORDER BY "restaurants"."created_at" ASC[0m
+  ↳ app/models/restaurant.rb:5
+  Rendered restaurant/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 23ms (Views: 20.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 12:38:44 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:7
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" ORDER BY "restaurants"."created_at" ASC[0m
+  ↳ app/models/restaurant.rb:5
+  [1m[36mCACHE Restaurant Load (0.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" ORDER BY "restaurants"."created_at" ASC[0m
+  ↳ app/models/restaurant.rb:5
+  [1m[36mCACHE Restaurant Load (0.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" ORDER BY "restaurants"."created_at" ASC[0m
+  ↳ app/models/restaurant.rb:5
+  Rendered restaurant/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 12:38:45 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:7
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" ORDER BY "restaurants"."created_at" ASC[0m
+  ↳ app/models/restaurant.rb:5
+  [1m[36mCACHE Restaurant Load (0.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" ORDER BY "restaurants"."created_at" ASC[0m
+  ↳ app/models/restaurant.rb:5
+  [1m[36mCACHE Restaurant Load (0.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" ORDER BY "restaurants"."created_at" ASC[0m
+  ↳ app/models/restaurant.rb:5
+  Rendered restaurant/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 12:38:45 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:7
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" ORDER BY "restaurants"."created_at" ASC[0m
+  ↳ app/models/restaurant.rb:5
+  [1m[36mCACHE Restaurant Load (0.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" ORDER BY "restaurants"."created_at" ASC[0m
+  ↳ app/models/restaurant.rb:5
+  [1m[36mCACHE Restaurant Load (0.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" ORDER BY "restaurants"."created_at" ASC[0m
+  ↳ app/models/restaurant.rb:5
+  Rendered restaurant/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 12:39:15 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:6
+  Rendered restaurant/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 12:39:15 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:6
+  Rendered restaurant/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 12:39:17 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:6
+  Rendered restaurant/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 12:39:51 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:6
+  Rendered restaurant/index.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 26ms (Views: 13.2ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 12:39:53 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:6
+  Rendered restaurant/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2021-10-14 12:40:26 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 31ms (Views: 29.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 12:40:27 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.8ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:6
+  Rendered restaurant/index.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 43ms (Views: 26.1ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 12:41:34 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:7
+  Rendered restaurant/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 20ms (Views: 9.5ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 12:41:34 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:7
+  Rendered restaurant/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 12:42:34 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:7
+  Rendered restaurant/index.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 35ms (Views: 18.4ms | ActiveRecord: 12.5ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 12:43:54 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:7
+  Rendered restaurant/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 30ms (Views: 16.3ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 12:43:56 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:7
+  Rendered restaurant/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 12:49:11 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:6
+  Rendered restaurant/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 26ms (Views: 12.2ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 12:49:12 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:6
+  Rendered restaurant/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 12:49:14 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:6
+  Rendered restaurant/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 12:49:30 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  Rendered restaurant/index.html.erb within layouts/application (6.2ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Self):
+    3: <h2><a href="/restaurant/new">Add New Restaurant</a></h2>
+    4: 
+    5: <h1>Restaurants</h1>
+    6: <% Self.sort %>
+    7: 
+    8: <% @restaurant.each do |restaurant| %>
+    9:   <a href="/restaurant/<%=restaurant.id%>"><h3><%= restaurant.name %></h3></a>
+  
+app/views/restaurant/index.html.erb:6:in `_app_views_restaurant_index_html_erb__2503987109670340934_68840'
+Started GET "/restaurant" for ::1 at 2021-10-14 12:49:30 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  Rendered restaurant/index.html.erb within layouts/application (8.6ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Self):
+    3: <h2><a href="/restaurant/new">Add New Restaurant</a></h2>
+    4: 
+    5: <h1>Restaurants</h1>
+    6: <% Self.sort %>
+    7: 
+    8: <% @restaurant.each do |restaurant| %>
+    9:   <a href="/restaurant/<%=restaurant.id%>"><h3><%= restaurant.name %></h3></a>
+  
+app/views/restaurant/index.html.erb:6:in `_app_views_restaurant_index_html_erb__2503987109670340934_69360'
+Started GET "/" for ::1 at 2021-10-14 12:49:49 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 12:49:50 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  Rendered restaurant/index.html.erb within layouts/application (8.4ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `sort' for #<Class:0x0000000119cd39c0>):
+    3: <h2><a href="/restaurant/new">Add New Restaurant</a></h2>
+    4: 
+    5: <h1>Restaurants</h1>
+    6: <% Restaurant.sort %>
+    7: 
+    8: <% @restaurant.each do |restaurant| %>
+    9:   <a href="/restaurant/<%=restaurant.id%>"><h3><%= restaurant.name %></h3></a>
+  
+app/views/restaurant/index.html.erb:6:in `_app_views_restaurant_index_html_erb__2503987109670340934_69960'
+Started GET "/restaurant" for ::1 at 2021-10-14 12:50:07 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:7
+  Rendered restaurant/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 12:50:49 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:7
+  Rendered restaurant/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 12:50:51 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:7
+  Rendered restaurant/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 12:52:33 -0600
+Processing by RestaurantController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/restaurant_controller.rb:4:in `index'
+Started GET "/restaurant" for ::1 at 2021-10-14 12:52:49 -0600
+Processing by RestaurantController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/restaurant_controller.rb:4:in `index'
+Started GET "/restaurant" for ::1 at 2021-10-14 12:52:50 -0600
+Processing by RestaurantController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/restaurant_controller.rb:4:in `index'
+Started GET "/restaurant" for ::1 at 2021-10-14 12:52:52 -0600
+Processing by RestaurantController#index as HTML
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/restaurant_controller.rb:4:in `index'
+Started GET "/restaurant" for ::1 at 2021-10-14 12:53:05 -0600
+Processing by RestaurantController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/restaurant_controller.rb:4:in `index'
+Started GET "/restaurant" for ::1 at 2021-10-14 12:53:06 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:7
+  Rendered restaurant/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 31ms (Views: 16.6ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 12:53:17 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:7
+  Rendered restaurant/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 12:53:17 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurant/index.html.erb:7
+  Rendered restaurant/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 12:53:18 -0600
+Processing by RestaurantController#index as HTML
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurant_controller.rb:4
+  Rendering restaurant/index.html.erb within layouts/application
+  Rendered restaurant/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 34ms (Views: 13.5ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 12:53:18 -0600
+Processing by RestaurantController#index as HTML
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurant_controller.rb:4
+  Rendering restaurant/index.html.erb within layouts/application
+  Rendered restaurant/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 18ms (Views: 15.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurant/new" for ::1 at 2021-10-14 13:03:19 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurant/3" for ::1 at 2021-10-14 13:14:18 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mRestaurant Load (0.7ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_controller.rb:25
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 70ms (Views: 19.1ms | ActiveRecord: 16.2ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 13:23:54 -0600
+Processing by RestaurantController#index as HTML
+  [1m[36mRestaurant Load (1.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurant_controller.rb:4
+  Rendering restaurant/index.html.erb within layouts/application
+  Rendered restaurant/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 27ms (Views: 22.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/restaurant/3" for ::1 at 2021-10-14 13:23:56 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_controller.rb:25
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 18ms (Views: 15.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/restaurant/3/employee" for ::1 at 2021-10-14 13:23:57 -0600
+Processing by RestaurantEmployeesController#index as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_employees_controller.rb:3
+  Rendering restaurant_employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."restaurant_id" = $1[0m  [["restaurant_id", 3]]
+  ↳ app/views/restaurant_employees/index.html.erb:3
+  Rendered restaurant_employees/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 34ms (Views: 12.3ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 13:23:59 -0600
+Processing by RestaurantController#index as HTML
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurant_controller.rb:4
+  Rendering restaurant/index.html.erb within layouts/application
+  Rendered restaurant/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 18ms (Views: 15.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurant/2" for ::1 at 2021-10-14 13:24:00 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_controller.rb:25
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 17ms (Views: 14.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurant/2/employee" for ::1 at 2021-10-14 13:24:01 -0600
+Processing by RestaurantEmployeesController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_employees_controller.rb:3
+  Rendering restaurant_employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."restaurant_id" = $1[0m  [["restaurant_id", 2]]
+  ↳ app/views/restaurant_employees/index.html.erb:3
+  Rendered restaurant_employees/index.html.erb within layouts/application (26.4ms)
+Completed 200 OK in 44ms (Views: 32.8ms | ActiveRecord: 9.7ms)
+
+
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (6.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (30.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "relational_rails_development"[0m
+  ↳ bin/rails:4
+  [1m[35m (31.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "relational_rails_test"[0m
+  ↳ bin/rails:4
+  [1m[35m (122.2ms)[0m  [1m[35mCREATE DATABASE "relational_rails_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (65.3ms)[0m  [1m[35mCREATE DATABASE "relational_rails_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (11.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:4
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6619517006900186970)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateRestaurant (20211012214945)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (14.9ms)[0m  [1m[35mCREATE TABLE "restaurants" ("id" bigserial primary key, "name" character varying, "seats" integer, "serve_liquor" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20211012214945_create_restaurant.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211012214945"]]
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateBrewery (20211012231602)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "breweries" ("id" bigserial primary key, "name" character varying, "number_of_employees" integer, "employee_owned" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20211012231602_create_brewery.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211012231602"]]
+  ↳ bin/rails:4
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateEmployee (20211013203340)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "employees" ("id" bigserial primary key, "name" character varying, "weekly_hours" integer, "over_21" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20211013203340_create_employee.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (8.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211013203340"]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddRestaurantToEmployee (20211013203716)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (5.7ms)[0m  [1m[35mALTER TABLE "employees" ADD "restaurant_id" bigint[0m
+  ↳ db/migrate/20211013203716_add_restaurant_to_employee.rb:3
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_employees_on_restaurant_id" ON "employees"  ("restaurant_id")[0m
+  ↳ db/migrate/20211013203716_add_restaurant_to_employee.rb:3
+  [1m[35m (7.8ms)[0m  [1m[35mALTER TABLE "employees" ADD CONSTRAINT "fk_rails_49811d7840"
+FOREIGN KEY ("restaurant_id")
+  REFERENCES "restaurants" ("id")
+[0m
+  ↳ db/migrate/20211013203716_add_restaurant_to_employee.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211013203716"]]
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateBeer (20211013231526)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (13.1ms)[0m  [1m[35mCREATE TABLE "beers" ("id" bigserial primary key, "name" character varying, "vendor_lead_time" integer, "bottled" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20211013231526_create_beer.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211013231526"]]
+  ↳ bin/rails:4
+  [1m[35m (8.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddBreweryToBeer (20211013231643)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (20.1ms)[0m  [1m[35mALTER TABLE "beers" ADD "brewery_id" bigint[0m
+  ↳ db/migrate/20211013231643_add_brewery_to_beer.rb:3
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "index_beers_on_brewery_id" ON "beers"  ("brewery_id")[0m
+  ↳ db/migrate/20211013231643_add_brewery_to_beer.rb:3
+  [1m[35m (15.9ms)[0m  [1m[35mALTER TABLE "beers" ADD CONSTRAINT "fk_rails_86b81df81e"
+FOREIGN KEY ("brewery_id")
+  REFERENCES "breweries" ("id")
+[0m
+  ↳ db/migrate/20211013231643_add_brewery_to_beer.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211013231643"]]
+  ↳ bin/rails:4
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Create (3.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-10-14 19:42:19.047611"], ["updated_at", "2021-10-14 19:42:19.047611"]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6619517006900186970)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Started GET "/" for ::1 at 2021-10-14 13:59:13 -0600
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/dididodson/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 58ms (Views: 57.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 14:00:09 -0600
+Processing by RestaurantController#index as HTML
+  [1m[36mRestaurant Load (1.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurant_controller.rb:4
+  Rendering restaurant/index.html.erb within layouts/application
+  Rendered restaurant/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 22ms (Views: 9.0ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/restaurant/new" for ::1 at 2021-10-14 14:00:13 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/restaurant" for ::1 at 2021-10-14 14:00:20 -0600
+Processing by RestaurantController#create as HTML
+  Parameters: {"authenticity_token"=>"t83904kRexulKqFWeZUHVESp6Q1hKWbf5ykgRimcGW1VtLkX866l7YBq/Wk/HYmCuNnjRGB8BzQckL9nJIYyqA==", "restaurant"=>{"name"=>"Taste of Bombay", "seats"=>"35", "serve_liquor"=>"true"}, "Submit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/restaurant_controller.rb:19
+  [1m[36mRestaurant Create (2.3ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "seats", "serve_liquor", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taste of Bombay"], ["seats", 35], ["serve_liquor", true], ["created_at", "2021-10-14 20:00:20.074553"], ["updated_at", "2021-10-14 20:00:20.074553"]]
+  ↳ app/controllers/restaurant_controller.rb:19
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/restaurant_controller.rb:19
+Redirected to http://localhost:3000/restaurant
+Completed 302 Found in 22ms (ActiveRecord: 12.0ms)
+
+
+Started GET "/restaurant" for ::1 at 2021-10-14 14:00:20 -0600
+Processing by RestaurantController#index as HTML
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurant_controller.rb:4
+  Rendering restaurant/index.html.erb within layouts/application
+  Rendered restaurant/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 17ms (Views: 14.2ms | ActiveRecord: 0.4ms)
+
+

@@ -396,3 +396,1241 @@ Processing by RestaurantEmployeesController#index as HTML
   Rendered restaurant_employees/index.html.erb within layouts/application (6.4ms)
 Completed 200 OK in 68ms (Views: 61.0ms | ActiveRecord: 5.6ms)
   [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.8ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 17:53:49.269850"], ["updated_at", "2021-10-14 17:53:49.269850"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Load (5.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mEmployee Create (8.9ms)[0m  [1m[32mINSERT INTO "employees" ("name", "weekly_hours", "over_21", "created_at", "updated_at", "restaurant_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bob Smith"], ["weekly_hours", 40], ["over_21", true], ["created_at", "2021-10-14 17:53:49.288531"], ["updated_at", "2021-10-14 17:53:49.288531"], ["restaurant_id", 6]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/employee" for 127.0.0.1 at 2021-10-14 11:53:49 -0600
+Processing by EmployeeController#index as HTML
+  Rendering employee/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employee/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 81ms (Views: 79.2ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.4ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 17:53:49.418306"], ["updated_at", "2021-10-14 17:53:49.418306"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mEmployee Create (0.4ms)[0m  [1m[32mINSERT INTO "employees" ("name", "weekly_hours", "over_21", "created_at", "updated_at", "restaurant_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bob Smith"], ["weekly_hours", 40], ["over_21", true], ["created_at", "2021-10-14 17:53:49.420884"], ["updated_at", "2021-10-14 17:53:49.420884"], ["restaurant_id", 7]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/employee/7" for 127.0.0.1 at 2021-10-14 11:53:49 -0600
+Processing by EmployeeController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering employee/show.html.erb within layouts/application
+  Rendered employee/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.3ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 17:53:49.427077"], ["updated_at", "2021-10-14 17:53:49.427077"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mEmployee Create (0.4ms)[0m  [1m[32mINSERT INTO "employees" ("name", "weekly_hours", "over_21", "created_at", "updated_at", "restaurant_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bob Smith"], ["weekly_hours", 40], ["over_21", true], ["created_at", "2021-10-14 17:53:49.428581"], ["updated_at", "2021-10-14 17:53:49.428581"], ["restaurant_id", 8]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/employee/new" for 127.0.0.1 at 2021-10-14 11:53:49 -0600
+Processing by EmployeeController#new as HTML
+  Rendering employee/new.html.erb within layouts/application
+  Rendered employee/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.4ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 17:54:22.946555"], ["updated_at", "2021-10-14 17:54:22.946555"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mEmployee Create (0.4ms)[0m  [1m[32mINSERT INTO "employees" ("name", "weekly_hours", "over_21", "created_at", "updated_at", "restaurant_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bob Smith"], ["weekly_hours", 40], ["over_21", true], ["created_at", "2021-10-14 17:54:22.961498"], ["updated_at", "2021-10-14 17:54:22.961498"], ["restaurant_id", 9]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/employee" for 127.0.0.1 at 2021-10-14 11:54:22 -0600
+Processing by EmployeeController#index as HTML
+  Rendering employee/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employee/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 60ms (Views: 59.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.5ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 17:54:23.059319"], ["updated_at", "2021-10-14 17:54:23.059319"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mEmployee Create (0.4ms)[0m  [1m[32mINSERT INTO "employees" ("name", "weekly_hours", "over_21", "created_at", "updated_at", "restaurant_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bob Smith"], ["weekly_hours", 40], ["over_21", true], ["created_at", "2021-10-14 17:54:23.061042"], ["updated_at", "2021-10-14 17:54:23.061042"], ["restaurant_id", 10]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/employee/10" for 127.0.0.1 at 2021-10-14 11:54:23 -0600
+Processing by EmployeeController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering employee/show.html.erb within layouts/application
+  Rendered employee/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.5ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 17:54:23.066466"], ["updated_at", "2021-10-14 17:54:23.066466"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mEmployee Create (0.6ms)[0m  [1m[32mINSERT INTO "employees" ("name", "weekly_hours", "over_21", "created_at", "updated_at", "restaurant_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bob Smith"], ["weekly_hours", 40], ["over_21", true], ["created_at", "2021-10-14 17:54:23.068069"], ["updated_at", "2021-10-14 17:54:23.068069"], ["restaurant_id", 11]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/employee/new" for 127.0.0.1 at 2021-10-14 11:54:23 -0600
+Processing by EmployeeController#new as HTML
+  Rendering employee/new.html.erb within layouts/application
+  Rendered employee/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 2ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.7ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 17:54:36.481429"], ["updated_at", "2021-10-14 17:54:36.481429"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mEmployee Create (0.5ms)[0m  [1m[32mINSERT INTO "employees" ("name", "weekly_hours", "over_21", "created_at", "updated_at", "restaurant_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bob Smith"], ["weekly_hours", 40], ["over_21", true], ["created_at", "2021-10-14 17:54:36.496898"], ["updated_at", "2021-10-14 17:54:36.496898"], ["restaurant_id", 12]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/employee" for 127.0.0.1 at 2021-10-14 11:54:36 -0600
+Processing by EmployeeController#index as HTML
+  Rendering employee/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employee/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 55ms (Views: 53.9ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.4ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 17:54:36.588234"], ["updated_at", "2021-10-14 17:54:36.588234"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mEmployee Create (0.5ms)[0m  [1m[32mINSERT INTO "employees" ("name", "weekly_hours", "over_21", "created_at", "updated_at", "restaurant_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bob Smith"], ["weekly_hours", 40], ["over_21", true], ["created_at", "2021-10-14 17:54:36.589688"], ["updated_at", "2021-10-14 17:54:36.589688"], ["restaurant_id", 13]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/employee/13" for 127.0.0.1 at 2021-10-14 11:54:36 -0600
+Processing by EmployeeController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering employee/show.html.erb within layouts/application
+  Rendered employee/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.4ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 17:54:36.595266"], ["updated_at", "2021-10-14 17:54:36.595266"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mEmployee Create (0.4ms)[0m  [1m[32mINSERT INTO "employees" ("name", "weekly_hours", "over_21", "created_at", "updated_at", "restaurant_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bob Smith"], ["weekly_hours", 40], ["over_21", true], ["created_at", "2021-10-14 17:54:36.596586"], ["updated_at", "2021-10-14 17:54:36.596586"], ["restaurant_id", 14]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/employee/new" for 127.0.0.1 at 2021-10-14 11:54:36 -0600
+Processing by EmployeeController#new as HTML
+  Rendering employee/new.html.erb within layouts/application
+  Rendered employee/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.3ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 17:54:49.688874"], ["updated_at", "2021-10-14 17:54:49.688874"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mEmployee Create (0.4ms)[0m  [1m[32mINSERT INTO "employees" ("name", "weekly_hours", "over_21", "created_at", "updated_at", "restaurant_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bob Smith"], ["weekly_hours", 40], ["over_21", true], ["created_at", "2021-10-14 17:54:49.701017"], ["updated_at", "2021-10-14 17:54:49.701017"], ["restaurant_id", 15]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/employee" for 127.0.0.1 at 2021-10-14 11:54:49 -0600
+Processing by EmployeeController#index as HTML
+  Rendering employee/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employee/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 55ms (Views: 54.4ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.3ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 17:54:49.795748"], ["updated_at", "2021-10-14 17:54:49.795748"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mEmployee Create (0.4ms)[0m  [1m[32mINSERT INTO "employees" ("name", "weekly_hours", "over_21", "created_at", "updated_at", "restaurant_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bob Smith"], ["weekly_hours", 40], ["over_21", true], ["created_at", "2021-10-14 17:54:49.797288"], ["updated_at", "2021-10-14 17:54:49.797288"], ["restaurant_id", 16]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/employee/16" for 127.0.0.1 at 2021-10-14 11:54:49 -0600
+Processing by EmployeeController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  Rendering employee/show.html.erb within layouts/application
+  Rendered employee/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.2ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 17:54:49.802844"], ["updated_at", "2021-10-14 17:54:49.802844"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mEmployee Create (0.3ms)[0m  [1m[32mINSERT INTO "employees" ("name", "weekly_hours", "over_21", "created_at", "updated_at", "restaurant_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bob Smith"], ["weekly_hours", 40], ["over_21", true], ["created_at", "2021-10-14 17:54:49.804088"], ["updated_at", "2021-10-14 17:54:49.804088"], ["restaurant_id", 17]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/employee/new" for 127.0.0.1 at 2021-10-14 11:54:49 -0600
+Processing by EmployeeController#new as HTML
+  Rendering employee/new.html.erb within layouts/application
+  Rendered employee/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.5ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 17:56:53.721872"], ["updated_at", "2021-10-14 17:56:53.721872"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mEmployee Create (0.4ms)[0m  [1m[32mINSERT INTO "employees" ("name", "weekly_hours", "over_21", "created_at", "updated_at", "restaurant_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bob Smith"], ["weekly_hours", 40], ["over_21", true], ["created_at", "2021-10-14 17:56:53.734160"], ["updated_at", "2021-10-14 17:56:53.734160"], ["restaurant_id", 18]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/employee" for 127.0.0.1 at 2021-10-14 11:56:53 -0600
+Processing by EmployeeController#index as HTML
+  Rendering employee/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employee/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 55ms (Views: 53.7ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.3ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 17:56:53.825773"], ["updated_at", "2021-10-14 17:56:53.825773"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mEmployee Create (0.7ms)[0m  [1m[32mINSERT INTO "employees" ("name", "weekly_hours", "over_21", "created_at", "updated_at", "restaurant_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bob Smith"], ["weekly_hours", 40], ["over_21", true], ["created_at", "2021-10-14 17:56:53.830133"], ["updated_at", "2021-10-14 17:56:53.830133"], ["restaurant_id", 19]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/employee/19" for 127.0.0.1 at 2021-10-14 11:56:53 -0600
+Processing by EmployeeController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  Rendering employee/show.html.erb within layouts/application
+  Rendered employee/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.3ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 17:56:53.836643"], ["updated_at", "2021-10-14 17:56:53.836643"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mEmployee Create (1.4ms)[0m  [1m[32mINSERT INTO "employees" ("name", "weekly_hours", "over_21", "created_at", "updated_at", "restaurant_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bob Smith"], ["weekly_hours", 40], ["over_21", true], ["created_at", "2021-10-14 17:56:53.837995"], ["updated_at", "2021-10-14 17:56:53.837995"], ["restaurant_id", 20]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/employee/new" for 127.0.0.1 at 2021-10-14 11:56:53 -0600
+Processing by EmployeeController#new as HTML
+  Rendering employee/new.html.erb within layouts/application
+  Rendered employee/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.4ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 18:03:44.960390"], ["updated_at", "2021-10-14 18:03:44.960390"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/restaurant" for 127.0.0.1 at 2021-10-14 12:03:44 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurant/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 61ms (Views: 59.6ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.4ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 18:03:45.067505"], ["updated_at", "2021-10-14 18:03:45.067505"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/restaurant/22" for 127.0.0.1 at 2021-10-14 12:03:45 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+Started GET "/restaurant/new" for 127.0.0.1 at 2021-10-14 12:03:45 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.4ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 18:07:41.283238"], ["updated_at", "2021-10-14 18:07:41.283238"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/restaurant" for 127.0.0.1 at 2021-10-14 12:07:41 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurant/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 56ms (Views: 55.2ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (2.9ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 18:07:41.377389"], ["updated_at", "2021-10-14 18:07:41.377389"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/restaurant/24" for 127.0.0.1 at 2021-10-14 12:07:41 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/restaurant/new" for 127.0.0.1 at 2021-10-14 12:07:41 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.4ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 18:07:41.394566"], ["updated_at", "2021-10-14 18:07:41.394566"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/restaurant/new" for 127.0.0.1 at 2021-10-14 12:07:41 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.6ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 18:08:00.472148"], ["updated_at", "2021-10-14 18:08:00.472148"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/restaurant" for 127.0.0.1 at 2021-10-14 12:08:00 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurant/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 57ms (Views: 55.6ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.3ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 18:08:00.567512"], ["updated_at", "2021-10-14 18:08:00.567512"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/restaurant/27" for 127.0.0.1 at 2021-10-14 12:08:00 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/restaurant/new" for 127.0.0.1 at 2021-10-14 12:08:00 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.3ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 18:08:00.581171"], ["updated_at", "2021-10-14 18:08:00.581171"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/restaurant/new" for 127.0.0.1 at 2021-10-14 12:08:00 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.4ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 18:09:39.379179"], ["updated_at", "2021-10-14 18:09:39.379179"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/restaurant" for 127.0.0.1 at 2021-10-14 12:09:39 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurant/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 55ms (Views: 54.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.3ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 18:09:39.475295"], ["updated_at", "2021-10-14 18:09:39.475295"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/restaurant/30" for 127.0.0.1 at 2021-10-14 12:09:39 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+Started GET "/restaurant/new" for 127.0.0.1 at 2021-10-14 12:09:39 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.3ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 18:09:39.486836"], ["updated_at", "2021-10-14 18:09:39.486836"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/restaurant/new" for 127.0.0.1 at 2021-10-14 12:09:39 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.4ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 18:10:03.897957"], ["updated_at", "2021-10-14 18:10:03.897957"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/restaurant" for 127.0.0.1 at 2021-10-14 12:10:03 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurant/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 56ms (Views: 55.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.5ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 18:10:03.990417"], ["updated_at", "2021-10-14 18:10:03.990417"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/restaurant/33" for 127.0.0.1 at 2021-10-14 12:10:03 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+Started GET "/restaurant/new" for 127.0.0.1 at 2021-10-14 12:10:03 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.3ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 18:10:04.001862"], ["updated_at", "2021-10-14 18:10:04.001862"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/restaurant/new" for 127.0.0.1 at 2021-10-14 12:10:04 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.4ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 18:11:29.254985"], ["updated_at", "2021-10-14 18:11:29.254985"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/restaurant" for 127.0.0.1 at 2021-10-14 12:11:29 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurant/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 58ms (Views: 57.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.5ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 18:11:29.353962"], ["updated_at", "2021-10-14 18:11:29.353962"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/restaurant/36" for 127.0.0.1 at 2021-10-14 12:11:29 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+Started GET "/restaurant/new" for 127.0.0.1 at 2021-10-14 12:11:29 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.3ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 18:11:29.366888"], ["updated_at", "2021-10-14 18:11:29.366888"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/restaurant/new" for 127.0.0.1 at 2021-10-14 12:11:29 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.4ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 18:12:54.346001"], ["updated_at", "2021-10-14 18:12:54.346001"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/restaurant" for 127.0.0.1 at 2021-10-14 12:12:54 -0600
+Processing by RestaurantController#index as HTML
+  Rendering restaurant/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurant/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 57ms (Views: 55.8ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.4ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 18:12:54.444895"], ["updated_at", "2021-10-14 18:12:54.444895"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/restaurant/39" for 127.0.0.1 at 2021-10-14 12:12:54 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"39"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+Started GET "/restaurant/new" for 127.0.0.1 at 2021-10-14 12:12:54 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.5ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 18:12:54.457470"], ["updated_at", "2021-10-14 18:12:54.457470"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/restaurant/new" for 127.0.0.1 at 2021-10-14 12:12:54 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.6ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 18:28:30.186811"], ["updated_at", "2021-10-14 18:28:30.186811"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.4ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Del Taco"], ["created_at", "2021-10-14 18:28:30.188172"], ["updated_at", "2021-10-14 18:28:30.188172"], ["seats", 25], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.7ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 18:29:15.063910"], ["updated_at", "2021-10-14 18:29:15.063910"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.2ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Del Taco"], ["created_at", "2021-10-14 18:29:15.065395"], ["updated_at", "2021-10-14 18:29:15.065395"], ["seats", 25], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.8ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 18:29:24.557773"], ["updated_at", "2021-10-14 18:29:24.557773"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.3ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Del Taco"], ["created_at", "2021-10-14 18:29:24.559429"], ["updated_at", "2021-10-14 18:29:24.559429"], ["seats", 25], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.7ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 18:30:55.765357"], ["updated_at", "2021-10-14 18:30:55.765357"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.4ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Del Taco"], ["created_at", "2021-10-14 18:30:55.766785"], ["updated_at", "2021-10-14 18:30:55.766785"], ["seats", 25], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.9ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 18:39:29.372473"], ["updated_at", "2021-10-14 18:39:29.372473"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.2ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Del Taco"], ["created_at", "2021-10-14 18:39:29.374065"], ["updated_at", "2021-10-14 18:39:29.374065"], ["seats", 25], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.7ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 18:41:02.003085"], ["updated_at", "2021-10-14 18:41:02.003085"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.2ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Del Taco"], ["created_at", "2021-10-14 18:41:02.004565"], ["updated_at", "2021-10-14 18:41:02.004565"], ["seats", 25], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (1.0ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 18:44:56.087611"], ["updated_at", "2021-10-14 18:44:56.087611"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.5ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Del Taco"], ["created_at", "2021-10-14 18:44:56.089584"], ["updated_at", "2021-10-14 18:44:56.089584"], ["seats", 25], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Load (0.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.9ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 18:45:09.277152"], ["updated_at", "2021-10-14 18:45:09.277152"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.2ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Del Taco"], ["created_at", "2021-10-14 18:45:09.278860"], ["updated_at", "2021-10-14 18:45:09.278860"], ["seats", 25], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Load (0.9ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  [1m[36mRestaurant Load (1.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" ORDER BY "restaurants"."id" DESC[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.9ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 18:46:47.124951"], ["updated_at", "2021-10-14 18:46:47.124951"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.2ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Del Taco"], ["created_at", "2021-10-14 18:46:47.126581"], ["updated_at", "2021-10-14 18:46:47.126581"], ["seats", 25], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Load (0.8ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" ORDER BY "restaurants"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.8ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 18:47:50.527353"], ["updated_at", "2021-10-14 18:47:50.527353"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.2ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Del Taco"], ["created_at", "2021-10-14 18:47:50.528816"], ["updated_at", "2021-10-14 18:47:50.528816"], ["seats", 25], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (1.1ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 18:48:03.217786"], ["updated_at", "2021-10-14 18:48:03.217786"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.3ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Del Taco"], ["created_at", "2021-10-14 18:48:03.219728"], ["updated_at", "2021-10-14 18:48:03.219728"], ["seats", 25], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" ORDER BY "restaurants"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" ORDER BY "restaurants"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.3ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 18:54:27.410312"], ["updated_at", "2021-10-14 18:54:27.410312"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/restaurant" for 127.0.0.1 at 2021-10-14 12:54:27 -0600
+Processing by RestaurantController#index as HTML
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendering restaurant/index.html.erb within layouts/application
+  Rendered restaurant/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 58ms (Views: 56.3ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.3ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 18:54:27.506371"], ["updated_at", "2021-10-14 18:54:27.506371"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.4ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Del Taco"], ["created_at", "2021-10-14 18:54:27.507380"], ["updated_at", "2021-10-14 18:54:27.507380"], ["seats", 25], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" ORDER BY "restaurants"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" ORDER BY "restaurants"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.4ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 18:54:27.510900"], ["updated_at", "2021-10-14 18:54:27.510900"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/restaurant/66" for 127.0.0.1 at 2021-10-14 12:54:27 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"66"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 66], ["LIMIT", 1]]
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/restaurant/new" for 127.0.0.1 at 2021-10-14 12:54:27 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.3ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 18:54:27.522650"], ["updated_at", "2021-10-14 18:54:27.522650"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/restaurant/new" for 127.0.0.1 at 2021-10-14 12:54:27 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.4ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 19:04:41.400561"], ["updated_at", "2021-10-14 19:04:41.400561"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/restaurant" for 127.0.0.1 at 2021-10-14 13:04:41 -0600
+Processing by RestaurantController#index as HTML
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendering restaurant/index.html.erb within layouts/application
+  Rendered restaurant/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 63ms (Views: 61.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.5ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 19:04:41.502681"], ["updated_at", "2021-10-14 19:04:41.502681"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.4ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Del Taco"], ["created_at", "2021-10-14 19:04:41.503920"], ["updated_at", "2021-10-14 19:04:41.503920"], ["seats", 25], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Load (1.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" ORDER BY "restaurants"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" ORDER BY "restaurants"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (1.1ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 19:04:41.522829"], ["updated_at", "2021-10-14 19:04:41.522829"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/restaurant/71" for 127.0.0.1 at 2021-10-14 13:04:41 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"71"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 71], ["LIMIT", 1]]
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/restaurant/new" for 127.0.0.1 at 2021-10-14 13:04:41 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/restaurant/new" for 127.0.0.1 at 2021-10-14 13:04:41 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.8ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 19:06:06.565432"], ["updated_at", "2021-10-14 19:06:06.565432"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/restaurant" for 127.0.0.1 at 2021-10-14 13:06:06 -0600
+Processing by RestaurantController#index as HTML
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendering restaurant/index.html.erb within layouts/application
+  Rendered restaurant/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 66ms (Views: 64.3ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.3ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 19:06:06.675366"], ["updated_at", "2021-10-14 19:06:06.675366"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.2ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Del Taco"], ["created_at", "2021-10-14 19:06:06.676422"], ["updated_at", "2021-10-14 19:06:06.676422"], ["seats", 25], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" ORDER BY "restaurants"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" ORDER BY "restaurants"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.4ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 19:06:06.679888"], ["updated_at", "2021-10-14 19:06:06.679888"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/restaurant/75" for 127.0.0.1 at 2021-10-14 13:06:06 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"75"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 75], ["LIMIT", 1]]
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/restaurant/new" for 127.0.0.1 at 2021-10-14 13:06:06 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/restaurant/new" for 127.0.0.1 at 2021-10-14 13:06:06 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.5ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 19:06:52.750786"], ["updated_at", "2021-10-14 19:06:52.750786"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/restaurant" for 127.0.0.1 at 2021-10-14 13:06:52 -0600
+Processing by RestaurantController#index as HTML
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendering restaurant/index.html.erb within layouts/application
+  Rendered restaurant/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 61ms (Views: 59.7ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.4ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 19:06:52.857823"], ["updated_at", "2021-10-14 19:06:52.857823"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.2ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Del Taco"], ["created_at", "2021-10-14 19:06:52.858988"], ["updated_at", "2021-10-14 19:06:52.858988"], ["seats", 25], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" ORDER BY "restaurants"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" ORDER BY "restaurants"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.5ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 19:06:52.866106"], ["updated_at", "2021-10-14 19:06:52.866106"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/restaurant/79" for 127.0.0.1 at 2021-10-14 13:06:52 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"79"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 79], ["LIMIT", 1]]
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/restaurant/new" for 127.0.0.1 at 2021-10-14 13:06:52 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/restaurant/new" for 127.0.0.1 at 2021-10-14 13:06:52 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+Started POST "/restaurant" for 127.0.0.1 at 2021-10-14 13:06:52 -0600
+Processing by RestaurantController#create as HTML
+  Parameters: {"authenticity_token"=>"2dPrTiotMzYIPOmrzDVHm5JLThke+RW2W+OdOVNmZnPAa4yuBoA4ujpoZthVnMdOWZd8v2KXSBxiK6s8FfnaCg==", "restaurant"=>{"name"=>"Taco Bell", "seats"=>"12", "serve_liquor"=>"false"}, "Submit"=>""}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.4ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "seats", "serve_liquor") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["created_at", "2021-10-14 19:06:52.886547"], ["updated_at", "2021-10-14 19:06:52.886547"], ["seats", 12], ["serve_liquor", false]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/restaurant
+Completed 302 Found in 1ms (ActiveRecord: 0.6ms)
+Started GET "/restaurant" for 127.0.0.1 at 2021-10-14 13:06:52 -0600
+Processing by RestaurantController#index as HTML
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendering restaurant/index.html.erb within layouts/application
+  Rendered restaurant/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (27.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "relational_rails_test"[0m
+  [1m[35m (374.9ms)[0m  [1m[35mCREATE DATABASE "relational_rails_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "beers" CASCADE[0m
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE TABLE "beers" ("id" bigserial primary key, "name" character varying, "vendor_lead_time" integer, "bottled" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "brewery_id" bigint)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_beers_on_brewery_id" ON "beers"  ("brewery_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "breweries" CASCADE[0m
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "breweries" ("id" bigserial primary key, "name" character varying, "number_of_employees" integer, "employee_owned" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "employees" CASCADE[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "employees" ("id" bigserial primary key, "name" character varying, "weekly_hours" integer, "over_21" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "restaurant_id" bigint)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_employees_on_restaurant_id" ON "employees"  ("restaurant_id")[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "restaurants" CASCADE[0m
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "restaurants" ("id" bigserial primary key, "name" character varying, "seats" integer, "serve_liquor" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (8.0ms)[0m  [1m[35mALTER TABLE "beers" ADD CONSTRAINT "fk_rails_86b81df81e"
+FOREIGN KEY ("brewery_id")
+  REFERENCES "breweries" ("id")
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "employees" ADD CONSTRAINT "fk_rails_49811d7840"
+FOREIGN KEY ("restaurant_id")
+  REFERENCES "restaurants" ("id")
+[0m
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20211013231643)[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20211013203340),
+(20211013231526),
+(20211012231602),
+(20211012214945),
+(20211013203716);
+
+[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", "2021-10-14 19:44:54.035842"], ["updated_at", "2021-10-14 19:44:54.035842"]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.5ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "seats", "serve_liquor", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["seats", 12], ["serve_liquor", false], ["created_at", "2021-10-14 19:44:54.079966"], ["updated_at", "2021-10-14 19:44:54.079966"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.2ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "seats", "serve_liquor", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "El Tapatio"], ["seats", 400], ["serve_liquor", true], ["created_at", "2021-10-14 19:44:54.081468"], ["updated_at", "2021-10-14 19:44:54.081468"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/restaurant" for 127.0.0.1 at 2021-10-14 13:44:54 -0600
+Processing by RestaurantController#index as HTML
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendering restaurant/index.html.erb within layouts/application
+  Rendered restaurant/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 67ms (Views: 64.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (1.1ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "seats", "serve_liquor", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["seats", 12], ["serve_liquor", false], ["created_at", "2021-10-14 19:44:54.191975"], ["updated_at", "2021-10-14 19:44:54.191975"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.3ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "seats", "serve_liquor", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Del Taco"], ["seats", 25], ["serve_liquor", false], ["created_at", "2021-10-14 19:44:54.193960"], ["updated_at", "2021-10-14 19:44:54.193960"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" ORDER BY "restaurants"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mRestaurant Load (6.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" ORDER BY "restaurants"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.7ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "seats", "serve_liquor", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["seats", 12], ["serve_liquor", false], ["created_at", "2021-10-14 19:44:54.204926"], ["updated_at", "2021-10-14 19:44:54.204926"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/restaurant/5" for 127.0.0.1 at 2021-10-14 13:44:54 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mRestaurant Load (1.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 5ms (Views: 1.0ms | ActiveRecord: 1.1ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/restaurant/new" for 127.0.0.1 at 2021-10-14 13:44:54 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/restaurant/new" for 127.0.0.1 at 2021-10-14 13:44:54 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+Started POST "/restaurant" for 127.0.0.1 at 2021-10-14 13:44:54 -0600
+Processing by RestaurantController#create as HTML
+  Parameters: {"authenticity_token"=>"b6EB5uq+qW9raoxLLPAr14UUz0p07TXcJr1AWgAtUuifv01kUN9LCFSyxkR4vvD4rV11ReawcVJ227z6ShUY2w==", "restaurant"=>{"name"=>"Taco Bell", "seats"=>"12", "serve_liquor"=>"false"}, "Submit"=>""}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.5ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "seats", "serve_liquor", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["seats", 12], ["serve_liquor", false], ["created_at", "2021-10-14 19:44:54.229455"], ["updated_at", "2021-10-14 19:44:54.229455"]]
+  [1m[35m (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/restaurant
+Completed 302 Found in 2ms (ActiveRecord: 1.1ms)
+Started GET "/restaurant" for 127.0.0.1 at 2021-10-14 13:44:54 -0600
+Processing by RestaurantController#index as HTML
+  [1m[36mRestaurant Load (2.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendering restaurant/index.html.erb within layouts/application
+  Rendered restaurant/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 2.6ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.4ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "seats", "serve_liquor", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["seats", 12], ["serve_liquor", false], ["created_at", "2021-10-14 19:46:10.318646"], ["updated_at", "2021-10-14 19:46:10.318646"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.1ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "seats", "serve_liquor", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "El Tapatio"], ["seats", 400], ["serve_liquor", true], ["created_at", "2021-10-14 19:46:10.319761"], ["updated_at", "2021-10-14 19:46:10.319761"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/restaurant" for 127.0.0.1 at 2021-10-14 13:46:10 -0600
+Processing by RestaurantController#index as HTML
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendering restaurant/index.html.erb within layouts/application
+  Rendered restaurant/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 60ms (Views: 58.2ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.6ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "seats", "serve_liquor", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["seats", 12], ["serve_liquor", false], ["created_at", "2021-10-14 19:46:10.420692"], ["updated_at", "2021-10-14 19:46:10.420692"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.2ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "seats", "serve_liquor", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Del Taco"], ["seats", 25], ["serve_liquor", false], ["created_at", "2021-10-14 19:46:10.422192"], ["updated_at", "2021-10-14 19:46:10.422192"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" ORDER BY "restaurants"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" ORDER BY "restaurants"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.9ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "seats", "serve_liquor", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["seats", 12], ["serve_liquor", false], ["created_at", "2021-10-14 19:46:10.425867"], ["updated_at", "2021-10-14 19:46:10.425867"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/restaurant/11" for 127.0.0.1 at 2021-10-14 13:46:10 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (4.3ms)[0m  [1m[35mBEGIN[0m
+Started GET "/restaurant/new" for 127.0.0.1 at 2021-10-14 13:46:10 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/restaurant/new" for 127.0.0.1 at 2021-10-14 13:46:10 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+Started POST "/restaurant" for 127.0.0.1 at 2021-10-14 13:46:10 -0600
+Processing by RestaurantController#create as HTML
+  Parameters: {"authenticity_token"=>"7TTgQLEwy6n/MX6fGygPSyPY5jQG1BEhFEqU1d2oU6TDrfAEH+qUygcUZIS3sCA4mruMhAN4OlIds+XGsQsM1w==", "restaurant"=>{"name"=>"Taco Bell", "seats"=>"12", "serve_liquor"=>"false"}, "Submit"=>""}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (1.2ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "seats", "serve_liquor", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["seats", 12], ["serve_liquor", false], ["created_at", "2021-10-14 19:46:10.456993"], ["updated_at", "2021-10-14 19:46:10.456993"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/restaurant
+Completed 302 Found in 4ms (ActiveRecord: 1.5ms)
+Started GET "/restaurant" for 127.0.0.1 at 2021-10-14 13:46:10 -0600
+Processing by RestaurantController#index as HTML
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendering restaurant/index.html.erb within layouts/application
+  Rendered restaurant/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.7ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "seats", "serve_liquor", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["seats", 12], ["serve_liquor", false], ["created_at", "2021-10-14 19:53:11.954768"], ["updated_at", "2021-10-14 19:53:11.954768"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.2ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "seats", "serve_liquor", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "El Tapatio"], ["seats", 400], ["serve_liquor", true], ["created_at", "2021-10-14 19:53:11.956276"], ["updated_at", "2021-10-14 19:53:11.956276"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/restaurant" for 127.0.0.1 at 2021-10-14 13:53:11 -0600
+Processing by RestaurantController#index as HTML
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendering restaurant/index.html.erb within layouts/application
+  Rendered restaurant/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 62ms (Views: 59.8ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.3ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "seats", "serve_liquor", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["seats", 12], ["serve_liquor", false], ["created_at", "2021-10-14 19:53:12.064991"], ["updated_at", "2021-10-14 19:53:12.064991"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.2ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "seats", "serve_liquor", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Del Taco"], ["seats", 25], ["serve_liquor", false], ["created_at", "2021-10-14 19:53:12.065954"], ["updated_at", "2021-10-14 19:53:12.065954"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" ORDER BY "restaurants"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" ORDER BY "restaurants"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/restaurant/new" for 127.0.0.1 at 2021-10-14 13:53:21 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 65ms (Views: 64.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/restaurant/new" for 127.0.0.1 at 2021-10-14 13:53:30 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 60ms (Views: 59.8ms | ActiveRecord: 0.0ms)
+Started POST "/restaurant" for 127.0.0.1 at 2021-10-14 13:53:30 -0600
+Processing by RestaurantController#create as HTML
+  Parameters: {"authenticity_token"=>"sMRqrN9GNu/byE/uSatpvD2DC3+4gkNPtRy+qX9atrL8zl5Q26Dn2pcrZJRNaQDLgJDxu4RXx5SlljRX0OhqKg==", "restaurant"=>{"name"=>"Taco Bell", "seats"=>"12", "serve_liquor"=>"false"}, "Submit"=>""}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.7ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "seats", "serve_liquor", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["seats", 12], ["serve_liquor", false], ["created_at", "2021-10-14 19:53:30.756640"], ["updated_at", "2021-10-14 19:53:30.756640"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/restaurant
+Completed 302 Found in 22ms (ActiveRecord: 16.7ms)
+Started GET "/restaurant" for 127.0.0.1 at 2021-10-14 13:53:30 -0600
+Processing by RestaurantController#index as HTML
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendering restaurant/index.html.erb within layouts/application
+  Rendered restaurant/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.8ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "seats", "serve_liquor", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["seats", 12], ["serve_liquor", false], ["created_at", "2021-10-14 19:53:39.985237"], ["updated_at", "2021-10-14 19:53:39.985237"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.2ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "seats", "serve_liquor", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "El Tapatio"], ["seats", 400], ["serve_liquor", true], ["created_at", "2021-10-14 19:53:39.986959"], ["updated_at", "2021-10-14 19:53:39.986959"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/restaurant/18" for 127.0.0.1 at 2021-10-14 13:53:39 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 60ms (Views: 57.6ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.7ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "seats", "serve_liquor", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["seats", 12], ["serve_liquor", false], ["created_at", "2021-10-14 19:54:31.229487"], ["updated_at", "2021-10-14 19:54:31.229487"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.2ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "seats", "serve_liquor", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "El Tapatio"], ["seats", 400], ["serve_liquor", true], ["created_at", "2021-10-14 19:54:31.231039"], ["updated_at", "2021-10-14 19:54:31.231039"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/restaurant/20" for 127.0.0.1 at 2021-10-14 13:54:31 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 60ms (Views: 57.4ms | ActiveRecord: 0.7ms)
+  [1m[35m (1.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (4.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.7ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "seats", "serve_liquor", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["seats", 12], ["serve_liquor", false], ["created_at", "2021-10-14 19:54:51.366903"], ["updated_at", "2021-10-14 19:54:51.366903"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.4ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "seats", "serve_liquor", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "El Tapatio"], ["seats", 400], ["serve_liquor", true], ["created_at", "2021-10-14 19:54:51.368452"], ["updated_at", "2021-10-14 19:54:51.368452"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/restaurant/22" for 127.0.0.1 at 2021-10-14 13:54:51 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 62ms (Views: 60.1ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/restaurant/new" for 127.0.0.1 at 2021-10-14 13:55:38 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 61ms (Views: 59.8ms | ActiveRecord: 0.0ms)
+Started POST "/restaurant" for 127.0.0.1 at 2021-10-14 13:55:38 -0600
+Processing by RestaurantController#create as HTML
+  Parameters: {"authenticity_token"=>"aTvqqrWu+zaSv0XriAuz3Ix/8yYhJqHFjhedVky4R+oLnlAuRHgjhgC9bc6MusqE72T12N8o4uXwcR6PF9Lf3A==", "restaurant"=>{"name"=>"Taco Bell", "seats"=>"12", "serve_liquor"=>"false"}, "Submit"=>""}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (1.0ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "seats", "serve_liquor", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["seats", 12], ["serve_liquor", false], ["created_at", "2021-10-14 19:55:38.982851"], ["updated_at", "2021-10-14 19:55:38.982851"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/restaurant
+Completed 302 Found in 21ms (ActiveRecord: 16.4ms)
+Started GET "/restaurant" for 127.0.0.1 at 2021-10-14 13:55:38 -0600
+Processing by RestaurantController#index as HTML
+  [1m[36mRestaurant Load (0.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendering restaurant/index.html.erb within layouts/application
+  Rendered restaurant/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/restaurant/new" for 127.0.0.1 at 2021-10-14 13:56:53 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 64ms (Views: 63.9ms | ActiveRecord: 0.0ms)
+Started POST "/restaurant" for 127.0.0.1 at 2021-10-14 13:56:53 -0600
+Processing by RestaurantController#create as HTML
+  Parameters: {"authenticity_token"=>"4uT5KbkMklZ9NcuLIXzkyrVDBHzlczOWZOaXz6poqQaAKJb8DqmlZI2303VmmFvLgYEN98Wm3MXe4QlVcCsCSw==", "restaurant"=>{"name"=>"Taco Bell", "seats"=>"12", "serve_liquor"=>"false"}, "Submit"=>""}
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.8ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "seats", "serve_liquor", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["seats", 12], ["serve_liquor", false], ["created_at", "2021-10-14 19:56:53.639061"], ["updated_at", "2021-10-14 19:56:53.639061"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/restaurant
+Completed 302 Found in 21ms (ActiveRecord: 15.2ms)
+Started GET "/restaurant" for 127.0.0.1 at 2021-10-14 13:56:53 -0600
+Processing by RestaurantController#index as HTML
+  [1m[36mRestaurant Load (0.8ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendering restaurant/index.html.erb within layouts/application
+  Rendered restaurant/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/restaurant/new" for 127.0.0.1 at 2021-10-14 13:57:14 -0600
+Processing by RestaurantController#new as HTML
+  Rendering restaurant/new.html.erb within layouts/application
+  Rendered restaurant/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 61ms (Views: 60.3ms | ActiveRecord: 0.0ms)
+Started POST "/restaurant" for 127.0.0.1 at 2021-10-14 13:57:14 -0600
+Processing by RestaurantController#create as HTML
+  Parameters: {"authenticity_token"=>"YBhBMqNhYFQGUhTWAlLRJ63XJb4OI0T4ADejoTOOh0SqbXMLG/MT0zgCWDiUXiZnU2LgtmTSWGM41mp5dtxDZA==", "restaurant"=>{"name"=>"Taco Bell", "seats"=>"12", "serve_liquor"=>"false"}, "Submit"=>""}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.8ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "seats", "serve_liquor", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["seats", 12], ["serve_liquor", false], ["created_at", "2021-10-14 19:57:14.975472"], ["updated_at", "2021-10-14 19:57:14.975472"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/restaurant
+Completed 302 Found in 22ms (ActiveRecord: 17.1ms)
+Started GET "/restaurant" for 127.0.0.1 at 2021-10-14 13:57:14 -0600
+Processing by RestaurantController#index as HTML
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendering restaurant/index.html.erb within layouts/application
+  Rendered restaurant/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.7ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "seats", "serve_liquor", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["seats", 12], ["serve_liquor", false], ["created_at", "2021-10-14 19:57:40.531337"], ["updated_at", "2021-10-14 19:57:40.531337"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.2ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "seats", "serve_liquor", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "El Tapatio"], ["seats", 400], ["serve_liquor", true], ["created_at", "2021-10-14 19:57:40.532833"], ["updated_at", "2021-10-14 19:57:40.532833"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/restaurant/27" for 127.0.0.1 at 2021-10-14 13:57:40 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 63ms (Views: 61.2ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.8ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "seats", "serve_liquor", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Taco Bell"], ["seats", 12], ["serve_liquor", false], ["created_at", "2021-10-14 19:58:24.011099"], ["updated_at", "2021-10-14 19:58:24.011099"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurant Create (0.2ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "seats", "serve_liquor", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "El Tapatio"], ["seats", 400], ["serve_liquor", true], ["created_at", "2021-10-14 19:58:24.012701"], ["updated_at", "2021-10-14 19:58:24.012701"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/restaurant/29" for 127.0.0.1 at 2021-10-14 13:58:24 -0600
+Processing by RestaurantController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  Rendering restaurant/show.html.erb within layouts/application
+  Rendered restaurant/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 61ms (Views: 58.8ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m

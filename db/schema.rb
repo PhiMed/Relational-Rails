@@ -27,10 +27,10 @@ ActiveRecord::Schema.define(version: 2021_10_13_231643) do
 
   create_table "breweries", force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
     t.integer "number_of_employees"
     t.boolean "employee_owned"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "employees", force: :cascade do |t|
@@ -45,10 +45,10 @@ ActiveRecord::Schema.define(version: 2021_10_13_231643) do
 
   create_table "restaurants", force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
     t.integer "seats"
     t.boolean "serve_liquor"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_foreign_key "beers", "breweries"

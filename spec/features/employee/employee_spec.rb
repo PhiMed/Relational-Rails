@@ -33,4 +33,21 @@ RSpec.describe "employee", type: :feature do
     expect(page).to have_content(employee.restaurant_id)
     expect(page).to_not have_content("Taco Bell")
   end
+
+  it 'takes to new employee form' do
+    restaurant = Restaurant.create!(name: "Taco Bell",
+                                    seats: 12,
+                                    serve_liquor: false)
+
+    employee = Employee.create!(name: "Bob Smith",
+                                weekly_hours: 40,
+                                over_21: true,
+                                restaurant_id: restaurant.id)
+
+    visit "/employee/new"
+
+    expect(current_path).to eq('/employee/new')
+    expect(page).to have_content('Name')
+  end
+
 end
