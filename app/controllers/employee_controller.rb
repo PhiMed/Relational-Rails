@@ -8,14 +8,12 @@ class EmployeeController < ApplicationController
   end
 
   def create
-    employee = Employee.new({
+    employee = Employee.create({
       name: params[:employee][:name],
       weekly_hours: params[:employee][:weekly_hours],
       over_21: params[:employee][:over_21],
       restaurant_id: params[:employee][:restaurant_id]
       })
-
-    employee.save
 
     redirect_to '/employee'
   end
