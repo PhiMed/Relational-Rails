@@ -1,0 +1,13 @@
+<form action="/beer" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <p><h3>Enter a new beer:</h3></p>
+  <p>Name:</p>
+  <input type='text' name='beer[name]'/><br/>
+  <p>Vendor Lead Time:</p>
+  <input type='integer' name='beer[vendor_lead_time]'/><br/>
+  <p>Bottled:</p>
+  <input type='boolean' name='beer[bottled]'/><br/>
+  <p>Brewery:</p>
+  <input type='integer' name='beer[brewery_id]'/><br/>
+  <input type='submit'/>
+</form>
