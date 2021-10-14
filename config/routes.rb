@@ -16,4 +16,12 @@ Rails.application.routes.draw do
   get '/employee/new', to: 'employee#new'
   post '/employee', to: 'employee#create'
   get '/employee/:id', to: 'employee#show'
+
+  get '/beer', to: 'beer#index'
+  get '/beer/new', to: 'beer#new'
+  post '/beer', to: 'beer#create'
+  get '/beer/:id', to: 'beer#show'
+
+  get '/restaurant/:id/employee', to: 'restaurant_employees#index'
+
 end
