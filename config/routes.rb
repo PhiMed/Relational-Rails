@@ -24,4 +24,6 @@ Rails.application.routes.draw do
 
   get '/restaurant/:id/employee', to: 'restaurant_employees#index'
 
+  get '/brewery/:id/beer', to: 'brewery_beers#index'
+
 end

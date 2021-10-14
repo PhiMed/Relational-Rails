@@ -6,3 +6,5 @@
 <p><%='Employee Owned:'%> <%= @brewery.employee_owned %></p>
 <p><%='Created At:'%> <%= @brewery.created_at %></p>
 <p><%='Updated At:'%> <%= @brewery.updated_at %></p>
+
+<a href= <%="/brewery/#{@brewery.id}/beer"%> >Beers</a>
