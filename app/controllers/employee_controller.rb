@@ -12,8 +12,6 @@ class EmployeeController < ApplicationController
       name: params[:employee][:name],
       weekly_hours: params[:employee][:weekly_hours],
       over_21: params[:employee][:over_21],
-      created_at: params[:employee][:created_at],
-      updated_at: params[:employee][:updated_at],
       restaurant_id: params[:employee][:restaurant_id]
       })
 
