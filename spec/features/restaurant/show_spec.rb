@@ -11,7 +11,7 @@ RSpec.describe "restaurant", type: :feature do
                                       serve_liquor: true)
 
     visit "/restaurant/#{restaurant.id}"
-
+    
     expect(page).to have_content(restaurant.name)
     expect(page).to have_content(restaurant.seats)
     expect(page).to have_content(restaurant.serve_liquor)
