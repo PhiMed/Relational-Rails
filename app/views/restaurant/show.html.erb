@@ -1,3 +1,4 @@
+<a href="/employee">Employee Index</a>
 <a href="/restaurant">Restaurant Index</a>
 
 <h1><%= @restaurant.name %></h1>
@@ -6,5 +7,6 @@
 <p><%='Serves Alcohol:'%> <%= @restaurant.serve_liquor %></p>
 <p><%='Created At:'%> <%= @restaurant.created_at %></p>
 <p><%='Updated At:'%> <%= @restaurant.updated_at %></p>
+<p><%='Number of Employees:'%> <%= @restaurant.employees.count %></p>
 
 <a href= <%="/restaurant/#{@restaurant.id}/employee"%> >Employees</a>

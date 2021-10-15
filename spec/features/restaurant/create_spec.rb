@@ -9,5 +9,6 @@ RSpec.describe "restaurant", type: :feature do
     click_on "Submit"
 
     expect(page).to have_content("Taco Bell")
+    expect(page).to_not have_content("Mary Takanaka")
   end
 end

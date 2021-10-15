@@ -17,7 +17,7 @@ RSpec.describe "employee", type: :feature do
     expect(page).to_not have_content("Jane Doe")
   end
 
-  it 'displays employee attributes' do
+  it 'provides link to add new employee' do
     restaurant = Restaurant.create!(name: "Taco Bell",
                                     seats: 12,
                                     serve_liquor: false)
@@ -27,27 +27,16 @@ RSpec.describe "employee", type: :feature do
                                 over_21: true,
                                 restaurant_id: restaurant.id)
 
-    visit "/employee/#{employee.id}"
+    visit "/employee"
 
-    expect(page).to have_content(employee.id)
-    expect(page).to have_content(employee.restaurant_id)
-    expect(page).to_not have_content("Taco Bell")
+    expect(page).to have_link("Add New Employee")
   end
 
-  it 'takes to new employee form' do
-    restaurant = Restaurant.create!(name: "Taco Bell",
-                                    seats: 12,
-                                    serve_liquor: false)
+  it 'provides links for employee and restaurant indexes' do
 
-    employee = Employee.create!(name: "Bob Smith",
-                                weekly_hours: 40,
-                                over_21: true,
-                                restaurant_id: restaurant.id)
+    visit "/employee"
 
-    visit "/employee/new"
-
-    expect(current_path).to eq('/employee/new')
-    expect(page).to have_content('Name')
+    expect(page).to have_link("Employee Index")
+    expect(page).to have_link("Restaurant Index")
   end
-
 end

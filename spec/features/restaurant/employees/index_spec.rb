@@ -16,4 +16,15 @@ RSpec.describe 'restaurant employee index' do
     expect(page).to have_content(employee.name)
     expect(page).to have_content(employee.weekly_hours)
   end
+
+  it 'provides links for employee and restaurant indexes' do
+    restaurant = Restaurant.create!(name: "Taco Bell",
+                                    seats: 12,
+                                    serve_liquor: false)
+
+    visit "/restaurant/#{restaurant.id}/employee"
+
+    expect(page).to have_link("Employee Index")
+    expect(page).to have_link("Restaurant Index")
+  end
 end
