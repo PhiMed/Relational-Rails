@@ -24,8 +24,8 @@ RSpec.describe "restaurant", type: :feature do
                                       seats:25,
                                       serve_liquor: false)
 
-    expect(Restaurant.all.reverse_order.first).to eq(restaurant_2)
-    expect(Restaurant.all.reverse_order.first).to_not eq(restaurant_1)
+    expect(Restaurant.all.order_desc.first).to eq(restaurant_2)
+    expect(Restaurant.all.order_desc.first).to_not eq(restaurant_1)
   end
 
   it 'provides links for employee and restaurant indexes' do

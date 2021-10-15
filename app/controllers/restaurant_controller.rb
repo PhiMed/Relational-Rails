@@ -1,7 +1,7 @@
 class RestaurantController < ApplicationController
 
   def index
-    @restaurant = Restaurant.all.order(params[:created_at]).reverse
+    @restaurant = Restaurant.all.order_desc
   end
 
   def new
