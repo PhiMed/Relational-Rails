@@ -1,7 +1,7 @@
-class EmployeeController < ApplicationController
+class EmployeesController < ApplicationController
 
   def index
-    @employee = Employee.all.true_records
+    @employees = Employee.all.true_records
   end
 
   def new
@@ -15,15 +15,15 @@ class EmployeeController < ApplicationController
       restaurant_id: params[:employee][:restaurant_id]
       })
 
-    redirect_to '/employee'
+    redirect_to '/employees'
   end
 
   def show
-    @employee = Employee.find(params[:id])
+    @employees = Employee.find(params[:id])
   end
 
   def edit
-    @employee = Employee.find(params[:id])
+    @employees = Employee.find(params[:id])
   end
 
   def update
@@ -37,13 +37,13 @@ class EmployeeController < ApplicationController
 
     employee.save
 
-    redirect_to "/employee/#{employee.id}"
+    redirect_to "/employees/#{employee.id}"
   end
 
   def destroy
     employee = Employee.find(params[:id])
     employee.destroy
 
-    redirect_to '/employee'
+    redirect_to '/employees'
   end
 end
