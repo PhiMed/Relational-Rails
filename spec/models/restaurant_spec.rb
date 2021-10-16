@@ -28,10 +28,8 @@ RSpec.describe Restaurant, type: :model do
                                 weekly_hours: 45,
                                 over_21: false,
                                 restaurant_id: restaurant_1.id)
-    
+
     expect(restaurant_1.employees.first).to eq(employee)
     expect(restaurant_1.employees.first).to_not eq(employee_2)
-
-
   end
 end
