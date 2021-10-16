@@ -18,6 +18,8 @@ Rails.application.routes.draw do
   get '/employee/new', to: 'employee#new'
   post '/employee', to: 'employee#create'
   get '/employee/:id', to: 'employee#show'
+  get '/employee/:id/edit', to: 'employee#edit'
+  patch '/employee/:id', to: 'employee#update'
 
   get '/beer', to: 'beer#index'
   get '/beer/new', to: 'beer#new'
@@ -25,7 +27,8 @@ Rails.application.routes.draw do
   get '/beer/:id', to: 'beer#show'
 
   get '/restaurant/:id/employee', to: 'restaurant_employees#index'
+  get '/restaurant/:id/employee/new', to: 'restaurant_employees#new'
+  post '/restaurant/:id/employee', to: 'restaurant_employees#create'
 
   get '/brewery/:id/beer', to: 'brewery_beers#index'
-
 end
