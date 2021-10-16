@@ -27,16 +27,23 @@ class EmployeeController < ApplicationController
   end
 
   def update
-      employee = Employee.find(params[:id])
-      employee.update({
-        name: params[:employee][:name],
-        weekly_hours: params[:employee][:weekly_hours],
-        over_21: params[:employee][:over_21],
-        restaurant_id: params[:employee][:restaurant_id]
-        })
+    employee = Employee.find(params[:id])
+    employee.update({
+      name: params[:employee][:name],
+      weekly_hours: params[:employee][:weekly_hours],
+      over_21: params[:employee][:over_21],
+      restaurant_id: params[:employee][:restaurant_id]
+      })
 
-      employee.save
+    employee.save
 
     redirect_to "/employee/#{employee.id}"
+  end
+
+  def destroy
+    employee = Employee.find(params[:id])
+    employee.destroy
+
+    redirect_to '/employee'
   end
 end

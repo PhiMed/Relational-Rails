@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   get '/employee/:id', to: 'employee#show'
   get '/employee/:id/edit', to: 'employee#edit'
   patch '/employee/:id', to: 'employee#update'
+  delete '/employee/:id', to: 'employee#destroy'
 
   get '/beer', to: 'beer#index'
   get '/beer/new', to: 'beer#new'
