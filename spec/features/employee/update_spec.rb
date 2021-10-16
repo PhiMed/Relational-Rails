@@ -12,7 +12,7 @@ RSpec.describe "employee", type: :feature do
                                 restaurant_id: restaurant.id)
 
     visit "/employee/#{employee.id}/edit"
-    fill_in "employee[name]", with: "Taco Bell"
+    fill_in "employee[name]", with: "Jim Bob"
     fill_in "employee[weekly_hours]", with: "40"
     fill_in "employee[over_21]", with: "true"
     fill_in "employee[restaurant_id]", with: "#{restaurant.id}"

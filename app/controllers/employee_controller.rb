@@ -8,7 +8,7 @@ class EmployeeController < ApplicationController
   end
 
   def create
-    employee = Employee.create({
+    employee = Employee.create!({
       name: params[:employee][:name],
       weekly_hours: params[:employee][:weekly_hours],
       over_21: params[:employee][:over_21],
