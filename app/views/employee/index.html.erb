@@ -8,7 +8,7 @@
 <h1>Current Employees</h1>
 
 <% @employee.each do |employee| %>
-  <h3><%= employee.name %></h3>
+  <p><a href="/employee/<%=employee.id%>"><%= employee.name %></a> <a href= <%="/employee/#{employee.id}/edit"%> >Update Employee</a></p>
   <p>Employee ID: <%=employee.id%></p>
   <p>Weekly Hours: <%=employee.weekly_hours%><p>
   <p>Over 21: <%=employee.over_21%><p>
