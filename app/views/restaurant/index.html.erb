@@ -8,5 +8,5 @@
 <h1>Restaurants</h1>
 
 <% @restaurant.each do |restaurant| %>
-  <p><a href="/restaurant/<%=restaurant.id%>"><%= restaurant.name %></a>  <%=restaurant.created_at %></p>
+  <p><a href="/restaurant/<%=restaurant.id%>"><%= restaurant.name %></a>  <%=restaurant.created_at %> <a href= <%="/restaurant/#{restaurant.id}/edit"%> >Update Restaurant</a></p>
 <% end %>
