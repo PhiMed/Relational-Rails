@@ -1,16 +1,16 @@
-<a href="/employee">Employee Index</a>
-<a href="/restaurant">Restaurant Index</a>
+<a href="/employees">Employee Index</a>
+<a href="/restaurants">Restaurant Index</a>
 
 <h2>Employee Records by Restaurant</h2>
 
-<a href= <%="/restaurant/#{@restaurant.id}/employee/new"%> >Create Employee</a>
+<a href= <%="/restaurants/#{@restaurants.id}/employees/new"%> >Create Employee</a>
 
-<% @employee.each do |employee| %>
+<% @employees.each do |employee| %>
   <p>Name: <%= employee.name %></p>
   <p>Weekly Hours: <%= employee.weekly_hours %></p>
   <p>Over 21: <%= employee.over_21 %></p>
   <p>Created At: <%= employee.created_at %></p>
   <p>Updated At: <%= employee.updated_at %></p>
   <p>Restaurant ID: <%= employee.restaurant_id %></p>
-  <a href= <%="/employee/#{employee.id}/edit"%> >Update Employee</a>
+  <a href= <%="/employees/#{employee.id}/edit"%> >Update Employee</a>
 <% end %>
