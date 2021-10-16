@@ -1,0 +1,17 @@
+<a href="/employees">Employee Index</a>
+<a href="/restaurant">Restaurant Index</a>
+
+<form action="/employees/<%= @employees.id %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="PATCH" />
+  <p><h3>Update an Employee </h3></p>
+  <p>Name:</p>
+  <input type='text' name='employee[name]' value="<%= @employees.name %>"/><br/>
+  <p>Weekly Hours:</p>
+  <input type='integer' name='employee[weekly_hours]' value="<%= @employees.weekly_hours %>"/><br/>
+  <p>Over 21:</p>
+  <input type='boolean' name='employee[over_21]' value="<%= @employees.over_21 %>"/><br/>
+  <p>Restaurant ID:</p>
+  <input type='integer' name='employee[restaurant_id]' value="<%= @employees.restaurant_id %>"/><br/>
+  <input type='submit' name='Update Employee' value='Update Employee'/>
+</form>
