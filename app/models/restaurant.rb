@@ -1,7 +1,11 @@
 class Restaurant < ApplicationRecord
-  has_many :employees
+  has_many :employees, :dependent => :destroy
 
   def self.order_desc
     order('created_at desc')
+  end
+
+  def employee_sort
+    employees.order('name')
   end
 end

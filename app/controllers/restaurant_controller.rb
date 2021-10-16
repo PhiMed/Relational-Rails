@@ -8,7 +8,7 @@ class RestaurantController < ApplicationController
   end
 
   def create
-    restaurant = Restaurant.create!({
+    @restaurant = Restaurant.create!({
       name: params[:restaurant][:name],
       seats: params[:restaurant][:seats],
       serve_liquor: params[:restaurant][:serve_liquor]
@@ -36,5 +36,12 @@ class RestaurantController < ApplicationController
       restaurant.save
 
     redirect_to "/restaurant/#{restaurant.id}"
+  end
+
+  def destroy
+    restaurant = Restaurant.find(params[:id])
+    restaurant.destroy
+
+    redirect_to '/restaurant'
   end
 end
