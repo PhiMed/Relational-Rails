@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "restaurant", type: :feature do
 
-  it 'takes tan edit restaurant form' do
+  it 'takes to an edit restaurant form' do
     restaurant = Restaurant.create!(name: "Taco Bell",
                                     seats: 12,
                                     serve_liquor: false)
