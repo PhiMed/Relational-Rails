@@ -34,4 +34,12 @@ RSpec.describe "beer", type: :feature do
     expect(page).to have_content(beer.brewery_id)
     expect(page).to_not have_content("Pumpkin Spice Latte")
   end
+
+  it 'provides links for beer and brewery indexes' do
+
+    visit "/beer/new"
+
+    expect(page).to have_link("Beer Index")
+    expect(page).to have_link("Brewery Index")
+  end
 end
