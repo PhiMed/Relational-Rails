@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "brewery", type: :feature do
+RSpec.describe "brewery show", type: :feature do
   it 'displays beer count' do
     brewery_1 = Brewery.create!(name: "Breckenridge Brewery",
                                     number_of_employees: 120,

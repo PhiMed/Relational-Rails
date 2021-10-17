@@ -4,6 +4,8 @@
 
 <h2>Beer Records by Brewery</h2>
 
+<a href=<%="/brewery/#{@brewery.id}/beer/new"%>>Create beer</a>
+
 <% @beer.each do |beer| %>
   <p>Name: <%= beer.name %></p>
   <p>Vendor Lead Time (days): <%= beer.vendor_lead_time %></p>
@@ -11,4 +13,5 @@
   <p>Created At: <%= beer.created_at %></p>
   <p>Updated At: <%= beer.updated_at %></p>
   <p>Brewery ID: <%= beer.brewery_id %></p>
+
 <% end %>

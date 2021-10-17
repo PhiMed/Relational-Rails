@@ -1,0 +1,15 @@
+<a href="/">Welcome Index</a>
+<a href="/beer">Beer Index</a>
+<a href="/brewery">Brewery Index</a>
+
+<form action="/brewery/<%=@brewery.id%>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <h3>Update a brewery:</h3>
+  <p>Name:</p>
+  <input type='text' name='brewery[name]' value="<%=@brewery.name%>"/><br/>
+  <p>Number of Employees:</p>
+  <input type='integer' name='brewery[number_of_employees]' value="<%=@brewery.number_of_employees%>"/><br/>
+  <p>Employee Owned:</p>
+  <input type='boolean' name='brewery[employee_owned]'value="<%=@brewery.employee_owned%>"/><br/>
+  <input type='submit' name='Update Brewery' value='Update Brewery'/>
+</form>
