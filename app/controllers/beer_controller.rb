@@ -25,4 +25,21 @@ class BeerController < ApplicationController
   def show
     @beer = Beer.find(params[:id])
   end
+
+  def edit
+    @beer = Beer.find(params[:id])
+  end
+
+  def update
+    @beer = Beer.find(params[:id])
+    @beer.update({
+      name: params[:beer][:name],
+      vendor_lead_time: params[:beer][:vendor_lead_time],
+      bottled: params[:beer][:bottled]
+      })
+
+    @beer.save
+
+  redirect_to "/beer/#{@beer.id}"
+  end
 end
