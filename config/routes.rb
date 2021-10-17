@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   post '/brewery', to: 'brewery#create'
   get '/brewery/:id', to: 'brewery#show'
   get 'brewery/:id/edit', to: 'brewery#edit'
-  post 'brewery/:id', to: 'brewery#update'
+  patch 'brewery/:id', to: 'brewery#update'
 
   get '/employee', to: 'employee#index'
   get '/employee/new', to: 'employee#new'
@@ -30,7 +30,7 @@ Rails.application.routes.draw do
   post '/beer', to: 'beer#create'
   get '/beer/:id', to: 'beer#show'
   get '/beer/:id/edit', to: 'beer#edit'
-  post '/beer/:id', to: 'beer#update'
+  patch '/beer/:id', to: 'beer#update'
 
   get '/restaurant/:id/employee', to: 'restaurant_employees#index'
   get '/restaurant/:id/employee/new', to: 'restaurant_employees#new'
