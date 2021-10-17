@@ -6,9 +6,9 @@ RSpec.describe "restaurant", type: :feature do
     restaurant = Restaurant.create!(name: "Taco Bell",
                                     seats: 12,
                                     serve_liquor: false)
-    visit "/restaurant/#{restaurant.id}/edit"
+    visit "/restaurants/#{restaurant.id}/edit"
 
-    expect(current_path).to eq("/restaurant/#{restaurant.id}/edit")
+    expect(current_path).to eq("/restaurants/#{restaurant.id}/edit")
     expect(page).to have_content('Name')
   end
 
@@ -17,7 +17,7 @@ RSpec.describe "restaurant", type: :feature do
                                     seats: 12,
                                     serve_liquor: false)
 
-    visit "/restaurant/#{restaurant.id}/edit"
+    visit "/restaurants/#{restaurant.id}/edit"
 
     expect(page).to have_link("Employee Index")
     expect(page).to have_link("Restaurant Index")

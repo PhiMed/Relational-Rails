@@ -11,9 +11,9 @@ RSpec.describe "restaurant employee", type: :feature do
                                             restaurant_id: restaurant.id)
 
 
-    visit "/restaurant/#{restaurant.id}/employee/new"
+    visit "/restaurants/#{restaurant.id}/employees/new"
 
-    expect(current_path).to eq("/restaurant/#{restaurant.id}/employee/new")
+    expect(current_path).to eq("/restaurants/#{restaurant.id}/employees/new")
     expect(page).to have_content('Name:')
   end
 
@@ -22,7 +22,7 @@ RSpec.describe "restaurant employee", type: :feature do
                                     seats: 12,
                                     serve_liquor: false)
 
-    visit "/restaurant/#{restaurant.id}/employee/new"
+    visit "/restaurants/#{restaurant.id}/employees/new"
 
     expect(page).to have_link("Employee Index")
     expect(page).to have_link("Restaurant Index")

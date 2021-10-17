@@ -5,7 +5,7 @@ RSpec.describe "beer", type: :feature do
     visit "/beer/new"
     fill_in "beer[name]", with: "Los Gatos"
     sleep 1
-    save_and_open_page
+
     fill_in "beer[vendor_lead_time]", with: "40"
     fill_in "beer[bottled]", with: "false"
     fill_in "beer[brewery_id]", with: "1"

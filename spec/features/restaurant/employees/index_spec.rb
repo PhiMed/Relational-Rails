@@ -11,7 +11,7 @@ RSpec.describe 'restaurant employee index' do
                                             over_21: true,
                                             restaurant_id: restaurant.id)
 
-    visit "/restaurant/#{restaurant.id}/employee"
+    visit "/restaurants/#{restaurant.id}/employees"
 
     expect(page).to have_content(employee.name)
     expect(page).to have_content(employee.weekly_hours)
@@ -24,7 +24,7 @@ RSpec.describe 'restaurant employee index' do
                                     seats: 12,
                                     serve_liquor: false)
 
-    visit "/restaurant/#{restaurant.id}/employee"
+    visit "/restaurants/#{restaurant.id}/employees"
 
     expect(page).to have_link("Employee Index")
     expect(page).to have_link("Restaurant Index")
@@ -35,13 +35,13 @@ RSpec.describe 'restaurant employee index' do
                                     seats: 12,
                                     serve_liquor: false)
 
-    visit "/restaurant/#{restaurant.id}/employee"
+    visit "/restaurants/#{restaurant.id}/employees"
 
     expect(page).to have_link("Create Employee")
 
     click_link "Create Employee"
 
-    expect(current_path).to eq("/restaurant/#{restaurant.id}/employee/new")
+    expect(current_path).to eq("/restaurants/#{restaurant.id}/employees/new")
   end
 
   it 'gives link to edit each employee' do
@@ -57,11 +57,11 @@ RSpec.describe 'restaurant employee index' do
                                 over_21: true,
                                 restaurant_id: restaurant.id)
 
-    visit "/restaurant/#{restaurant.id}/employee"
+    visit "/restaurants/#{restaurant.id}/employees"
     expect(page).to have_link("Update Employee")
 
     click_link "Update Employee"
-    expect(current_path).to eq("/employee/#{employee.id}/edit")
+    expect(current_path).to eq("/employees/#{employee.id}/edit")
 
     fill_in "employee[name]", with: "Jane Dow"
     fill_in "employee[weekly_hours]", with: "35"
@@ -69,6 +69,6 @@ RSpec.describe 'restaurant employee index' do
     fill_in "employee[restaurant_id]", with: "#{restaurant_2.id}"
     click_button "Update Employee"
 
-    expect(current_path).to eq("/employee/#{employee.id}")
+    expect(current_path).to eq("/employees/#{employee.id}")
   end
 end
