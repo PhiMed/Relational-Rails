@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "brewery", type: :feature do
+RSpec.describe "brewery index", type: :feature do
   it 'displays index' do
     brewery_1 = Brewery.create!(name: "Breckenridge Brewery",
                                     number_of_employees: 120,
