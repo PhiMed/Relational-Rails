@@ -29,6 +29,7 @@ Rails.application.routes.draw do
   get '/restaurants/:id/employees', to: 'restaurant_employees#index'
   get '/restaurants/:id/employees/new', to: 'restaurant_employees#new'
   post '/restaurants/:id/employees', to: 'restaurant_employees#create'
+  get '/restaurants/:id/employees', to: 'restaurant_employees#sort_threshold'
 
   get '/brewery/:id/beer', to: 'brewery_beers#index'
 end

@@ -69,4 +69,17 @@ RSpec.describe "restaurant", type: :feature do
     expect(current_path).to eq("/restaurants/#{restaurant_1.id}")
   end
 
+  it 'provides delete link for each restaurant' do
+    restaurant_1 = Restaurant.create!(name: "Taco Bell",
+                                    seats: 12,
+                                    serve_liquor: false)
+
+    visit "/restaurants"
+    expect(page).to have_button("Delete Restaurant")
+
+    click_button "Delete Restaurant"
+    expect(current_path).to eq("/restaurants")
+
+    expect(page).to_not have_content("Taco Bell")
+  end
 end
