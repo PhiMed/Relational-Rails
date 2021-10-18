@@ -6,7 +6,7 @@ RSpec.describe "brewery update", type: :feature do
                                     number_of_employees: 120,
                                     employee_owned: false)
 
-    visit "/brewery/#{brewery_1.id}/edit"
+    visit "/breweries/#{brewery_1.id}/edit"
 
     fill_in "brewery[name]", with: "The Big Bunny Brewery"
     fill_in "brewery[number_of_employees]", with: "5"
@@ -15,7 +15,7 @@ RSpec.describe "brewery update", type: :feature do
     click_on "Update Brewery"
 
     expect(page).to have_content("The Big Bunny Brewery")
-    expect(current_path).to eq("/brewery/#{brewery_1.id}")
+    expect(current_path).to eq("/breweries/#{brewery_1.id}")
     expect(page).to_not have_content("Breckenridge Brewery")
 
   end

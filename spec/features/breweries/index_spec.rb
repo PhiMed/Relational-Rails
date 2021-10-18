@@ -11,7 +11,7 @@ RSpec.describe "brewery index", type: :feature do
                                     employee_owned: true)
 
 
-    visit "/brewery"
+    visit "/breweries"
 
     expect(page).to have_content(brewery_1.name)
     expect(page).to have_content(brewery_2.name)

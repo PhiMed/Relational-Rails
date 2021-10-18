@@ -1,0 +1,16 @@
+<a href="/">Welcome Index</a>
+<a href="/beers">Beers Index</a>
+<a href="/breweries">Breweries Index</a>
+
+<h1><%= @brewery.name %></h1>
+
+<a href= <%="/breweries/#{@brewery.id}/edit"%> >Update Brewery</a>
+<a href= <%="/breweries/#{@brewery.id}/delete"%> >Delete Brewery</a>
+
+<p><%='Number of Employees:'%> <%= @brewery.number_of_employees %></p>
+<p><%='Employee Owned:'%> <%= @brewery.employee_owned %></p>
+<p><%='Created At:'%> <%= @brewery.created_at %></p>
+<p><%='Updated At:'%> <%= @brewery.updated_at %></p>
+<p><%='Beer count:'%> <%= @brewery.beers.count %></p>
+
+<a href= <%="/breweries/#{@brewery.id}/beer"%> >Beers</a>

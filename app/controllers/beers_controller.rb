@@ -1,4 +1,4 @@
-class BeerController < ApplicationController
+class BeersController < ApplicationController
 
   def index
     @beer = Beer.where(bottled: 'true')
@@ -40,6 +40,6 @@ class BeerController < ApplicationController
 
     @beer.save
 
-  redirect_to "/beer/#{@beer.id}"
+  redirect_to "/beers/#{@beer.id}"
   end
 end

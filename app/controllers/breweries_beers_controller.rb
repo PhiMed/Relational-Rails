@@ -1,4 +1,4 @@
-class BreweryBeersController < ApplicationController
+class BreweriesBeersController < ApplicationController
   def index
     @brewery = Brewery.find(params[:id])
     @beer = @brewery.beers
@@ -22,14 +22,14 @@ class BreweryBeersController < ApplicationController
 
       @beer.save
 
-      redirect_to "/brewery/#{@brewery.id}/beer"
+      redirect_to "/breweries/#{@brewery.id}/beers"
   end
 
   def sort_alphabetically
     @brewery = Brewery.find(params[:id])
     @beer = @brewery.beers.order(name: :asc)
 
-    redirect_to "/brewery/#{@brewery.id}/beer"
+    redirect_to "/breweries/#{@brewery.id}/beers"
   end
 
 end

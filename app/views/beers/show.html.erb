@@ -1,0 +1,14 @@
+<a href="/">Welcome Index</a>
+<a href="/beers">Beers Index</a>
+<a href="/breweries">Breweries Index</a>
+
+<h1><%= @beer.name %></h1>
+
+<a href= <%="/beers/#{@beer.id}/edit"%> >Update Beer</a>
+
+<p><%='Beer ID:'%> <%=@beer.id%></p>
+<p><%='Vendor Lead Time:'%> <%=@beer.vendor_lead_time%><p>
+<p><%='Bottled:'%> <%=@beer.bottled%><p>
+<p><%='Created At:'%> <%=@beer.created_at%><p>
+<p><%='Updated At:'%> <%=@beer.updated_at%><p>
+<p><%='Brewery ID:'%> <%=@beer.brewery_id%><p>

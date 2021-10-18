@@ -1,8 +1,8 @@
 <a href="/">Welcome Index</a>
-<a href="/beer">Beer Index</a>
-<a href="/brewery">Brewery Index</a>
+<a href="/beers">Beers Index</a>
+<a href="/breweries">Breweries Index</a>
 
-<form action="/brewery/<%=@brewery.id%>" method="post">
+<form action="/breweries/<%=@brewery.id%>" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <input type="hidden" name="_method" value="PATCH" />
   <h3>Update a brewery:</h3>
