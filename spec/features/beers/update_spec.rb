@@ -10,7 +10,7 @@ RSpec.describe "beer update", type: :feature do
                                 bottled: true,
                                 brewery_id: brewery.id)
 
-    visit "/beer/#{beer.id}/edit"
+    visit "/beers/#{beer.id}/edit"
 
     fill_in "beer[name]", with: "RC Beer"
     fill_in "beer[vendor_lead_time]", with: "5"
@@ -19,7 +19,7 @@ RSpec.describe "beer update", type: :feature do
     click_on "Update Beer"
 
     expect(page).to have_content("RC Beer")
-    expect(current_path).to eq("/beer/#{beer.id}")
+    expect(current_path).to eq("/beers/#{beer.id}")
     expect(page).to_not have_content("Autumn Haze IPA")
 
   end

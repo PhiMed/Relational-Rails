@@ -11,7 +11,7 @@ RSpec.describe "beer", type: :feature do
                                 bottled: true,
                                 brewery_id: brewery.id)
 
-    visit "/beer"
+    visit "/beers"
 
     expect(page).to have_content(beer.name)
     expect(page).to_not have_content("Pumpkin Spice Latte")
@@ -28,7 +28,7 @@ RSpec.describe "beer", type: :feature do
                                 brewery_id: brewery.id)
 
 
-    visit "/beer/#{beer.id}"
+    visit "/beers/#{beer.id}"
 
     expect(page).to have_content(beer.id)
     expect(page).to have_content(beer.brewery_id)
@@ -37,10 +37,10 @@ RSpec.describe "beer", type: :feature do
 
   it 'provides links for beer and brewery indexes' do
 
-    visit "/beer/new"
+    visit "/beers/new"
 
-    expect(page).to have_link("Beer Index")
-    expect(page).to have_link("Brewery Index")
+    expect(page).to have_link("Beers Index")
+    expect(page).to have_link("Breweries Index")
   end
 
   it 'only shows true records' do
@@ -55,7 +55,7 @@ RSpec.describe "beer", type: :feature do
                                 vendor_lead_time: 7,
                                 bottled: false,
                                 brewery_id: brewery.id)
-                                visit "/beer"
+    visit "/beers"
 
     expect(page).to have_content(beer.name)
     expect(page).to_not have_content(false_beer.name)

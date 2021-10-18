@@ -6,10 +6,10 @@ RSpec.describe " brewery beer new", type: :feature do
                                     number_of_employees: 120,
                                     employee_owned: false)
 
-    visit "/brewery/#{brewery.id}/beer"
+    visit "/breweries/#{brewery.id}/beers"
     click_on "Create beer"
 
-    expect(current_path).to eq("/brewery/#{brewery.id}/beer/new")
+    expect(current_path).to eq("/breweries/#{brewery.id}/beers/new")
     expect(page).to have_content('Enter a new beer')
     expect(page).to have_link
   end
@@ -19,7 +19,7 @@ RSpec.describe " brewery beer new", type: :feature do
                                     number_of_employees: 120,
                                     employee_owned: false)
 
-    visit "/brewery/#{brewery.id}/beer"
+    visit "/breweries/#{brewery.id}/beers"
     click_on "Create beer"
 
     fill_in 'beer[name]', with: "Josephs Beer"
@@ -28,7 +28,7 @@ RSpec.describe " brewery beer new", type: :feature do
 
     click_on "Create beer"
 
-    expect(current_path).to eq("/brewery/#{brewery.id}/beer")
+    expect(current_path).to eq("/breweries/#{brewery.id}/beers")
     expect(page).to have_content("Josephs Beer")
   end
 end

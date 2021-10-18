@@ -10,7 +10,7 @@ RSpec.describe "brewery show", type: :feature do
                                 bottled: false,
                                 brewery_id: brewery_1.id)
 
-    visit "/brewery/#{brewery_1.id}"
+    visit "/breweries/#{brewery_1.id}"
 
     expect(page).to have_content("Beer count")
     expect(page).to have_content(brewery_1.beers.count)
