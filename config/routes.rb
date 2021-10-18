@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get '/brewery/:id', to: 'brewery#show'
   get 'brewery/:id/edit', to: 'brewery#edit'
   patch 'brewery/:id', to: 'brewery#update'
+  delete '/brewery/:id', to: 'brewery#delete'
 
   get '/employee', to: 'employee#index'
   get '/employee/new', to: 'employee#new'
@@ -39,4 +40,6 @@ Rails.application.routes.draw do
   get '/brewery/:id/beer', to: 'brewery_beers#index'
   get '/brewery/:id/beer/new', to: 'brewery_beers#new'
   post '/brewery/:id/beer', to: 'brewery_beers#create'
+  get '/brewery/:id/beer/alphabetize', to: 'brewery_beers#sort_alphabetically'
+
 end

@@ -5,7 +5,9 @@
 <h1>Breweries</h1>
 
 <% @brewery.each do |brewery| %>
-  <p><a href="/brewery/<%=brewery.id%>"><h3><%= brewery.name %></a>  <%= brewery.created_at %>
+  <p><a href="/brewery/<%=brewery.id%>"><p><%= brewery.name %></a>
+  <%= brewery.created_at %>
+  <a href="brewery/<%=brewery.id%>/edit">Update Brewery</a>
 <% end %>
 
 <h2>Add New Brewery</h2>

@@ -1,7 +1,7 @@
 class BeerController < ApplicationController
 
   def index
-    @beer = Beer.all
+    @beer = Beer.where(bottled: 'true')
   end
 
   def new
