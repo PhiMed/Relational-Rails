@@ -1,11 +1,9 @@
 <a href="/employees">Employee Index</a>
 <a href="/restaurants">Restaurant Index</a>
 
-<h2>Employee Records by Restaurant</h2>
+<h2>Sorted Employee Records by Restaurant</h2>
 
 <a href= <%="/restaurants/#{@restaurants.id}/employees/new"%> ><h3>Create Employee</h3></a>
-
-<%= link_to "Sort Employees Alphabetically", restaurants_employees_path(sort_by: "name") %>
 
 <% @employees.each do |employee| %>
   <p>Name: <%= employee.name %></p>
@@ -15,7 +13,6 @@
   <p>Updated At: <%= employee.updated_at %></p>
   <p>Restaurant ID: <%= employee.restaurant_id %></p>
   <a href= <%="/employees/#{employee.id}/edit"%> >Update Employee</a>
-
   <form action="/restaurants/<%= @restaurants.id %>/employees" method="POST">
     <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
     <input type="hidden" name="_method" value="DELETE">
@@ -24,7 +21,7 @@
   <hr>
 <% end %>
 
-<form action=<%=restaurants_employees_path(hours: "hours")%> method="get">
+<form action=<%="/restaurants/#{@restaurants.id}"%> method="get">
   <label for="hours">Input a number of weekly hours to see employees meeting that threshold:</label><br>
   <input type="text" id="hours" name="hours"><br>
   <input type="submit" value="Submit">

@@ -11,7 +11,7 @@ RSpec.describe "employee", type: :feature do
                                 over_21: true,
                                 restaurant_id: restaurant.id)
 
-    visit "/employee"
+    visit "/employees"
 
     expect(page).to have_content(employee.id)
     expect(page).to have_content(employee.name)
@@ -25,29 +25,12 @@ RSpec.describe "employee", type: :feature do
 
     click_link "#{employee.name}"
 
-    expect(current_path).to eq("/employee/#{employee.id}")
-  end
-
-  it 'provides link to add new employee' do
-    restaurant = Restaurant.create!(name: "Taco Bell",
-                                    seats: 12,
-                                    serve_liquor: false)
-
-    employee = Employee.create!(name: "Bob Smith",
-                                weekly_hours: 40,
-                                over_21: true,
-                                restaurant_id: restaurant.id)
-
-    visit "/employee"
-    expect(page).to have_link("Add New Employee")
-
-    click_link "Add New Employee"
-    expect(current_path).to eq('/employee/new')
+    expect(current_path).to eq("/employees/#{employee.id}")
   end
 
   it 'provides links for employee, restaurant, welcome indexes' do
 
-    visit "/employee"
+    visit "/employees"
 
     expect(page).to have_link("Employee Index")
     expect(page).to have_link("Restaurant Index")
@@ -67,11 +50,11 @@ RSpec.describe "employee", type: :feature do
                                 over_21: true,
                                 restaurant_id: restaurant.id)
 
-    visit "/employee"
+    visit "/employees"
     expect(page).to have_link("Update Employee")
 
     click_link "Update Employee"
-    expect(current_path).to eq("/employee/#{employee.id}/edit")
+    expect(current_path).to eq("/employees/#{employee.id}/edit")
 
     fill_in "employee[name]", with: "Jane Dow"
     fill_in "employee[weekly_hours]", with: "35"
@@ -79,6 +62,6 @@ RSpec.describe "employee", type: :feature do
     fill_in "employee[restaurant_id]", with: "#{restaurant_2.id}"
     click_button "Update Employee"
 
-    expect(current_path).to eq("/employee/#{employee.id}")
+    expect(current_path).to eq("/employees/#{employee.id}")
   end
 end

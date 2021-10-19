@@ -10,7 +10,7 @@ RSpec.describe "restaurant", type: :feature do
                                       seats: 400,
                                       serve_liquor: true)
 
-    visit "/restaurant/#{restaurant.id}"
+    visit "/restaurants/#{restaurant.id}"
 
     expect(page).to have_content(restaurant.name)
     expect(page).to have_content(restaurant.seats)
@@ -33,7 +33,7 @@ RSpec.describe "restaurant", type: :feature do
                                               over_21: true,
                                               restaurant_id: restaurant.id)
 
-    visit "/restaurant/#{restaurant.id}"
+    visit "/restaurants/#{restaurant.id}"
 
     expect(page).to have_content(restaurant.employees.count)
     expect(restaurant.employees.count).to eq(2)
@@ -44,7 +44,7 @@ RSpec.describe "restaurant", type: :feature do
                                     seats: 12,
                                     serve_liquor: false)
 
-    visit "/restaurant/#{restaurant.id}"
+    visit "/restaurants/#{restaurant.id}"
 
     expect(page).to have_link("Employee Index")
     expect(page).to have_link("Restaurant Index")
@@ -63,14 +63,14 @@ RSpec.describe "restaurant", type: :feature do
                                               over_21: true,
                                               restaurant_id: restaurant.id)
 
-    visit "/restaurant/#{restaurant.id}"
+    visit "/restaurants/#{restaurant.id}"
 
     expect(page).to have_button("Delete Restaurant")
     expect(restaurant.employees.count).to eq(2)
 
     click_button "Delete Restaurant"
 
-    expect(current_path).to eq('/restaurant')
+    expect(current_path).to eq('/restaurants')
     expect(page).to_not have_content("Taco Bell")
   end
 end

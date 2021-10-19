@@ -1,28 +1,28 @@
-class RestaurantController < ApplicationController
+class RestaurantsController < ApplicationController
 
   def index
-    @restaurant = Restaurant.all.order_desc
+    @restaurants = Restaurant.all.order_desc
   end
 
   def new
   end
 
   def create
-    @restaurant = Restaurant.create!({
+    @restaurants = Restaurant.create!({
       name: params[:restaurant][:name],
       seats: params[:restaurant][:seats],
       serve_liquor: params[:restaurant][:serve_liquor]
       })
 
-    redirect_to '/restaurant'
+    redirect_to '/restaurants'
   end
 
   def show
-    @restaurant = Restaurant.find(params[:id])
+    @restaurants = Restaurant.find(params[:id])
   end
 
   def edit
-    @restaurant = Restaurant.find(params[:id])
+    @restaurants = Restaurant.find(params[:id])
   end
 
   def update
@@ -35,13 +35,13 @@ class RestaurantController < ApplicationController
 
       restaurant.save
 
-    redirect_to "/restaurant/#{restaurant.id}"
+    redirect_to "/restaurants/#{restaurant.id}"
   end
 
   def destroy
     restaurant = Restaurant.find(params[:id])
     restaurant.destroy
 
-    redirect_to '/restaurant'
+    redirect_to '/restaurants'
   end
 end

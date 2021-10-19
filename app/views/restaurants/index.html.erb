@@ -1,0 +1,19 @@
+<a href="/employees">Employee Index</a>
+<a href="/restaurants">Restaurant Index</a>
+
+<a href="/">Welcome Index</a>
+
+<h2><a href="/restaurants/new">New Restaurant</a></h2>
+
+<h1>Restaurants</h1>
+
+<% @restaurants.each do |restaurant| %>
+  <a href="/restaurants/<%=restaurant.id%>"><%= restaurant.name %></a>  <%=restaurant.created_at %> <a href= <%="/restaurants/#{restaurant.id}/edit"%> >Update Restaurant</a>
+
+  <form action="/restaurants/<%= restaurant.id %>" method="POST">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="Delete Restaurant"style="background:none; border-width:0px; color:blue; text-decoration:underline;cursor:pointer;font-family:timesnewroman;font-size:100%"/>
+  </form>
+  <hr>
+<% end %>

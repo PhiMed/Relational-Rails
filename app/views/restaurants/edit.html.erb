@@ -1,0 +1,15 @@
+<a href="/employees">Employee Index</a>
+<a href="/restaurants">Restaurant Index</a>
+
+<form action="/restaurants/<%= @restaurants.id %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="PATCH" />
+  <p><h3>Update a Restaurant </h3></p>
+  <p>Name:</p>
+  <input type='text' name='restaurant[name]' value="<%= @restaurants.name %>"/><br/>
+  <p>Number of Seats:</p>
+  <input type='integer' name='restaurant[seats]' value="<%= @restaurants.seats %>"/><br/>
+  <p>Serves Alcohol:</p>
+  <input type='boolean' name='restaurant[serve_liquor]' value="<%= @restaurants.serve_liquor %>"/><br/>
+  <input type='submit' name='Update Restaurant' value='Update Restaurant'/>
+</form>
