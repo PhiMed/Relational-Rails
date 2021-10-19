@@ -7,17 +7,6 @@ class EmployeesController < ApplicationController
   def new
   end
 
-  def create
-    employee = Employee.create!({
-      name: params[:employee][:name],
-      weekly_hours: params[:employee][:weekly_hours],
-      over_21: params[:employee][:over_21],
-      restaurant_id: params[:employee][:restaurant_id]
-      })
-
-    redirect_to '/employees'
-  end
-
   def show
     @employees = Employee.find(params[:id])
   end
