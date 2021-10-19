@@ -17,12 +17,7 @@ class EmployeesController < ApplicationController
 
   def update
     employee = Employee.find(params[:id])
-    employee.update({
-      name: params[:employee][:name],
-      weekly_hours: params[:employee][:weekly_hours],
-      over_21: params[:employee][:over_21],
-      restaurant_id: params[:employee][:restaurant_id]
-      })
+    employee.update(employees_params)
 
     employee.save
 
@@ -35,4 +30,9 @@ class EmployeesController < ApplicationController
 
     redirect_to '/employees'
   end
+
+  private
+    def employees_params
+      params..permit(:name, :weekly_hours, :over_21, :restaurant_id)
+    end
 end
