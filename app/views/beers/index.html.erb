@@ -4,16 +4,21 @@
 
 <h1>Beers</h1>
 
+<a href="/beers/new">Add New Beer</a>
+<br>
+
 <% @beer.each do |beer| %>
-  <h3><%= beer.name %></h3>
+  <h3><%= beer.name %> <a href=<%="beers/#{beer.id}/edit"%>>Edit Beer</a> </h3>
   <p>Beer ID: <%=beer.id%></p>
   <p>Vendor Lead Time: <%=beer.vendor_lead_time%><p>
   <p>Bottled: <%=beer.bottled%><p>
   <p>Created At: <%=beer.created_at%><p>
   <p>Updated At: <%=beer.updated_at%><p>
   <p>Brewery ID: <%=beer.brewery_id%><p>
+  <form action="/beers/<%= beer.id %>" method="POST">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="Delete Beer"/>
+  </form>
+
 <% end %>
-
-<h2>Add New Beer</h2>
-
-<a href="/beers/new">Add New Beer</a>

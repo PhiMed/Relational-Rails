@@ -19,7 +19,7 @@ class BeersController < ApplicationController
 
     beer.save
 
-    redirect_to '/beer'
+    redirect_to '/beers'
   end
 
   def show
@@ -41,5 +41,12 @@ class BeersController < ApplicationController
     @beer.save
 
   redirect_to "/beers/#{@beer.id}"
+  end
+
+  def destroy
+    beer = Beer.find(params[:id])
+    beer.destroy
+
+    redirect_to '/beers'
   end
 end
