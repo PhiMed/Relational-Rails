@@ -2,14 +2,15 @@
 <a href="/beer">Beer Index</a>
 <a href="/brewery">Brewery Index</a>
 
-<form action="/brewery" method="post">
+<form action="/brewery/<%=@brewery.id%>" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <p><h3>Enter a new brewery:</h3></p>
+  <input type="hidden" name="_method" value="PATCH" />
+  <h3>Update a brewery:</h3>
   <p>Name:</p>
   <input type='text' name='brewery[name]'/><br/>
   <p>Number of Employees:</p>
   <input type='integer' name='brewery[number_of_employees]'/><br/>
   <p>Employee Owned:</p>
   <input type='boolean' name='brewery[employee_owned]'/><br/>
-  <input type='submit' name='submit'/>
+  <input type='submit' name='Update Brewery' value='Update Brewery'/>
 </form>

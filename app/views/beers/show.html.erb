@@ -1,10 +1,10 @@
 <a href="/">Welcome Index</a>
-<a href="/beer">Beer Index</a>
-<a href="/brewery">Brewery Index</a>
+<a href="/beers">Beers Index</a>
+<a href="/breweries">Breweries Index</a>
 
 <h1><%= @beer.name %></h1>
 
-<a href= <%="/beer/#{@beer.id}/edit"%> >Update Beer</a>
+<a href= <%="/beers/#{@beer.id}/edit"%> >Update Beer</a>
 
 <p><%='Beer ID:'%> <%=@beer.id%></p>
 <p><%='Vendor Lead Time:'%> <%=@beer.vendor_lead_time%><p>

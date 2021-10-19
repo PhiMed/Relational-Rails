@@ -1,0 +1,16 @@
+<a href="/">Welcome Index</a>
+<a href="/beer">Beers Index</a>
+<a href="/brewery">Breweries Index</a>
+
+<form action="/beers/<%=@beer.id%>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="PATCH" />
+  <h3>Update a beer:</h3>
+  <p>Name:</p>
+  <input type='text' name='beer[name]'/><br/>
+  <p>Vendor Lead Time (days):</p>
+  <input type='integer' name='beer[vendor_lead_time]'/><br/>
+  <p>Bottled:</p>
+  <input type='boolean' name='beer[bottled]'/><br/>
+  <input type='submit' name='Update Beer' value='Update Beer'/>
+</form>

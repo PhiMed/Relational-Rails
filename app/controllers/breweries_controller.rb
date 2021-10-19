@@ -1,4 +1,4 @@
-class BreweryController < ApplicationController
+class BreweriesController < ApplicationController
 
   def index
     @brewery = Brewery.all.order(params[:created_at]).reverse
@@ -18,7 +18,7 @@ class BreweryController < ApplicationController
 
     brewery.save
 
-    redirect_to '/brewery'
+    redirect_to '/breweries'
   end
 
   def show
@@ -39,13 +39,13 @@ class BreweryController < ApplicationController
 
     @brewery.save
 
-  redirect_to "/brewery/#{@brewery.id}"
+  redirect_to "/breweries/#{@brewery.id}"
   end
 
   def delete
     brewery = Brewery.find(params[:id])
     brewery.destroy
 
-    redirect_to '/brewery'
+    redirect_to '/breweries'
   end
 end

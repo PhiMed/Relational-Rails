@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "beer", type: :feature do
+RSpec.describe "beer show", type: :feature do
   it 'displays beer attributes' do
     brewery = Brewery.create!(name: "Breckenridge Brewery",
                                     number_of_employees: 120,
@@ -12,7 +12,7 @@ RSpec.describe "beer", type: :feature do
                                 brewery_id: brewery.id)
 
 
-    visit "/beer/#{beer.id}"
+    visit "/beers/#{beer.id}"
 
     expect(page).to have_content(beer.name)
     expect(page).to have_content(beer.bottled)
@@ -20,9 +20,9 @@ RSpec.describe "beer", type: :feature do
 
   it 'provides links for beer and brewery indexes' do
 
-    visit "/beer/new"
+    visit "/beers/new"
 
-    expect(page).to have_link("Beer Index")
-    expect(page).to have_link("Brewery Index")
+    expect(page).to have_link("Beers Index")
+    expect(page).to have_link("Breweries Index")
   end
 end
