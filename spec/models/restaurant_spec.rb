@@ -51,8 +51,8 @@ RSpec.describe Restaurant, type: :model do
                                 over_21: true,
                                 restaurant_id: restaurant_1.id)
 
-    expect(restaurant_1.threshold_records.first).to eq(employee)
-    expect(restaurant_1.threshold_records.last).to eq(employee_2)
-    expect(restaurant_1.threshold_records).to_not include(employee_3)
+    expect(restaurant_1.threshold_records(40).first).to eq(employee)
+    expect(restaurant_1.threshold_records(40).last).to eq(employee_2)
+    expect(restaurant_1.threshold_records(40)).to_not include(employee_3)
   end
 end

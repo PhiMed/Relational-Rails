@@ -9,7 +9,7 @@ class Restaurant < ApplicationRecord
     employees.order('name')
   end
 
-  def threshold_records
-
-  end  
+  def threshold_records(num)
+    employees.where("weekly_hours >= ?", num)
+  end
 end

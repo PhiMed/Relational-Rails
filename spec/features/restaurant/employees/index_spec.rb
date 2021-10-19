@@ -71,4 +71,23 @@ RSpec.describe 'restaurant employee index' do
 
     expect(current_path).to eq("/employees/#{employee.id}")
   end
+
+  xit 'deletes a restaurant employee instance' do
+    restaurant = Restaurant.create!(name: "Taco Bell",
+                                    seats: 12,
+                                    serve_liquor: false)
+    employee_1 = restaurant.employees.create!(name: "Joe Smith",
+                                              weekly_hours: 40,
+                                              over_21: true,
+                                              restaurant_id: restaurant.id)
+
+    visit "/restaurants/#{restaurant.id}/employees"
+
+    expect(page).to have_button("Delete Employee")
+
+    click_button "Delete Employee"
+
+    expect(current_path).to eq("/restaurants/#{restaurant.id}/employees")
+    expect(page).to_not have_content("Joe Smith")
+  end
 end
