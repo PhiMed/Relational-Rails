@@ -36,7 +36,11 @@ class RestaurantEmployeesController < ApplicationController
     @restaurants = Restaurant.find(params[:id])
     @employees = @restaurants.employees
 
-    @employees.find(params[:id]).destroy
+    single_emp = @employees.find do |employee|
+      employee.id
+    end
+
+    single_emp.destroy
 
     redirect_to "/restaurants/#{@restaurants.id}/employees"
   end

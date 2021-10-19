@@ -5,12 +5,12 @@
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <p><h3>Enter a new employee:</h3></p>
   <p>Name:</p>
-  <input type='text' name='employee[name]'/><br/>
+  <input type='text' id='name' name='employee[name]'/><br/>
   <p>Weekly Hours:</p>
-  <input type='integer' name='employee[weekly_hours]'/><br/>
+  <input type='integer' id='weekly_hours' name='employee[weekly_hours]'/><br/>
   <p>Over 21:</p>
-  <input type='boolean' name='employee[over_21]'/><br/>
+  <input type='boolean' id='over_21' name='employee[over_21]'/><br/>
   <p>Restaurant:</p>
-  <input type='integer' name='employee[restaurant_id]'/><br/>
+  <input type='integer' id='restaurant_id' name='employee[restaurant_id]'/><br/>
   <input type='submit' name='Create Employee' value='Create Employee'/>
 </form>
