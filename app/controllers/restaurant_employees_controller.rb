@@ -9,7 +9,7 @@ class RestaurantEmployeesController < ApplicationController
       @employees.all
     end
 
-    if params[:hours] == "hours"
+    if params[:hours]
       @employees = @restaurants.threshold_records(params[:hours])
     else
       @employees.all
@@ -36,7 +36,7 @@ class RestaurantEmployeesController < ApplicationController
     @restaurants = Restaurant.find(params[:id])
     @employees = @restaurants.employees
 
-    @employees.destroy
+    @employees.find(params[:id]).destroy
 
     redirect_to "/restaurants/#{@restaurants.id}/employees"
   end

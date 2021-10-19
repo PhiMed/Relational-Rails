@@ -9,6 +9,7 @@
 
 <% @employees.each do |employee| %>
   <p>Name: <%= employee.name %></p>
+  <p>ID: <%= employee.id %></p>
   <p>Weekly Hours: <%= employee.weekly_hours %></p>
   <p>Over 21: <%= employee.over_21 %></p>
   <p>Created At: <%= employee.created_at %></p>
@@ -25,7 +26,6 @@
 <% end %>
 
 <form action=<%=restaurants_employees_path(hours: "hours")%> method="get">
-  <label for="hours">Input a number of weekly hours to see employees meeting that threshold:</label><br>
-  <input type="text" id="hours" name="hours"><br>
+  <label for="hours">Only return records with more than <input type="text" id="hours" name="hours"> weekly hours</label><br>
   <input type="submit" value="Submit">
 </form>

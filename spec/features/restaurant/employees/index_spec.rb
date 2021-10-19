@@ -72,7 +72,7 @@ RSpec.describe 'restaurant employee index' do
     expect(current_path).to eq("/employees/#{employee.id}")
   end
 
-  xit 'deletes a restaurant employee instance' do
+  it 'deletes a restaurant employee instance' do
     restaurant = Restaurant.create!(name: "Taco Bell",
                                     seats: 12,
                                     serve_liquor: false)
