@@ -8,4 +8,8 @@ class Restaurant < ApplicationRecord
   def employee_sort
     employees.order('name')
   end
+
+  def threshold_records(num)
+    employees.where("weekly_hours >= ?", num)
+  end
 end

@@ -11,7 +11,7 @@ RSpec.describe "employee", type: :feature do
                                 over_21: true,
                                 restaurant_id: restaurant.id)
 
-    visit "/employee/#{employee.id}"
+    visit "/employees/#{employee.id}"
 
     expect(page).to have_content(employee.id)
     expect(page).to have_content(employee.restaurant_id)
@@ -29,7 +29,7 @@ RSpec.describe "employee", type: :feature do
                                 over_21: true,
                                 restaurant_id: restaurant.id)
 
-    visit "/employee/#{employee.id}"
+    visit "/employees/#{employee.id}"
 
     expect(page).to have_link("Employee Index")
     expect(page).to have_link("Restaurant Index")
@@ -49,13 +49,13 @@ RSpec.describe "employee", type: :feature do
                                               over_21: true,
                                               restaurant_id: restaurant.id)
 
-    visit "/employee/#{employee_1.id}"
+    visit "/employees/#{employee_1.id}"
 
     expect(page).to have_button("Delete Employee")
 
     click_button "Delete Employee"
 
-    expect(current_path).to eq('/employee')
+    expect(current_path).to eq('/employees')
     expect(page).to_not have_content("Joe Smith")
     expect(page).to have_content("Jane Doe")
   end

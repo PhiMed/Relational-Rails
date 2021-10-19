@@ -1,0 +1,21 @@
+<a href="/">Welcome Index</a>
+<a href="/employees">Employee Index</a>
+<a href="/restaurants">Restaurant Index</a>
+
+<h1>Current Employees</h1>
+
+<% @employees.each do |employee| %>
+  <p><a href="/employees/<%=employee.id%>"><%= employee.name %></a> <a href= <%="/employees/#{employee.id}/edit"%> >Update Employee</a></p>
+  <p>Employee ID: <%=employee.id%></p>
+  <p>Weekly Hours: <%=employee.weekly_hours%><p>
+  <p>Over 21: <%=employee.over_21%><p>
+  <p>Created At: <%=employee.created_at%><p>
+  <p>Updated At: <%=employee.updated_at%><p>
+  <p>Restaurant ID: <%=employee.restaurant_id%><p>
+  <form action="/employees/<%= employee.id %>" method="POST">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="Delete Employee"style="background:none; border-width:0px; color:blue; text-decoration:underline;cursor:pointer;font-family:timesnewroman;font-size:100%"/>
+  </form>
+  <hr>
+<% end %>

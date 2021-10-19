@@ -1,0 +1,21 @@
+<a href="/">Welcome Index</a>
+<a href="/restaurants">Restaurant Index</a>
+<a href="/employees">Employee Index</a>
+
+<h1><%=@employees.name%></h1>
+
+<p><%='Employee ID:'%> <%=@employees.id%></p>
+<p><%='Weekly Hours:'%> <%=@employees.weekly_hours%><p>
+<p><%='Over 21:'%> <%=@employees.over_21%><p>
+<p><%='Created At:'%> <%=@employees.created_at%><p>
+<p><%='Updated At:'%> <%=@employees.updated_at%><p>
+<p><%='Restaurant ID:'%> <%=@employees.restaurant_id%><p>
+
+<a href= <%="/employees/#{@employees.id}/edit"%> >Update Employee</a>
+
+
+<form action="/employees/<%= @employees.id %>" method="POST">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="Delete Employee"/>
+</form>

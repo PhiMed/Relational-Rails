@@ -6,7 +6,7 @@ RSpec.describe "employee", type: :feature do
                                     seats: 12,
                                     serve_liquor: false)
 
-    visit "/restaurant/#{restaurant.id}/employee/new"
+    visit "/restaurants/#{restaurant.id}/employees/new"
     fill_in "employee[name]", with: "Joe Smith"
     fill_in "employee[weekly_hours]", with: "40"
     fill_in "employee[over_21]", with: "false"
@@ -14,7 +14,7 @@ RSpec.describe "employee", type: :feature do
     click_on "Create Employee"
 
 
-    expect(current_path).to eq("/restaurant/#{restaurant.id}/employee")
+    expect(current_path).to eq("/restaurants/#{restaurant.id}/employees")
     expect(page).to have_content("Joe Smith")
     expect(page).to have_content("40")
     expect(page).to have_content("false")
