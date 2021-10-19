@@ -1,5 +1,5 @@
-<a href="/employees">Employee Index</a>
-<a href="/restaurants">Restaurant Index</a>
+<%= link_to "Employee Index", "/employees"%>
+<%= link_to "Restaurant Index", "/restaurants"%>
 
 <form action="/employees/<%= @employees.id %>" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">

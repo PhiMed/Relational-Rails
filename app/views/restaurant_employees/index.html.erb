@@ -1,11 +1,11 @@
-<a href="/employees">Employee Index</a>
-<a href="/restaurants">Restaurant Index</a>
+<%= link_to "Employee Index", "/employees"%>
+<%= link_to "Restaurant Index", "/restaurants"%>
 
 <h2>Employee Records by Restaurant</h2>
 
-<a href= <%="/restaurants/#{@restaurants.id}/employees/new"%> ><h3>Create Employee</h3></a>
+<%= link_to "Create Employee", "/restaurants/#{@restaurants.id}/employees/new"%> <br>
 
-<%= link_to "Sort Employees Alphabetically", restaurants_employees_path(sort_by: "name") %>
+<%= link_to "Sort Employees Alphabetically", "/restaurants/#{@restaurants.id}/employees?sort_by=name"%> <br>
 
 <% @employees.each do |employee| %>
   <p>Name: <%= employee.name %></p>
@@ -15,7 +15,7 @@
   <p>Created At: <%= employee.created_at %></p>
   <p>Updated At: <%= employee.updated_at %></p>
   <p>Restaurant ID: <%= employee.restaurant_id %></p>
-  <a href= <%="/employees/#{employee.id}/edit"%> >Update Employee</a>
+  <%= link_to "Update Employee", "/employees/#{employee.id}/edit"%>
 
   <form action="/restaurants/<%= @restaurants.id %>/employees" method="POST">
     <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
@@ -25,7 +25,7 @@
   <hr>
 <% end %>
 
-<form action=<%=restaurants_employees_path(hours: "hours")%> method="get">
+<form action=<%="/restaurants/#{@restaurants.id}/employees hours: hours"%> method="get">
   <label for="hours">Only return records with more than <input type="text" id="hours" name="hours"> weekly hours</label><br>
   <input type="submit" value="Submit">
 </form>
