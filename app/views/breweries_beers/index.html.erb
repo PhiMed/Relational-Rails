@@ -8,12 +8,18 @@
 <a href=<%="/breweries/#{@brewery.id}/beers/alphabetize"%>>Sort alphabetically</a>
 
 <% @beer.each do |beer| %>
-  <p>Name: <%= beer.name %></p>
+
+  <h3><%= beer.name %> <a href=<%="/beers/#{beer.id}/edit"%>>Edit Beer</a> </h3>
   <p>Vendor Lead Time (days): <%= beer.vendor_lead_time %></p>
   <p>Bottled: <%= beer.bottled %></p>
   <p>Created At: <%= beer.created_at %></p>
   <p>Updated At: <%= beer.updated_at %></p>
   <p>Brewery ID: <%= beer.brewery_id %></p>
+  <form action="/beers/<%= beer.id %>" method="POST">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="Delete Beer"/>
+  </form>
 
 
 <% end %>
