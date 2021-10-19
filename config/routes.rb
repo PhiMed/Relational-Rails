@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   get '/brewery/:id', to: 'brewery#show'
 
   get '/employees', to: 'employees#index'
+  get '/employees/new', to: 'employees#new'
+  post '/employees', to: 'employees#create'
   get '/employees/:id', to: 'employees#show'
   get '/employees/:id/edit', to: 'employees#edit'
   patch '/employees/:id', to: 'employees#update'
@@ -26,10 +28,10 @@ Rails.application.routes.draw do
   post '/beer', to: 'beer#create'
   get '/beer/:id', to: 'beer#show'
 
-  get '/restaurants/:id/employees', to: 'restaurant_employees#index'
+  get '/restaurants/:id/employees', to: 'restaurant_employees#index', as: "restaurants_employees"
   get '/restaurants/:id/employees/new', to: 'restaurant_employees#new'
   post '/restaurants/:id/employees', to: 'restaurant_employees#create'
-  get '/restaurants/:id/employees', to: 'restaurant_employees#sort_threshold'
+  delete '/restaurants/:id/employees', to: 'restaurant_employees#destroy'
 
   get '/brewery/:id/beer', to: 'brewery_beers#index'
 end

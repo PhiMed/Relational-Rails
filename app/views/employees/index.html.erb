@@ -12,4 +12,10 @@
   <p>Created At: <%=employee.created_at%><p>
   <p>Updated At: <%=employee.updated_at%><p>
   <p>Restaurant ID: <%=employee.restaurant_id%><p>
+  <form action="/employees/<%= employee.id %>" method="POST">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="Delete Employee"style="background:none; border-width:0px; color:blue; text-decoration:underline;cursor:pointer;font-family:timesnewroman;font-size:100%"/>
+  </form>
+  <hr>
 <% end %>
