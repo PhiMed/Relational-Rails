@@ -34,7 +34,7 @@ Rails.application.routes.draw do
   patch '/beers/:id', to: 'beers#update'
   delete '/beers/:id', to: 'beers#destroy'
 
-  get '/restaurants/:id/employees', to: 'restaurant_employees#index', as: "restaurants_employees"
+  get '/restaurants/:id/employees', to: 'restaurant_employees#index'
   get '/restaurants/:id/employees/new', to: 'restaurant_employees#new'
   post '/restaurants/:id/employees', to: 'restaurant_employees#create'
   delete '/restaurants/:id/employees', to: 'restaurant_employees#destroy'
@@ -42,5 +42,4 @@ Rails.application.routes.draw do
   get '/breweries/:id/beers', to: 'breweries_beers#index'
   get '/breweries/:id/beers/new', to: 'breweries_beers#new'
   post '/breweries/:id/beers', to: 'breweries_beers#create'
-
 end
