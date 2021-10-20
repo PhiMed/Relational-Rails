@@ -5,17 +5,17 @@
 <h1>Breweries</h1>
 
 <% @brewery.each do |brewery| %>
-  <p><a href="/breweries/<%=brewery.id%>"><p><%= brewery.name %></a>
-  <%= brewery.created_at %>
+<hr>
+  <a href="/breweries/<%=brewery.id%>"><p><h3><%= brewery.name %></h3></a>
   <a href="breweries/<%=brewery.id%>/edit">Edit Brewery</a>
   <form action="/breweries/<%=brewery.id%>" method="POST">
     <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
     <input type="hidden" name="_method" value="DELETE">
-    <input type="submit" value="Delete Brewery"/>
+    <input type="submit" value="Delete Brewery" style="background:none; border-width:0px; color:blue; text-decoration:underline;cursor:pointer;font-family:timesnewroman;font-size:100%"/>
   </form>
+  <p>Created at: <%= brewery.created_at %>
 <% end %>
 
   <br>
-  <br>
-
-  <a href="/breweries/new">New Brewery</a>
+  <hr>
+  <a href="/breweries/new">Add New Brewery</a>

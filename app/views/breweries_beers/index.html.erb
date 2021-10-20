@@ -4,22 +4,28 @@
 
 <h2>Beer Records by Brewery</h2>
 
-<a href=<%="/breweries/#{@brewery.id}/beers/new"%>>Create beer</a>
-<a href=<%="/breweries/#{@brewery.id}/beers/alphabetize"%>>Sort alphabetically</a>
+<%= link_to "Create Beer", "/breweries/#{@brewery.id}/beers/new"%>
+<br>
+<%= link_to "Sort Beers Alphabetically", "/breweries/#{@brewery.id}/beers?sort_by=name"%>
+<hr>
+<form action=<%="/breweries/#{@brewery.id}/beers"%> method="get">
+  <label for="threshold">Only return records with more than <input type="text" id="threshold" name="threshold"> lead time in days</label><br>
+  <input type="submit" value="Submit">
+</form>
+<hr>
 
 <% @beer.each do |beer| %>
 
-  <h3><%= beer.name %> <a href=<%="/beers/#{beer.id}/edit"%>>Edit Beer</a> </h3>
-  <p>Vendor Lead Time (days): <%= beer.vendor_lead_time %></p>
+  <h3><%= beer.name %></h3> <a href=<%="/beers/#{beer.id}/edit"%>>Edit Beer</a>
+  <p>Vendor Lead Time (days): <%=beer.vendor_lead_time %></p>
   <p>Bottled: <%= beer.bottled %></p>
   <p>Created At: <%= beer.created_at %></p>
   <p>Updated At: <%= beer.updated_at %></p>
   <p>Brewery ID: <%= beer.brewery_id %></p>
   <form action="/beers/<%= beer.id %>" method="POST">
-    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-    <input type="hidden" name="_method" value="DELETE">
-    <input type="submit" value="Delete Beer"/>
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="Delete Beer"style="background:none; border-width:0px; color:blue; text-decoration:underline;cursor:pointer;font-family:timesnewroman;font-size:100%"/>
   </form>
-
-
+  <hr>
 <% end %>

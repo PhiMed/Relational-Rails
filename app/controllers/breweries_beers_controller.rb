@@ -2,12 +2,23 @@ class BreweriesBeersController < ApplicationController
   def index
     @brewery = Brewery.find(params[:id])
     @beer = @brewery.beers
+
+    if params[:sort_by] == "name"
+      @beer = @brewery.beer_sort
+    else
+      @beer.all
+    end
+
+    if params[:threshold] != nil
+      @beer = @brewery.threshold_records(params[:threshold])
+    else
+      @beer.all
+    end
   end
 
   def new
     @brewery = Brewery.find(params[:id])
   end
-
 
   def create
       @brewery = Brewery.find(params[:id])
@@ -23,13 +34,6 @@ class BreweriesBeersController < ApplicationController
       @beer.save
 
       redirect_to "/breweries/#{@brewery.id}/beers"
-  end
-
-  def sort_alphabetically
-    @brewery = Brewery.find(params[:id])
-    @beer = @brewery.beers.order(name: :asc)
-
-    redirect_to "/breweries/#{@brewery.id}/beers"
   end
 
 end
