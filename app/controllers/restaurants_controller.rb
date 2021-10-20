@@ -8,17 +8,17 @@ class RestaurantsController < ApplicationController
   end
 
   def create
-    @restaurants = Restaurant.create(restaurants_params)
+    @restaurant = Restaurant.create(restaurants_params)
 
     redirect_to '/restaurants'
   end
 
   def show
-    @restaurants = Restaurant.find(params[:id])
+    @restaurant = Restaurant.find(params[:id])
   end
 
   def edit
-    @restaurants = Restaurant.find(params[:id])
+    @restaurant = Restaurant.find(params[:id])
   end
 
   def update
@@ -38,7 +38,7 @@ class RestaurantsController < ApplicationController
 
   private
     def restaurants_params
-      # params.permit(:name, :seats, :serve_liquor)
+      params.permit(:name, :seats, :serve_liquor)
       {
         name: params[:restaurant][:name],
         seats: params[:restaurant][:seats],
