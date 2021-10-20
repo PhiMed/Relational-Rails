@@ -5,11 +5,14 @@
 <h1><%= @brewery.name %></h1>
 
 <a href= <%="/breweries/#{@brewery.id}/edit"%> >Update Brewery</a>
+<br>
+<br>
 <form action="/breweries/<%= @brewery.id %>" method="POST">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <input type="hidden" name="_method" value="DELETE">
-  <input type="submit" value="Delete Brewery"/>
+<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+<input type="hidden" name="_method" value="DELETE">
+<input type="submit" value="Delete Brewery"style="background:none; border-width:0px; color:blue; text-decoration:underline;cursor:pointer;font-family:timesnewroman;font-size:100%"/>
 </form>
+
 
 <p><%='Number of Employees:'%> <%= @brewery.number_of_employees %></p>
 <p><%='Employee Owned:'%> <%= @brewery.employee_owned %></p>
@@ -17,4 +20,4 @@
 <p><%='Updated At:'%> <%= @brewery.updated_at %></p>
 <p><%='Beer count:'%> <%= @brewery.beers.count %></p>
 
-<a href= <%="/breweries/#{@brewery.id}/beers"%> >Beers</a>
+<a href= <%="/breweries/#{@brewery.id}/beers"%> ><h3>Beers</h3></a>

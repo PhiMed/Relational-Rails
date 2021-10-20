@@ -42,5 +42,4 @@ Rails.application.routes.draw do
   get '/breweries/:id/beers', to: 'breweries_beers#index'
   get '/breweries/:id/beers/new', to: 'breweries_beers#new'
   post '/breweries/:id/beers', to: 'breweries_beers#create'
-  get '/breweries/:id/beers/alphabetize', to: 'breweries_beers#sort_alphabetically'
 end

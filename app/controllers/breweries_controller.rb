@@ -1,7 +1,7 @@
 class BreweriesController < ApplicationController
 
   def index
-    @brewery = Brewery.all.order(params[:created_at]).reverse
+    @brewery = Brewery.order_desc
   end
 
   def new
