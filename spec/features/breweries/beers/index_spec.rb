@@ -39,8 +39,8 @@ RSpec.describe 'brewery beer index' do
 
     click_on "Sort Beers Alphabetically"
 
-    expect(brewery.beer_sort.first).to eq(beer_2)
-    expect(brewery.beer_sort.last).to eq(beer_1)
+    expect(current_path).to eq("/breweries/#{brewery.id}/beers")
+
   end
 
   it 'can return records with more than x things' do

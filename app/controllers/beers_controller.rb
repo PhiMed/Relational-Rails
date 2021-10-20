@@ -1,7 +1,7 @@
 class BeersController < ApplicationController
 
   def index
-    @beer = Beer.where(bottled: 'true')
+    @beer = Beer.all.true_beers
   end
 
   def new
@@ -31,16 +31,12 @@ class BeersController < ApplicationController
   end
 
   def update
-    @beer = Beer.find(params[:id])
-    @beer.update({
-      name: params[:beer][:name],
-      vendor_lead_time: params[:beer][:vendor_lead_time],
-      bottled: params[:beer][:bottled]
-      })
+    beer = Beer.find(params[:id])
+    beer.update(beers_params)
 
-    @beer.save
+    beer.save
 
-  redirect_to "/beers/#{@beer.id}"
+  redirect_to "/beers/#{beer.id}"
   end
 
   def destroy
@@ -48,5 +44,16 @@ class BeersController < ApplicationController
     beer.destroy
 
     redirect_to '/beers'
+  end
+
+private
+  def beers_params
+    params.permit(:name, :vendor_lead_time, :bottled, :brewery_id)
+    {
+      name: params[:beer][:name],
+      vendor_lead_time: params[:beer][:vendor_lead_time],
+      bottled: params[:beer][:bottled],
+      brewery_id: params[:beer][:brewery_id]
+      }
   end
 end

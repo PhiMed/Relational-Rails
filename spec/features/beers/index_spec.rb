@@ -17,6 +17,23 @@ RSpec.describe "beer", type: :feature do
     expect(page).to_not have_content("Pumpkin Spice Latte")
   end
 
+  it 'can delete a beer' do
+    brewery = Brewery.create!(name: "Breckenridge Brewery",
+                                    number_of_employees: 120,
+                                    employee_owned: false)
+    deletable_beer = Beer.create!(name: "Deletable beer",
+                                vendor_lead_time: 7,
+                                bottled: true,
+                                brewery_id: brewery.id)
+    visit "/beers"
+
+    expect(page).to have_content(deletable_beer.name)
+
+    click_on "Delete Beer"
+
+    expect(page).not_to have_content(deletable_beer.name)
+  end
+
   it 'displays beer attributes' do
     brewery = Brewery.create!(name: "Breckenridge Brewery",
                                     number_of_employees: 120,
