@@ -41,7 +41,7 @@ class BreweriesController < ApplicationController
 
   private
     def breweries_params
-      params.permit(:name, :number_of_employees, :serve_liquor)
+      params.permit(:name, :number_of_employees, :employee_owned)
       {
         name: params[:brewery][:name],
         number_of_employees: params[:brewery][:number_of_employees],
