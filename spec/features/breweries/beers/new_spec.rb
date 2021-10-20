@@ -25,6 +25,7 @@ RSpec.describe " brewery beer new", type: :feature do
     fill_in 'beer[name]', with: "Josephs Beer"
     fill_in 'beer[vendor_lead_time]', with: "7"
     fill_in 'beer[bottled]', with: "false"
+    fill_in "beer[brewery_id]", with: "#{brewery.id}"
 
     click_on "Create beer"
 

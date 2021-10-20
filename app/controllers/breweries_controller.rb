@@ -8,13 +8,7 @@ class BreweriesController < ApplicationController
   end
 
   def create
-    brewery = Brewery.new({
-      name: params[:brewery][:name],
-      number_of_employees: params[:brewery][:number_of_employees],
-      employee_owned: params[:brewery][:employee_owned],
-      created_at: params[:brewery][:created_at],
-      updated_at: params[:brewery][:updated_at]
-      })
+    brewery = Brewery.new(breweries_params)
 
     brewery.save
 
@@ -31,11 +25,7 @@ class BreweriesController < ApplicationController
 
   def update
     @brewery = Brewery.find(params[:id])
-    @brewery.update({
-      name: params[:brewery][:name],
-      number_of_employees: params[:brewery][:number_of_employees],
-      employee_owned: params[:brewery][:employee_owned]
-      })
+    @brewery.update(breweries_params)
 
     @brewery.save
 
@@ -48,4 +38,14 @@ class BreweriesController < ApplicationController
 
     redirect_to '/breweries'
   end
+
+  private
+    def breweries_params
+      params.permit(:name, :number_of_employees, :employee_owned)
+      {
+        name: params[:brewery][:name],
+        number_of_employees: params[:brewery][:number_of_employees],
+        employee_owned: params[:brewery][:employee_owned]
+        }
+    end
 end

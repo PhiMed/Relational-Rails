@@ -15,6 +15,7 @@ RSpec.describe "beer update", type: :feature do
     fill_in "beer[name]", with: "RC Beer"
     fill_in "beer[vendor_lead_time]", with: "5"
     fill_in "beer[bottled]", with: "true"
+    fill_in "beer[brewery_id]", with: "#{brewery.id}"
 
     click_on "Update Beer"
 
