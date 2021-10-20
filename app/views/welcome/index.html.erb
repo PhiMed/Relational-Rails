@@ -1,14 +1,14 @@
 <%= link_to "Employee Index", "/employees"%>
 <%= link_to "Restaurant Index", "/restaurants"%>
-<a href="/beers">Beers Index</a>
-<a href="/breweries">Breweries Index</a>
+<%= link_to "Beers Index", "/beers"%>
+<%= link_to "Breweries Index", "/breweries"%>
 
 <h1>Welcome to Relational Rails</h1>
 <%=image_tag("restaurant.png", size: "50")%>
-<a href="/restaurants">Restaurant Index</a><br>
-<%=image_tag("employee.png", size: "50")%>
-<a href="/employees">Employee Index</a><br>
+<%= link_to "Restaurant Index", "/restaurants"%><br>
+<%=image_tag("employee.png", size: "40")%>
+<%= link_to "Employee Index", "/employees"%><br>
 <%=image_tag("brewery.png", size: "50")%>
-<a href="/breweries">Brewery Index</a><br>
+<%= link_to "Breweries Index", "/breweries"%><br>
 <%=image_tag("beer.png", size: "50")%>
-<a href="/beers">Beers Index</a><br>
+<%= link_to "Beers Index", "/beers"%>
