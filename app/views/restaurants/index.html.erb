@@ -2,12 +2,13 @@
 <%= link_to "Restaurant Index", "/restaurants"%>
 <%= link_to "Welcome Index", "/"%>
 
+
 <h2><a href="/restaurants/new">New Restaurant</a></h2>
 
 <h1>Restaurants</h1>
 
 <% @restaurants.each do |restaurant| %>
-  <a href="/restaurants/<%=restaurant.id%>"><%= restaurant.name %></a>  <%=restaurant.created_at %> <a href= <%="/restaurants/#{restaurant.id}/edit"%> >Update Restaurant</a>
+  <a href="/restaurants/<%=restaurant.id%>"><%= restaurant.name %></a>  <%=restaurant.created_at %> <%= link_to "Update Restaurant", "/restaurants/#{restaurant.id}/edit"%>
 
   <form action="/restaurants/<%= restaurant.id %>" method="POST">
     <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">

@@ -8,7 +8,7 @@ class EmployeesController < ApplicationController
   end
 
   def show
-    @employees = Employee.find(params[:id])
+    @employee = Employee.find(params[:id])
   end
 
   def edit
@@ -33,6 +33,7 @@ class EmployeesController < ApplicationController
 
   private
     def employees_params
+      params.permit(:name, :weekly_hours, :over_21, :restaurant_id)
       {
         name: params[:employee][:name],
         weekly_hours: params[:employee][:weekly_hours],

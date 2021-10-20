@@ -17,14 +17,14 @@ class RestaurantEmployeesController < ApplicationController
   end
 
   def new
-    @restaurants = Restaurant.find(params[:id])
+    @restaurant = Restaurant.find(params[:id])
   end
 
   def create
-    @restaurants = Restaurant.find(params[:id])
+    @restaurant = Restaurant.find(params[:id])
     @employees = Employee.create(restaurant_employees_params)
 
-    redirect_to "/restaurants/#{@restaurants.id}/employees"
+    redirect_to "/restaurants/#{@restaurant.id}/employees"
   end
 
   def destroy
@@ -42,6 +42,7 @@ class RestaurantEmployeesController < ApplicationController
 
   private
     def restaurant_employees_params
+      params.permit(:name, :weekly_hours, :over_21, :restaurant_id)
       {
         name: params[:employee][:name],
         weekly_hours: params[:employee][:weekly_hours],

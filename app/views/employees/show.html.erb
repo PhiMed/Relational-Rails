@@ -1,19 +1,19 @@
-<a href="/">Welcome Index</a>
-<a href="/restaurants">Restaurant Index</a>
-<a href="/employees">Employee Index</a>
+<%= link_to "Employee Index", "/employees"%>
+<%= link_to "Restaurant Index", "/restaurants"%>
+<%= link_to "Welcome Index", "/"%>
 
-<h1><%=@employees.name%></h1>
+<h1><%=@employee.name%></h1>
 
-<p><%='Employee ID:'%> <%=@employees.id%></p>
-<p><%='Weekly Hours:'%> <%=@employees.weekly_hours%><p>
-<p><%='Over 21:'%> <%=@employees.over_21%><p>
-<p><%='Created At:'%> <%=@employees.created_at%><p>
-<p><%='Updated At:'%> <%=@employees.updated_at%><p>
-<p><%='Restaurant ID:'%> <%=@employees.restaurant_id%><p>
+<p><%='Employee ID:'%> <%=@employee.id%></p>
+<p><%='Weekly Hours:'%> <%=@employee.weekly_hours%><p>
+<p><%='Over 21:'%> <%=@employee.over_21%><p>
+<p><%='Created At:'%> <%=@employee.created_at%><p>
+<p><%='Updated At:'%> <%=@employee.updated_at%><p>
+<p><%='Restaurant ID:'%> <%=@employee.restaurant_id%><p>
 
-<a href= <%="/employees/#{@employees.id}/edit"%> >Update Employee</a>
+<a href= <%="/employees/#{@employee.id}/edit"%> >Update Employee</a>
 
-<form action="/employees/<%= @employees.id %>" method="POST">
+<form action="/employees/<%= @employee.id %>" method="POST">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <input type="hidden" name="_method" value="DELETE">
   <input type="submit" value="Delete Employee"/>

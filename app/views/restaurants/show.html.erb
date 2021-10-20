@@ -1,18 +1,18 @@
 <%= link_to "Employee Index", "/employees"%>
 <%= link_to "Restaurant Index", "/restaurants"%>
 
-<h1><%= @restaurants.name %></h1>
+<h1><%= @restaurant.name %></h1>
 
-<p><%='Seats:'%> <%= @restaurants.seats %></p>
-<p><%='Serves Alcohol:'%> <%= @restaurants.serve_liquor %></p>
-<p><%='Created At:'%> <%= @restaurants.created_at %></p>
-<p><%='Updated At:'%> <%= @restaurants.updated_at %></p>
-<p><%='Number of Employees:'%> <%= @restaurants.employees.count %></p>
+<p><%='Seats:'%> <%= @restaurant.seats %></p>
+<p><%='Serves Alcohol:'%> <%= @restaurant.serve_liquor %></p>
+<p><%='Created At:'%> <%= @restaurant.created_at %></p>
+<p><%='Updated At:'%> <%= @restaurant.updated_at %></p>
+<p><%='Number of Employees:'%> <%= @restaurant.employees.count %></p>
 
-<a href= <%="/restaurants/#{@restaurants.id}/employees"%> >Employees</a>
-<a href= <%="/restaurants/#{@restaurants.id}/edit"%> >Update Restaurant</a>
+<a href= <%="/restaurants/#{@restaurant.id}/employees"%> >Employees</a>
+<a href= <%="/restaurants/#{@restaurant.id}/edit"%> >Update Restaurant</a>
 
-<form action="/restaurants/<%= @restaurants.id %>" method="POST">
+<form action="/restaurants/<%= @restaurant.id %>" method="POST">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <input type="hidden" name="_method" value="DELETE">
   <input type="submit" value="Delete Restaurant"/>
