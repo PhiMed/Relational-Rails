@@ -22,12 +22,7 @@ class RestaurantEmployeesController < ApplicationController
 
   def create
     @restaurants = Restaurant.find(params[:id])
-    @employees = Employee.create({
-      name: params[:employee][:name],
-      weekly_hours: params[:employee][:weekly_hours],
-      over_21: params[:employee][:over_21],
-      restaurant_id: params[:employee][:restaurant_id]
-      })
+    @employees = Employee.create(restaurant_employees_params)
 
     redirect_to "/restaurants/#{@restaurants.id}/employees"
   end
@@ -44,4 +39,14 @@ class RestaurantEmployeesController < ApplicationController
 
     redirect_to "/restaurants/#{@restaurants.id}/employees"
   end
+
+  private
+    def restaurant_employees_params
+      {
+        name: params[:employee][:name],
+        weekly_hours: params[:employee][:weekly_hours],
+        over_21: params[:employee][:over_21],
+        restaurant_id: params[:employee][:restaurant_id]
+        }
+    end
 end
