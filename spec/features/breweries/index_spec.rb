@@ -30,4 +30,17 @@ RSpec.describe "brewery index", type: :feature do
     expect(Brewery.all.reverse_order.first).to eq(brewery_2)
     expect(Brewery.all.reverse_order.first).to_not eq(brewery_1)
   end
+
+  it 'can delete a brewery' do
+    deletable_brewery = Brewery.create!(name: "Deleteable Brewery",
+                                    number_of_employees: 120,
+                                    employee_owned: false)
+    visit "/breweries"
+
+    expect(page).to have_content(deletable_brewery.name)
+
+    click_on "Delete Brewery"
+
+    expect(page).not_to have_content(deletable_brewery.name)
+  end
 end
