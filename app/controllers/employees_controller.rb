@@ -33,6 +33,11 @@ class EmployeesController < ApplicationController
 
   private
     def employees_params
-      params..permit(:name, :weekly_hours, :over_21, :restaurant_id)
+      {
+        name: params[:employee][:name],
+        weekly_hours: params[:employee][:weekly_hours],
+        over_21: params[:employee][:over_21],
+        restaurant_id: params[:employee][:restaurant_id]
+        }
     end
 end
